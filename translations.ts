@@ -73,7 +73,7 @@ export const translations = {
       items: {
         1: { name: "Rindfleischstreifen in Tomaten-Eintopf", desc: "Zartes Rindfleisch in fruchtiger Tomatenbrühe." },
         2: { name: "Zickzack-Fisch nach Zigong-Art", desc: "Authentischer Zigong-Fisch mit frischem Chili und Ingwer." },
-        3: { name: "Kaninchen mit frischen Chilischoten", desc: "Zartes Kaninchenfleisch, gebraten mit frischem Sichuan-Pfeffer." },
+        3: { name: "Kaninchen with fresh chilies", desc: "Zartes Kaninchenfleisch, gebraten mit frischem Sichuan-Pfeffer." },
         4: { name: "Zartes Rindfleisch Scharf", desc: "Sichuan-Stil. Zartes Rindfleisch in scharfem Chiliöl pochiert." }
       }
     },
@@ -85,8 +85,10 @@ export const translations = {
       contactTitle: "Kontakt",
       reserve: "Tisch reservieren",
       hoursTitle: "Öffnungszeiten",
-      daily: "Täglich",
-      kitchenClose: "Küche schließt um 22:30",
+      daily: "Mo, Mi - So",
+      time: "11:30-15:00 & 17:00-21:30",
+      tuesdayClosed: "Dienstag Ruhetag",
+      kitchenClose: "Küche schließt um 21:00",
       rights: "Alle Rechte vorbehalten.",
       impressum: "Impressum",
       datenschutz: "Datenschutz"
@@ -102,13 +104,13 @@ export const translations = {
       subtitle: "Authentische Sichuan Küche in Frankfurt",
       chineseSubtitle: "喃妹砂锅菜单",
       categories: {
-        D: "Eintopf - Klare Brühe",
-        C: "Eintopf - Scharfe Brühe",
-        B: "Empfehlungen",
-        A: "Kalte Vorspeisen",
-        E: "Hausmannskost",
-        S: "Snacks & Reis",
-        F: "Nudelsuppen"
+        D: "砂锅清汤",
+        C: "砂锅红汤",
+        B: "必点菜品",
+        A: "特色凉菜",
+        E: "家常小炒",
+        S: "小吃 & 主食",
+        F: "面食 & 米线"
       },
       allergyTitle: "Hinweis zu Allergenen & Zusatzstoffen:",
       allergyText: "Bitte informieren Sie unser Servicepersonal über eventuelle Allergien oder Unverträglichkeiten. Eine detaillierte Liste ist im Restaurant einsehbar.",
@@ -187,7 +189,7 @@ export const translations = {
       items: {
         1: { name: "Beef Strips in Tomato Casserole", desc: "Tender beef in fruity tomato broth." },
         2: { name: "Zigong Style Jumping Fish", desc: "Authentic Zigong fish with fresh chili and ginger." },
-        3: { name: "Rabbit with Fresh Chilies", desc: "Tender rabbit meat fried with fresh Sichuan peppers." },
+        3: { name: "Rabbit with fresh chilies", desc: "Tender rabbit meat fried with fresh Sichuan peppers." },
         4: { name: "Spicy Boiled Beef", desc: "Sichuan classic. Tender beef poached in spicy chili oil." }
       }
     },
@@ -199,8 +201,10 @@ export const translations = {
       contactTitle: "Contact",
       reserve: "Book a Table",
       hoursTitle: "Opening Hours",
-      daily: "Daily",
-      kitchenClose: "Kitchen closes at 22:30",
+      daily: "Mon, Wed - Sun",
+      time: "11:30-15:00 & 17:00-21:30",
+      tuesdayClosed: "Closed on Tuesdays",
+      kitchenClose: "Kitchen closes at 21:00",
       rights: "All rights reserved.",
       impressum: "Imprint",
       datenschutz: "Privacy Policy"
@@ -299,7 +303,7 @@ export const translations = {
       description: "从我们著名的砂锅系列到火辣的自贡江湖菜。",
       viewFull: "查看完整菜单",
       items: {
-        1: { name: "番茄炖牛柳", desc: "鲜嫩牛柳配上浓郁番茄汤底。" },
+        1: { name: "番茄炖牛柳", desc: "鲜嫩牛柳配上浓育番茄汤底。" },
         2: { name: "自贡跳水鱼", desc: "地道自贡做法，鲜椒姜丝，鲜辣爽口。" },
         3: { name: "自贡鲜椒兔", desc: "鲜嫩兔肉，配上新鲜花椒和辣椒爆炒。" },
         4: { name: "水煮牛肉", desc: "川菜经典。红油鲜香，牛肉滑嫩。" }
@@ -313,8 +317,10 @@ export const translations = {
       contactTitle: "联系方式",
       reserve: "预定座位",
       hoursTitle: "营业时间",
-      daily: "每天",
-      kitchenClose: "厨房 22:30 关闭",
+      daily: "周一, 周三 - 周日",
+      time: "11:30-15:00 & 17:00-21:30",
+      tuesdayClosed: "周二休息",
+      kitchenClose: "厨房 21:00 关闭",
       rights: "所有权利保留。",
       impressum: "法律声明 (Impressum)",
       datenschutz: "隐私政策 (Datenschutz)"

@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Facebook, Instagram, MapPin, Phone, Mail, Clock, ExternalLink, CalendarDays } from 'lucide-react';
+import { Facebook, Instagram, MapPin, Phone, Mail, Clock, ExternalLink, CalendarDays, X } from 'lucide-react';
 import { Language } from '../types';
 import { translations } from '../translations';
 
@@ -22,7 +22,6 @@ const Footer: React.FC<FooterProps> = ({ onNavigate, lang }) => {
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           
-          {/* 在下方 src 处替换您的 Logo 链接 */}
           <div className="space-y-6">
             <div className="flex items-center gap-3">
                <div className="w-16 h-16 shrink-0">
@@ -66,7 +65,6 @@ const Footer: React.FC<FooterProps> = ({ onNavigate, lang }) => {
             </div>
           </div>
 
-          {/* Location */}
           <div className="space-y-6">
             <h4 className="text-sm font-bold text-white uppercase tracking-widest border-l-4 border-nm-orange pl-3">{t.addressTitle}</h4>
             <div className="space-y-4">
@@ -89,7 +87,6 @@ const Footer: React.FC<FooterProps> = ({ onNavigate, lang }) => {
             </div>
           </div>
 
-          {/* Contact */}
           <div className="space-y-6">
             <h4 className="text-sm font-bold text-white uppercase tracking-widest border-l-4 border-nm-blue pl-3">{t.contactTitle}</h4>
             <div className="space-y-4">
@@ -119,13 +116,18 @@ const Footer: React.FC<FooterProps> = ({ onNavigate, lang }) => {
             </div>
           </div>
 
-          {/* Hours */}
           <div className="space-y-6">
             <h4 className="text-sm font-bold text-white uppercase tracking-widest border-l-4 border-white pl-3">{t.hoursTitle}</h4>
             <div className="space-y-3 text-sm text-gray-400">
-              <div className="flex items-center gap-6 border-b border-gray-800 pb-2">
-                <span className="flex items-center gap-2 font-bold min-w-[80px]"><Clock size={14} className="text-nm-orange"/> {t.daily}</span>
-                <span className="text-white font-bold">12:00 - 23:00</span>
+              <div className="flex flex-col gap-1 border-b border-gray-800 pb-2">
+                <div className="flex items-center gap-2 font-bold"><Clock size={14} className="text-nm-orange"/> {t.daily}</div>
+                <div className="text-white font-bold ml-6">
+                  11:30 - 15:00<br/>
+                  17:00 - 21:30
+                </div>
+              </div>
+              <div className="flex items-center gap-2 text-nm-orange font-bold text-xs uppercase">
+                <X size={14} /> {t.tuesdayClosed}
               </div>
               <p className="text-xs text-gray-500 mt-2 italic">{t.kitchenClose}</p>
             </div>
@@ -133,7 +135,6 @@ const Footer: React.FC<FooterProps> = ({ onNavigate, lang }) => {
 
         </div>
 
-        {/* Bottom Bar */}
         <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-gray-600 gap-4">
           <p>&copy; {new Date().getFullYear()} Eintopf Gastro Management GmbH. {t.rights}</p>
           <div className="flex gap-6">

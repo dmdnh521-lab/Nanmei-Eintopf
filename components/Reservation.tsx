@@ -1,3 +1,4 @@
+
 import React from 'react';
 
 const Reservation: React.FC = () => {
@@ -20,7 +21,14 @@ const Reservation: React.FC = () => {
                     <span className="font-serif text-2xl">Jetzt anfragen!</span>
                 </p>
                 <div className="space-y-3 text-sm font-bold bg-white/10 p-4 rounded-xl backdrop-blur-sm">
-                    <p className="flex justify-between"><span>Mo - So</span> <span>12:00 - 23:00</span></p>
+                    <div className="flex flex-col gap-1">
+                      <span className="text-white/70">Mo, Mi - So:</span>
+                      <div className="flex flex-col">
+                        <span>11:30 - 15:00</span>
+                        <span>17:00 - 21:30</span>
+                      </div>
+                    </div>
+                    <p className="text-[10px] text-white/70 uppercase tracking-widest text-right mt-2">Dienstag Ruhetag</p>
                 </div>
              </div>
              <div className="relative z-10 mt-10 pt-8 border-t border-white/20">
@@ -51,6 +59,10 @@ const Reservation: React.FC = () => {
                 <div>
                     <label className="block text-xs uppercase tracking-widest text-gray-500 mb-2 font-bold">Zeit</label>
                     <select className="w-full bg-nm-light border border-gray-200 rounded-lg px-4 py-3 focus:outline-none focus:border-nm-orange focus:ring-1 focus:ring-nm-orange transition-all text-nm-dark font-bold">
+                    <option>11:30</option>
+                    <option>12:00</option>
+                    <option>13:00</option>
+                    <option>14:00</option>
                     <option>17:00</option>
                     <option>18:00</option>
                     <option>19:00</option>
