@@ -1,5 +1,7 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { Info, LayoutGrid, LayoutList } from 'lucide-react';
+
+// Added missing React hooks and icon imports
+import React, { useState, useRef, useEffect } from 'react';
+import { LayoutList, LayoutGrid, Info } from 'lucide-react';
 import { Language } from '../types';
 import { translations } from '../translations';
 
@@ -16,7 +18,7 @@ interface Dish {
   desc?: string; // German Description
   descEn?: string; // English Description
   image?: string; 
-  spicy?: boolean;
+  spicy?: number; // 0-3 chilis
   rec?: boolean; 
 }
 
@@ -32,7 +34,6 @@ const FullMenu: React.FC<FullMenuProps> = ({ lang }) => {
   const [viewMode, setViewMode] = useState<'list' | 'card'>('list');
   const navContainerRef = useRef<HTMLDivElement>(null);
   
-  // Defensive fallback
   const currentLang = translations[lang] ? lang : 'de';
   const t = translations[currentLang]?.fullmenu;
 
@@ -47,12 +48,12 @@ const FullMenu: React.FC<FullMenuProps> = ({ lang }) => {
       titleKey: 'D',
       iconColor: 'bg-amber-500',
       items: [
-        { code: "D1", name: "Gemischter Fleischtopf mit Garnelen", nameEn: "Mixed Meat Pot with Shrimp", nameCn: "荤什锦", price: "€22.80", desc: "Schweinebällchen, Garnelen, Frühstücksfleisch, Tofu, Gemüse.", descEn: "Pork meatballs, shrimp, luncheon meat, tofu, vegetables.", image: "https://i.postimg.cc/1RJChGzj/d1.png?q=80&w=800&auto=format&fit=crop" },
-        { code: "D2", name: "Vegetarischer Eintopf", nameEn: "Vegetarian Pot", nameCn: "素三鲜", price: "€15.80", desc: "Glasnudeln, Tofu, Tomaten, Pilze.", descEn: "Glass noodles, tofu, tomatoes, mushrooms.", image: "https://i.postimg.cc/7Y5NFjdT/d2.png?q=80&w=800&auto=format&fit=crop" },
-        { code: "D3", name: "Eintopf mit Hühnerfleisch & Schweinemagen", nameEn: "Chicken & Pork Stomach Pot", nameCn: "猪肚鸡", price: "€18.80", desc: "Kräftige Brühe mit Pfeffer-Note.", descEn: "Rich broth with a hint of pepper.", image: "https://i.postimg.cc/ZnTtyyVC/d3.png?q=80&w=800&auto=format&fit=crop" },
-        { code: "D4", name: "Rindfleischstreifen in Tomaten-Eintopf", nameEn: "Beef Strips in Tomato Pot", nameCn: "番茄炖牛柳", price: "€18.80", desc: "Zartes Rindfleisch in fruchtiger Tomatenbrühe.", descEn: "Tender beef in fruity tomato broth.", image: "https://i.postimg.cc/yYLKk386/d4.jpg?q=80&w=800&auto=format&fit=crop" },
-        { code: "D5", name: "Schweinefuß-Suppe nach Hausrezept", nameEn: "House Special Pork Trotter Soup", nameCn: "老妈蹄花汤", price: "€17.80", desc: "Reichhaltige Kollagen-Suppe mit weißen Bohnen.", descEn: "Rich collagen soup with white beans.", image: "https://i.postimg.cc/sfHLGkhD/d5.jpg?q=80&w=800&auto=format&fit=crop" },
-        { code: "D6", name: "Zartes Tofu mit Eigelbsauce", nameEn: "Silken Tofu in Egg Yolk Sauce", nameCn: "蟹黄晕豆花", price: "€15.80", desc: "Zarter Tofu in sämiger Sauce.", descEn: "Tender tofu in creamy sauce.", image: "https://i.postimg.cc/d3tDdDtL/d6.jpg?q=80&w=800&auto=format&fit=crop" },
+        { code: "D1", name: "Gemischter Eintopf mit Garnelen", nameEn: "Mixed Meat Eintopf with Shrimp", nameCn: "荤什锦", price: "€22.80", desc: "Schweinebällchen, Garnelen, Frühstücksfleisch, Tofu, Gemüse.", descEn: "Pork meatballs, shrimp, luncheon meat, tofu, vegetables.", image: "https://i.postimg.cc/1RJChGzj/d1.png?q=80&w=800&auto=format&fit=crop", spicy: 0 },
+        { code: "D2", name: "Vegetarischer Eintopf", nameEn: "Vegetarian Eintopf", nameCn: "素三鲜", price: "€15.80", desc: "Glasnudeln, Tofu, Tomaten, Pilze.", descEn: "Glass noodles, tofu, tomatoes, mushrooms.", image: "https://i.postimg.cc/7Y5NFjdT/d2.png?q=80&w=800&auto=format&fit=crop", spicy: 0 },
+        { code: "D3", name: "Eintopf mit Hühnerfleisch & Schweinemagen", nameEn: "Chicken & Pork Stomach Eintopf", nameCn: "猪肚鸡", price: "€18.80", desc: "Kräftige Brühe mit Pfeffer-Note.", descEn: "Rich broth with a hint of pepper.", image: "https://i.postimg.cc/ZnTtyyVC/d3.png?q=80&w=800&auto=format&fit=crop", spicy: 0 },
+        { code: "D4", name: "Rindfleischstreifen in Tomaten-Eintopf", nameEn: "Beef Strips in Tomato Eintopf", nameCn: "番茄炖牛柳", price: "€18.80", desc: "Zartes Rindfleisch in fruchtiger Tomatenbrühe.", descEn: "Tender beef in fruity tomato broth.", image: "https://i.postimg.cc/yYLKk386/d4.jpg?q=80&w=800&auto=format&fit=crop", spicy: 0 },
+        { code: "D5", name: "Schweinefuß-Suppe nach Hausrezept", nameEn: "House Special Pork Trotter Soup", nameCn: "老妈蹄花汤", price: "€17.80", desc: "Reichhaltige Kollagen-Suppe mit weißen Bohnen.", descEn: "Rich collagen soup with white beans.", image: "https://i.postimg.cc/Z57xQJ8j/d5.jpg?q=80&w=800&auto=format&fit=crop", spicy: 0 },
+        { code: "D6", name: "Zartes Tofu mit Eigelbsauce", nameEn: "Silken Tofu in Egg Yolk Sauce", nameCn: "蟹黄晕豆花", price: "€15.80", desc: "Zarter Tofu in sämiger Sauce.", descEn: "Tender tofu in creamy sauce.", image: "https://i.postimg.cc/d3tDdDtL/d6.jpg?q=80&w=800&auto=format&fit=crop", spicy: 0 },
       ]
     },
     {
@@ -60,11 +61,11 @@ const FullMenu: React.FC<FullMenuProps> = ({ lang }) => {
       titleKey: 'C',
       iconColor: 'bg-red-600',
       items: [
-        { code: "C1", name: "Rindfleisch in scharfem Eintopf", nameEn: "Spicy Boiled Beef", nameCn: "水煮牛肉", price: "€20.80", desc: "Sichuan-Klassiker. Zartes Rindfleisch in Chiliöl.", descEn: "Sichuan classic. Tender beef in chili oil.", image: "https://i.postimg.cc/pTBppKx2/c1.jpg?q=80&w=800&auto=format&fit=crop", spicy: true },
-        { code: "C2", name: "Entenblut mit eingelegtem Chili im Eintopf", nameEn: "Duck Blood with Pickled Peppers", nameCn: "泡椒鸭血", price: "€14.80", desc: "Scharf und säuerlich.", descEn: "Spicy and sour.", image: "https://i.postimg.cc/RhtZfcXQ/c2.jpg?q=80&w=800&auto=format&fit=crop", spicy: true },
-        { code: "C3", name: "Zickzack-Fisch nach Zigong-Art", nameEn: "Zigong Style Jumping Fish", nameCn: "自贡跳水鱼", price: "€24.80", desc: "Fischfilet mit viel frischem Chili und Ingwer.", descEn: "Fish fillet with plenty of fresh chili and ginger.", image: "https://i.postimg.cc/kGXD8DX3/c3.jpg?q=80&w=800&auto=format&fit=crop", spicy: true, rec: true },
-        { code: "C4", name: "Kaninchen mit frischen Chilischoten", nameEn: "Fresh Pepper Rabbit", nameCn: "自贡鲜椒兔", price: "€22.80", desc: "Zigong-Spezialität. Würziges Kaninchenfleisch.", descEn: "Zigong specialty. Spicy rabbit meat.", image: "https://i.postimg.cc/RFTNNw99/c4.jpg?q=80&w=800&auto=format&fit=crop", spicy: true },
-        { code: "C5", name: "Lammrippchen mit Salz und Pfeffer", nameEn: "Salt & Pepper Lamb Chops", nameCn: "椒盐羊排", price: "€28.80", desc: "Knusprig frittiert und gewürzt.", descEn: "Crispy fried and seasoned.", image: "https://i.postimg.cc/L82636sD/c5.jpg?q=80&w=800&auto=format&fit=crop" }
+        { code: "C1", name: "Rindfleisch in scharfem Eintopf", nameEn: "Spicy Boiled Beef", nameCn: "水煮牛肉", price: "€20.80", desc: "Sichuan-Klassiker. Zartes Rindfleisch in Chiliöl.", descEn: "Sichuan classic. Tender beef in chili oil.", image: "https://i.postimg.cc/pTBppKx2/c1.jpg?q=80&w=800&auto=format&fit=crop", spicy: 3 },
+        { code: "C2", name: "Entenblut mit eingelegtem Chili im Eintopf", nameEn: "Duck Blood with Pickled Peppers", nameCn: "泡椒鸭血", price: "€14.80", desc: "Scharf und säuerlich.", descEn: "Spicy and sour.", image: "https://i.postimg.cc/RhtZfcXQ/c2.jpg?q=80&w=800&auto=format&fit=crop", spicy: 1 },
+        { code: "C3", name: "Zickzack-Fisch nach Zigong-Art", nameEn: "Zigong Style Jumping Fish", nameCn: "自贡跳水鱼", price: "€24.80", desc: "Fischfilet mit viel frischem Chili und Ingwer.", descEn: "Fish fillet with plenty of fresh chili and ginger.", image: "https://i.postimg.cc/kGXD8DX3/c3.jpg?q=80&w=800&auto=format&fit=crop", spicy: 2, rec: true },
+        { code: "C4", name: "Kaninchen mit frischen Chilischoten", nameEn: "Fresh Pepper Rabbit", nameCn: "自贡鲜椒兔", price: "€22.80", desc: "Zigong-Spezialität. Würziges Kaninchenfleisch.", descEn: "Zigong specialty. Spicy rabbit meat.", image: "https://i.postimg.cc/RFTNNw99/c4.jpg?q=80&w=800&auto=format&fit=crop", spicy: 2 },
+        { code: "C5", name: "Lammrippchen mit Salz und Pfeffer", nameEn: "Salt & Pepper Lamb Chops", nameCn: "椒盐羊排", price: "€28.80", desc: "Knusprig frittiert und gewürzt.", descEn: "Crispy fried and seasoned.", image: "https://i.postimg.cc/L82636sD/c5.jpg?q=80&w=800&auto=format&fit=crop", spicy: 1 }
       ]
     },
     {
@@ -72,14 +73,14 @@ const FullMenu: React.FC<FullMenuProps> = ({ lang }) => {
       titleKey: 'B',
       iconColor: 'bg-nm-orange',
       items: [
-        { code: "B1", name: "Garnelen mit Glasnudeln in Knoblauchsauce", nameEn: "Shrimp with Garlic & Glass Noodles", nameCn: "蒜蓉粉丝虾仁", price: "€22.80", image: "https://i.postimg.cc/50m668JT/b1.jpg?q=80&w=800&auto=format&fit=crop" },
-        { code: "B2", name: "Geschmortes Rindfleisch in Sojasauce", nameEn: "Braised Beef Brisket", nameCn: "红烧牛腩", price: "€18.80", image: "https://i.postimg.cc/ryS4qbdY/b2.jpg?q=80&w=800&auto=format&fit=crop" },
-        { code: "B3", name: "Fischfilet in Sichuan-Pfeffer-Chili-Sauce", nameEn: "Sichuan Pepper Fish Filet", nameCn: "川香椒麻鱼", price: "€28.80", spicy: true, image: "https://i.postimg.cc/85bjjLG3/b3.jpg?q=80&w=800&auto=format&fit=crop" },
-        { code: "B4", name: "Hausgemachte Schweinefleischbällchen Suppe", nameEn: "Handmade Pork Meatball Soup", nameCn: "手工鲜肉丸子", price: "€17.80", image: "https://i.postimg.cc/xTNd3pHq/b4.jpg?q=80&w=800&auto=format&fit=crop" },
-        { code: "B5", name: "Hähncheneintopf nach Nann-Stil", nameEn: "Nanmei Chicken Pot", nameCn: "喃味鸡煲", price: "€17.80", image: "https://i.postimg.cc/Jz3vVQmw/b5.jpg?q=80&w=800&auto=format&fit=crop", rec: true },
-        { code: "B6", name: "Mapo-Tofu mit Hackfleisch und Chiliöl", nameEn: "Mapo Tofu", nameCn: "麻婆豆腐", price: "€14.80", spicy: true, image: "https://i.postimg.cc/C1QgywSg/b6.jpg?q=80&w=800&auto=format&fit=crop" },
-        { code: "B7", name: "Schweinefleisch in Sauerkraut-Brühe", nameEn: "Sliced Pork in Sauerkraut Soup", nameCn: "酸菜滑肉汤", price: "€16.80", image: "https://i.postimg.cc/GpQJKmY9/b7.jpg?q=80&w=800&auto=format&fit=crop" },
-        { code: "B8", name: "Scharfer Sichuan-Eintopf (Mao Xue Wang)", nameEn: "Spicy Blood Curd Hotpot (Mao Xue Wang)", nameCn: "砂锅毛血旺", desc: "Mit Entenblut, Innereien und Gemüse.", descEn: "With duck blood, tripe and vegetables.", price: "€22.80", spicy: true, image: "https://i.postimg.cc/HskkFPbW/b8.jpg?q=80&w=800&auto=format&fit=crop" }
+        { code: "B1", name: "Garnelen mit Glasnudeln in Knoblauchsauce", nameEn: "Shrimp with Garlic & Glass Noodles", nameCn: "蒜蓉粉丝虾仁", price: "€22.80", image: "https://i.postimg.cc/50m668JT/b1.jpg?q=80&w=800&auto=format&fit=crop", spicy: 0 },
+        { code: "B2", name: "Geschmortes Rindfleisch in Sojasauce", nameEn: "Braised Beef Brisket", nameCn: "红烧牛腩", price: "€18.80", image: "https://i.postimg.cc/ryS4qbdY/b2.jpg?q=80&w=800&auto=format&fit=crop", spicy: 1 },
+        { code: "B3", name: "Fischfilet in Sichuan-Pfeffer-Chili-Sauce", nameEn: "Sichuan Pepper Fish Filet", nameCn: "川香椒麻鱼", price: "€28.80", spicy: 3, image: "https://i.postimg.cc/85bjjLG3/b3.jpg?q=80&w=800&auto=format&fit=crop" },
+        { code: "B4", name: "Hausgemachte Schweinefleischbällchen Suppe", nameEn: "Handmade Pork Meatball Soup", nameCn: "手工鲜肉丸子", price: "€17.80", image: "https://i.postimg.cc/tCRPGL4T/b4.jpg?q=80&w=800&auto=format&fit=crop", spicy: 0 },
+        { code: "B5", name: "Hähncheneintopf nach Nann-Stil", nameEn: "Nanmei Chicken Pot", nameCn: "喃味鸡煲", price: "€17.80", image: "https://i.postimg.cc/Jz3vVQmw/b5.jpg?q=80&w=800&auto=format&fit=crop", rec: true, spicy: 2 },
+        { code: "B6", name: "Mapo-Tofu mit Hackfleisch und Chiliöl", nameEn: "Mapo Tofu", nameCn: "麻婆豆腐", price: "€14.80", spicy: 1, image: "https://i.postimg.cc/C1QgywSg/b6.jpg?q=80&w=800&auto=format&fit=crop" },
+        { code: "B7", name: "Schweinefleisch in Sauerkraut-Brühe", nameEn: "Sliced Pork in Sauerkraut Soup", nameCn: "酸菜滑肉汤", price: "€16.80", image: "https://i.postimg.cc/GpQJKmY9/b7.jpg?q=80&w=800&auto=format&fit=crop", spicy: 0 },
+        { code: "B8", name: "Scharfer Sichuan-Eintopf (Mao Xue Wang)", nameEn: "Spicy Blood Curd Hotpot (Mao Xue Wang)", nameCn: "砂锅毛血旺", desc: "Mit Entenblut, Innereien und Gemüse.", descEn: "With duck blood, tripe and vegetables.", price: "€22.80", spicy: 3, image: "https://i.postimg.cc/HskkFPbW/b8.jpg?q=80&w=800&auto=format&fit=crop" }
       ]
     },
     {
@@ -87,16 +88,16 @@ const FullMenu: React.FC<FullMenuProps> = ({ lang }) => {
       titleKey: 'A',
       iconColor: 'bg-green-600',
       items: [
-        { code: "A1", name: "Hausgemachter kalter Vorspeisenteller", nameEn: "Homemade Cold Appetizers", nameCn: "风味小拌菜", price: "€6.80", image: "https://i.postimg.cc/Twcppnxs/a1.jpg?q=80&w=800&auto=format&fit=crop" },
-        { code: "A2", name: "Gurkensalat mit Knoblauch", nameEn: "Smashed Cucumbers with Garlic", nameCn: "拍黄瓜", price: "€6.80", image: "https://i.postimg.cc/kX6xrgxV/a2.jpg?q=80&w=800&auto=format&fit=crop" },
-        { code: "A3", name: "Kalt serviertes Hähnchen mit Frühlingszwiebeln", nameEn: "Scallion & Pepper Chicken", nameCn: "喃味葱椒鸡", price: "€8.80", spicy: true, image: "https://i.postimg.cc/k4yBBWCL/a3.jpg?q=80&w=800&auto=format&fit=crop" },
-        { code: "A4", name: "Schweineohr in Chiliöl", nameEn: "Pork Ear in Chili Oil", nameCn: "红油耳片", price: "€9.80", spicy: true, image: "https://i.postimg.cc/bJ948w8W/a4.png?q=80&w=800&auto=format&fit=crop" },
-        { code: "A5", name: "Kalte Nudeln mit Hähnchenstreifen", nameEn: "Cold Noodles with Chicken", nameCn: "鸡丝凉面", price: "€12.80", image: "https://i.postimg.cc/SsWvdqRd/a5.jpg?q=80&w=800&auto=format&fit=crop" },
-        { code: "A6", name: "Rindfleisch und Pansen in scharfer Sauce", nameEn: "Sliced Beef & Tripe (Fu Qi Fei Pian)", nameCn: "夫妻肺片", price: "€10.80", spicy: true, image: "https://i.postimg.cc/4yQgy1Gf/a6.png?q=80&w=800&auto=format&fit=crop" },
-        { code: "A7", name: "Kaltes Rindfleisch mit Koriander", nameEn: "Cold Beef with Coriander", nameCn: "香菜拌牛肉", price: "€9.80", image: "https://i.postimg.cc/DZyP31T8/a7.jpg?q=80&w=800&auto=format&fit=crop" },
-        { code: "A8", name: "Scharfe Rindermagenstreifen", nameEn: "Spicy Shredded Tripe", nameCn: "麻辣肚丝", price: "€9.80", spicy: true, image: "https://i.postimg.cc/rm9KK5Tg/a8.jpg?q=80&w=800&auto=format&fit=crop" },
-        { code: "A9", name: "Tofustreifen mit Sesamöl", nameEn: "Tofu Strips with Sesame Oil", nameCn: "香油豆腐丝", price: "€7.80", image: "https://i.postimg.cc/wMyZXC3k/a9.jpg?q=80&w=800&auto=format&fit=crop" },
-        { code: "A10", name: "Kaltes eingelegtes Rindfleisch nach Hausrezept", nameEn: "House Special Marinated Beef", nameCn: "草包牛肉", price: "€11.80", rec: true, image: "https://i.postimg.cc/BbryMmK3/a10.jpg?q=80&w=800&auto=format&fit=crop" },
+        { code: "A1", name: "Hausgemachter kalter Vorspeisenteller", nameEn: "Homemade Cold Appetizers", nameCn: "风味小拌菜", price: "€6.80", image: "https://i.postimg.cc/Twcppnxs/a1.jpg?q=80&w=800&auto=format&fit=crop", spicy: 0 },
+        { code: "A2", name: "Gurkensalat mit Knoblauch", nameEn: "Smashed Cucumbers with Garlic", nameCn: "拍黄瓜", price: "€6.80", image: "https://i.postimg.cc/kX6xrgxV/a2.jpg?q=80&w=800&auto=format&fit=crop", spicy: 0 },
+        { code: "A3", name: "Kalt serviertes Hähnchen mit Frühlingszwiebeln und Salz", nameEn: "Scallion & Salt Pepper Chicken", nameCn: "喃味葱椒盐鸡", price: "€8.80", spicy: 0, image: "https://i.postimg.cc/k4yBBWCL/a3.jpg?q=80&w=800&auto=format&fit=crop" },
+        { code: "A4", name: "Schweineohr in Chiliöl", nameEn: "Pork Ear in Chili Oil", nameCn: "红油耳片", price: "€9.80", spicy: 2, image: "https://i.postimg.cc/bJ948w8W/a4.png?q=80&w=800&auto=format&fit=crop" },
+        { code: "A5", name: "Kalte Nudeln mit Hähnchenstreifen", nameEn: "Cold Noodles with Chicken", nameCn: "鸡丝凉面", price: "€12.80", spicy: 2, image: "https://i.postimg.cc/SsWvdqRd/a5.jpg?q=80&w=800&auto=format&fit=crop" },
+        { code: "A6", name: "Rindfleisch und Pansen in scharfer Sauce", nameEn: "Sliced Beef & Tripe (Fu Qi Fei Pian)", nameCn: "夫妻肺片", price: "€10.80", spicy: 2, image: "https://i.postimg.cc/4yQgy1Gf/a6.png?q=80&w=800&auto=format&fit=crop" },
+        { code: "A7", name: "Kaltes Rindfleisch mit Koriander", nameEn: "Cold Beef with Coriander", nameCn: "香菜拌牛肉", price: "€9.80", spicy: 2, image: "https://i.postimg.cc/DZyP31T8/a7.jpg?q=80&w=800&auto=format&fit=crop" },
+        { code: "A8", name: "Scharfe Rindermagenstreifen", nameEn: "Spicy Shredded Tripe", nameCn: "麻辣肚丝", price: "€9.80", spicy: 2, image: "https://i.postimg.cc/rm9KK5Tg/a8.jpg?q=80&w=800&auto=format&fit=crop" },
+        { code: "A9", name: "Tofustreifen mit Sesamöl", nameEn: "Tofu Strips with Sesame Oil", nameCn: "香油豆腐丝", price: "€7.80", spicy: 0, image: "https://i.postimg.cc/wMyZXC3k/a9.jpg?q=80&w=800&auto=format&fit=crop" },
+        { code: "A10", name: "Kaltes eingelegtes Rindfleisch nach Hausrezept", nameEn: "House Special Marinated Beef", nameCn: "草包牛肉", price: "€11.80", rec: true, spicy: 3, image: "https://i.postimg.cc/BbryMmK3/a10.jpg?q=80&w=800&auto=format&fit=crop" },
       ]
     },
     {
@@ -104,19 +105,19 @@ const FullMenu: React.FC<FullMenuProps> = ({ lang }) => {
       titleKey: 'E',
       iconColor: 'bg-red-500',
       items: [
-        { code: "E1", name: "Doppelgekochtes Schweinefleisch", nameEn: "Double Cooked Pork", nameCn: "回锅肉", price: "€15.80", image: "https://i.postimg.cc/mk2hMh2R/e1.jpg?q=80&w=800&auto=format&fit=crop", spicy: true },
-        { code: "E2", name: "Grüne Bohnen mit Hackfleisch", nameEn: "Minced Meat with Green Beans", nameCn: "肉末豇豆", price: "€14.80", image: "https://i.postimg.cc/26XgBkj6/e2.jpg?q=80&w=800&auto=format&fit=crop" },
-        { code: "E3", name: "Gebratener Kohl auf Hausart", nameEn: "Hand-Torn Cabbage", nameCn: "手撕包菜", price: "€13.80", image: "https://i.postimg.cc/brRGyB9D/e3.jpg?q=80&w=800&auto=format&fit=crop" },
-        { code: "E4", name: "Scharf-saure Kartoffelstreifen", nameEn: "Sour & Spicy Potato Strips", nameCn: "酸辣土豆丝", price: "€12.80", image: "https://i.postimg.cc/HxLfxcmG/e4.jpg?q=80&w=800&auto=format&fit=crop", spicy: true },
-        { code: "E5", name: "Rindmagen nach Sichuan Art", nameEn: "Beef Tripe Sichuan Style", nameCn: "火爆毛肚", price: "€20.80", image: "https://i.postimg.cc/90FzTzFc/e5.jpg?q=80&w=800&auto=format&fit=crop", spicy: true },
-        { code: "E5", name: "Knusprige Schweineaorta nach Sichuan-Art", nameEn: "Spicy Crispy Pork Aorta", nameCn: "火爆黄喉", price: "€22.80", image: "https://i.postimg.cc/63zwc07v/e51.jpg?q=80&w=800&auto=format&fit=crop", spicy: true },
-        { code: "E6", name: "Rindfleisch mit Frühlingszwiebeln", nameEn: "Scallion Beef", nameCn: "葱爆牛肉", price: "€18.80", image: "https://i.postimg.cc/FH55ZHyR/e6.jpg?q=80&w=800&auto=format&fit=crop" },
-        { code: "E7", name: "Gebratene Schweine-Sehnen mit zweierlei Chili", nameEn: "Pork Tendon with Double Peppers", nameCn: "双椒猪蹄筋", price: "€16.00", image: "https://i.postimg.cc/tTdGTzdW/e7.png?q=80&w=800&auto=format&fit=crop", spicy: true },
-        { code: "E8", name: "Entendärme in würziger Sauce", nameEn: "Spicy Duck Intestines", nameCn: "爽口鸭肠", price: "€18.80", image: "https://i.postimg.cc/x1vrFV5s/e8.jpg?q=80&w=800&auto=format&fit=crop", spicy: true },
-        { code: "E9", name: "Zerpflücktes Schweinefleisch in würziger Sauce", nameEn: "Hand-shredded Pork Chops", nameCn: "手撕大排", price: "€18.80", image: "https://i.postimg.cc/6pcpYn87/e9.png?q=80&w=800&auto=format&fit=crop" },
-        { code: "E10", name: "Gebratener Luffa-Kürbis mit Knoblauch", nameEn: "Stir-fried Luffa with Garlic", nameCn: "白油丝瓜", price: "€14.80", image: "https://i.postimg.cc/gjxFMwt2/e10.jpg?q=80&w=800&auto=format&fit=crop" },
-        { code: "E11", name: "Gebratene grüne Bohnen und Auberginenstreifen", nameEn: "Green Beans & Eggplant", nameCn: "豆角茄条", price: "€14.80", image: "https://i.postimg.cc/0Q7gwg3R/e11.jpg?q=80&w=800&auto=format&fit=crop" },
-        { code: "E12", name: "Gebratenes Saisongemüse", nameEn: "Stir-fried Seasonal Vegetables", nameCn: "炒时蔬", price: "", image: "https://i.postimg.cc/hvPhxhPJ/e12.jpg?q=80&w=800&auto=format&fit=crop" },
+        { code: "E1", name: "Doppelgekochtes Schweinefleisch", nameEn: "Double Cooked Pork", nameCn: "回锅肉", price: "€15.80", image: "https://i.postimg.cc/mk2hMh2R/e1.jpg?q=80&w=800&auto=format&fit=crop", spicy: 0 },
+        { code: "E2", name: "Grüne Bohnen mit Hackfleisch", nameEn: "Minced Meat with Green Beans", nameCn: "肉末豇豆", price: "€14.80", image: "https://i.postimg.cc/26XgBkj6/e2.jpg?q=80&w=800&auto=format&fit=crop", spicy: 0 },
+        { code: "E3", name: "Gebratener Kohl auf Hausart", nameEn: "Hand-Torn Cabbage", nameCn: "手撕包菜", price: "€13.80", image: "https://i.postimg.cc/brRGyB9D/e3.jpg?q=80&w=800&auto=format&fit=crop", spicy: 0 },
+        { code: "E4", name: "Scharf-saure Kartoffelstreifen", nameEn: "Sour & Spicy Potato Strips", nameCn: "酸辣土豆丝", price: "€12.80", image: "https://i.postimg.cc/HxLfxcmG/e4.jpg?q=80&w=800&auto=format&fit=crop", spicy: 1 },
+        { code: "E5", name: "Rindmagen nach Sichuan Art", nameEn: "Beef Tripe Sichuan Style", nameCn: "火爆毛肚", price: "€20.80", image: "https://i.postimg.cc/90FzTzFc/e5.jpg?q=80&w=800&auto=format&fit=crop", spicy: 2 },
+        { code: "E5", name: "Knusprige Schweineaorta nach Sichuan-Art", nameEn: "Spicy Crispy Pork Aorta", nameCn: "火爆黄喉", price: "€22.80", image: "https://i.postimg.cc/63zwc07v/e51.jpg?q=80&w=800&auto=format&fit=crop", spicy: 0 },
+        { code: "E6", name: "Rindfleisch mit Frühlingszwiebeln", nameEn: "Scallion Beef", nameCn: "葱爆牛肉", price: "€18.80", image: "https://i.postimg.cc/FH55ZHyR/e6.jpg?q=80&w=800&auto=format&fit=crop", spicy: 0 },
+        { code: "E7", name: "Gebratene Schweine-Sehnen mit zweierlei Chili", nameEn: "Pork Tendon with Double Peppers", nameCn: "双椒猪蹄筋", price: "€16.00", image: "https://i.postimg.cc/tTdGTzdW/e7.png?q=80&w=800&auto=format&fit=crop", spicy: 2 },
+        { code: "E8", name: "Entendärme in würziger Sauce", nameEn: "Spicy Duck Intestines", nameCn: "爽口鸭肠", price: "€18.80", image: "https://i.postimg.cc/x1vrFV5s/e8.jpg?q=80&w=800&auto=format&fit=crop", spicy: 0 },
+        { code: "E9", name: "Zerpflücktes Schweinefleisch in würziger Sauce", nameEn: "Hand-shredded Pork Chops", nameCn: "手撕大排", price: "€18.80", image: "https://i.postimg.cc/6pcpYn87/e9.png?q=80&w=800&auto=format&fit=crop", spicy: 1 },
+        { code: "E10", name: "Gebratener Luffa-Kürbis mit Knoblauch", nameEn: "Stir-fried Luffa with Garlic", nameCn: "白油丝瓜", price: "€14.80", image: "https://i.postimg.cc/gjxFMwt2/e10.jpg?q=80&w=800&auto=format&fit=crop", spicy: 0 },
+        { code: "E11", name: "Gebratene grüne Bohnen und Auberginenstreifen", nameEn: "Green Beans & Eggplant", nameCn: "豆角茄条", price: "€14.80", image: "https://i.postimg.cc/0Q7gwg3R/e11.jpg?q=80&w=800&auto=format&fit=crop", spicy: 0 },
+        { code: "E12", name: "Gebratenes Saisongemüse", nameEn: "Stir-fried Seasonal Vegetables", nameCn: "炒时蔬", price: "", image: "https://i.postimg.cc/hvPhxhPJ/e12.jpg?q=80&w=800&auto=format&fit=crop", spicy: 0 },
       ]
     },
     {
@@ -124,11 +125,11 @@ const FullMenu: React.FC<FullMenuProps> = ({ lang }) => {
       titleKey: 'S',
       iconColor: 'bg-yellow-500',
       items: [
-        { code: "S1", name: "Frisch frittiertes knuspriges Schweinefleisch", nameEn: "Crispy Fried Pork", nameCn: "现炸农家小酥肉", price: "€7.80", image: "https://i.postimg.cc/BnHs9KSm/s1.jpg?q=80&w=800&auto=format&fit=crop" },
-        { code: "S2", name: "Gebratener Reis mit eingelegtem Gemüse", nameEn: "Fried Rice with Pickled Greens", nameCn: "酸菜炒饭", price: "€12.50", image: "https://i.postimg.cc/XvqRNB3Q/s2.jpg?q=80&w=800&auto=format&fit=crop" },
-        { code: "S3", name: "Gebratener Reis mit Ei (Sichuan-Art)", nameEn: "Sichuan Egg Fried Rice", nameCn: "四川蛋炒饭", price: "€10.80", image: "https://i.postimg.cc/GmB0YRJH/s3.png?q=80&w=800&auto=format&fit=crop" },
-        { code: "S4", name: "Reis (pro Portion)", nameEn: "Rice (per portion)", nameCn: "米饭", price: "€1.00", image: "https://i.postimg.cc/XvKVFyt7/s4.jpg?q=80&w=800&auto=format&fit=crop" },
-        { code: "S5", name: "Süßes Gelee-Dessert mit Eis und Sirup (Bingfen)", nameEn: "Ice Jelly (Bingfen)", nameCn: "冰粉", price: "€3.80", image: "https://i.postimg.cc/LsF9nVQ9/s5.jpg?q=80&w=800&auto=format&fit=crop" },
+        { code: "S1", name: "Frisch frittiertes knuspriges Schweinefleisch", nameEn: "Crispy Fried Pork", nameCn: "现炸农家小酥肉", price: "€7.80", image: "https://i.postimg.cc/BnHs9KSm/s1.jpg?q=80&w=800&auto=format&fit=crop", spicy: 1 },
+        { code: "S2", name: "Gebratener Reis mit eingelegtem Gemüse", nameEn: "Fried Rice with Pickled Greens", nameCn: "酸菜炒饭", price: "€12.50", image: "https://i.postimg.cc/XvqRNB3Q/s2.jpg?q=80&w=800&auto=format&fit=crop", spicy: 0 },
+        { code: "S3", name: "Gebratener Reis mit Ei (Sichuan-Art)", nameEn: "Sichuan Egg Fried Rice", nameCn: "四川蛋炒饭", price: "€10.80", image: "https://i.postimg.cc/GmB0YRJH/s3.png?q=80&w=800&auto=format&fit=crop", spicy: 0 },
+        { code: "S4", name: "Reis (pro Portion)", nameEn: "Rice (per portion)", nameCn: "米饭", price: "€1.00", image: "https://i.postimg.cc/XvKVFyt7/s4.jpg?q=80&w=800&auto=format&fit=crop", spicy: 0 },
+        { code: "S5", name: "Süßes Gelee-Dessert mit Eis und Sirup (Bingfen)", nameEn: "Ice Jelly (Bingfen)", nameCn: "冰粉", price: "€3.80", image: "https://i.postimg.cc/LsF9nVQ9/s5.jpg?q=80&w=800&auto=format&fit=crop", spicy: 0 },
       ]
     },
     {
@@ -136,19 +137,18 @@ const FullMenu: React.FC<FullMenuProps> = ({ lang }) => {
       titleKey: 'F',
       iconColor: 'bg-yellow-600',
       items: [
-        { code: "F1", name: "Scharfe Chongqing-Nudelsuppe", nameEn: "Chongqing Spicy Noodles", nameCn: "重庆小面", price: "€12.50", image: "https://i.postimg.cc/43GGJxnf/f1.jpg?q=80&w=800&auto=format&fit=crop", spicy: true },
-        { code: "F2", name: "Würzig angemachte Nudeln (ohne Brühe)", nameEn: "Dry Mixed Noodles", nameCn: "干拌面", price: "€12.50", image: "https://i.postimg.cc/vmvtK3pd/f2.jpg?q=80&w=800&auto=format&fit=crop", spicy: true },
-        { code: "F3", name: "Geschmorte Rindfleisch-Nudelsuppe", nameEn: "Braised Beef Noodle Soup", nameCn: "红烧牛肉面", price: "€13.00", image: "https://i.postimg.cc/HnNHH08v/f3.jpg?q=80&w=800&auto=format&fit=crop" },
-        { code: "F4", name: "Klare Rindfleisch-Nudelsuppe", nameEn: "Clear Broth Beef Noodle Soup", nameCn: "清汤牛肉面", price: "€13.00", image: "https://i.postimg.cc/0yDxRwkD/f4.jpg?q=80&w=800&auto=format&fit=crop" },
-        { code: "F6", name: "Reisnudelsuppe mit Huhn und Pilzen (im Tontopf)", nameEn: "Chicken & Mushroom Rice Noodles", nameCn: "砂锅鸡菌菇米线", price: "€13.50", image: "https://i.postimg.cc/TwYXDNVf/f6.jpg?q=80&w=800&auto=format&fit=crop" },
-        { code: "F7", name: "Scharfe Hotpot-Reisnudelsuppe (im Tontopf)", nameEn: "Spicy Hotpot Rice Noodles", nameCn: "砂锅火锅米线", price: "€13.50", image: "https://i.postimg.cc/kXFtpmvM/f7.jpg?q=80&w=800&auto=format&fit=crop", spicy: true },
-        { code: "F8", name: "Reisnudelsuppe mit Rindfleisch in klarer Brühe", nameEn: "Clear Broth Beef Rice Noodles", nameCn: "砂锅清汤牛肉米线", price: "€13.50", image: "https://i.postimg.cc/cH4NnkRN/f8.jpg?q=80&w=800&auto=format&fit=crop" },
-        { code: "F10", name: "Teigtaschen in Brühe (im Tontopf)", nameEn: "Dumplings in Casserole", nameCn: "砂锅水饺", price: "€15.00", image: "https://i.postimg.cc/Bb1Sxq7f/F10.jpg?q=80&w=800&auto=format&fit=crop" },
+        { code: "F1", name: "Scharfe Chongqing-Nudelsuppe", nameEn: "Chongqing Spicy Noodles", nameCn: "重庆小面", price: "€12.50", image: "https://i.postimg.cc/43GGJxnf/f1.jpg?q=80&w=800&auto=format&fit=crop", spicy: 2 },
+        { code: "F2", name: "Würzig angemachte Nudeln (ohne Brühe)", nameEn: "Dry Mixed Noodles", nameCn: "干拌面", price: "€12.50", image: "https://i.postimg.cc/vmvtK3pd/f2.jpg?q=80&w=800&auto=format&fit=crop", spicy: 2 },
+        { code: "F3", name: "Geschmorte Rindfleisch-Nudelsuppe", nameEn: "Braised Beef Noodle Soup", nameCn: "红烧牛肉面", price: "€13.00", image: "https://i.postimg.cc/HnNHH08v/f3.jpg?q=80&w=800&auto=format&fit=crop", spicy: 1 },
+        { code: "F4", name: "Klare Rindfleisch-Nudelsuppe", nameEn: "Clear Broth Beef Noodle Soup", nameCn: "清汤牛肉面", price: "€13.00", image: "https://i.postimg.cc/0yDxRwkD/f4.jpg?q=80&w=800&auto=format&fit=crop", spicy: 0 },
+        { code: "F6", name: "Reisnudelsuppe mit Huhn und Pilzen (im Tontopf)", nameEn: "Chicken & Mushroom Rice Noodles", nameCn: "砂锅鸡菌菇米线", price: "€13.50", image: "https://i.postimg.cc/TwYXDNVf/f6.jpg?q=80&w=800&auto=format&fit=crop", spicy: 0 },
+        { code: "F7", name: "Scharfe Hotpot-Reisnudelsuppe (im Tontopf)", nameEn: "Spicy Hotpot Rice Noodles", nameCn: "砂锅火锅米线", price: "€13.50", image: "https://i.postimg.cc/kXFtpmvM/f7.jpg?q=80&w=800&auto=format&fit=crop", spicy: 2 },
+        { code: "F8", name: "Reisnudelsuppe mit Rindfleisch in klarer Brühe", nameEn: "Clear Broth Beef Rice Noodles", nameCn: "砂锅清汤牛肉米线", price: "€13.50", image: "https://i.postimg.cc/cH4NnkRN/f8.jpg?q=80&w=800&auto=format&fit=crop", spicy: 0 },
+        { code: "F10", name: "Teigtaschen in Brühe (im Tontopf)", nameEn: "Dumplings in Eintopf", nameCn: "砂锅水饺", price: "€15.00", image: "https://i.postimg.cc/Bb1Sxq7f/F10.jpg?q=80&w=800&auto=format&fit=crop", spicy: 0 },
       ]
     }
   ];
 
-  // Safety check to prevent rendering if translations are missing
   if (!t || !t.categories) return null;
 
   useEffect(() => {
@@ -198,7 +198,6 @@ const FullMenu: React.FC<FullMenuProps> = ({ lang }) => {
     <div className="bg-nm-light min-h-screen pb-20 pt-24">
       <div className="container mx-auto px-4 md:px-6 py-6 max-w-6xl">
         
-        {/* Intro */}
         <div className="text-center mb-6 relative">
             <h2 className="text-4xl md:text-6xl font-serif font-black mb-3 text-nm-dark">
               {t.title}
@@ -207,7 +206,6 @@ const FullMenu: React.FC<FullMenuProps> = ({ lang }) => {
             {lang !== 'cn' && t.chineseSubtitle && <p className="text-nm-orange/80 font-serif font-bold mt-1 text-sm">{t.chineseSubtitle}</p>}
         </div>
 
-        {/* STICKY CATEGORY NAV */}
         <div className="sticky top-[72px] md:top-[88px] z-40 bg-nm-light/95 backdrop-blur-md py-3 md:py-4 border-b border-gray-100 mb-8 -mx-4 md:-mx-6 px-4 md:px-6 shadow-sm flex items-center gap-3 md:block">
            
            <div 
@@ -235,7 +233,6 @@ const FullMenu: React.FC<FullMenuProps> = ({ lang }) => {
               ))}
            </div>
 
-           {/* Mobile View Toggle - Fixed at end (right) */}
            <div className="md:hidden shrink-0 flex gap-1 bg-white p-1 rounded-xl border border-gray-200 shadow-sm">
                 <button
                 onClick={() => setViewMode('list')}
@@ -254,7 +251,6 @@ const FullMenu: React.FC<FullMenuProps> = ({ lang }) => {
            </div>
         </div>
 
-        {/* Menu Content */}
         <div className="space-y-12">
           {menuData.map((category) => (
               <div key={category.id} id={`cat-${category.id}`} className="scroll-mt-32">
@@ -281,15 +277,14 @@ const FullMenu: React.FC<FullMenuProps> = ({ lang }) => {
                       } else if (lang === 'cn') {
                           mainName = item.nameCn;
                           subName = item.name;
-                          description = ""; // Optional: add Chinese desc if available
+                          description = ""; 
                       }
 
                       return (
-                      <div key={item.code} className={`group bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-xl hover:border-nm-orange/30 transition-all duration-300 
-                        ${/* Mobile View Mode Logic */
-                          viewMode === 'list' 
-                          ? 'flex flex-row md:flex-col' // Mobile List, Desktop Card
-                          : 'flex flex-col' // Mobile Card, Desktop Card
+                      <div key={`${item.code}-${item.nameCn}`} className={`group bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-xl hover:border-nm-orange/30 transition-all duration-300 
+                        ${viewMode === 'list' 
+                          ? 'flex flex-row md:flex-col' 
+                          : 'flex flex-col' 
                         } 
                         ${item.rec ? 'ring-2 ring-nm-orange/20' : ''}`}>
                         
@@ -307,11 +302,11 @@ const FullMenu: React.FC<FullMenuProps> = ({ lang }) => {
                               loading="lazy"
                               onError={handleImageError}
                             />
-                            {item.spicy && (
-                              <div className="absolute top-1 left-1 md:top-2 md:right-2 md:left-auto bg-red-600 text-white text-[9px] md:text-[10px] font-bold px-2 py-1 rounded-full shadow-sm z-10">
-                                SCHARF 🌶
+                            {item.spicy && item.spicy > 0 ? (
+                              <div className="absolute top-1 left-1 md:top-2 md:right-2 md:left-auto bg-white/90 backdrop-blur-sm border border-gray-100 text-[11px] md:text-[13px] px-1.5 py-0.5 rounded-lg shadow-md z-10 flex items-center tracking-tighter">
+                                {"🌶️".repeat(item.spicy)}
                               </div>
-                            )}
+                            ) : null}
                             {item.rec && (
                               <div className="absolute bottom-1 left-1 md:top-2 md:left-2 md:bottom-auto bg-nm-orange text-white text-[9px] md:text-[10px] font-bold px-2 py-1 rounded-full shadow-sm z-10">
                                 EMPFEHLUNG
@@ -332,11 +327,13 @@ const FullMenu: React.FC<FullMenuProps> = ({ lang }) => {
                           
                           {!item.image && (item.spicy || item.rec) && (
                             <div className="flex gap-2 my-2">
-                                {item.spicy && (
-                                    <span className="bg-red-50 text-red-600 text-[10px] font-bold px-2 py-0.5 rounded border border-red-100">SCHARF 🌶</span>
-                                )}
+                                {item.spicy && item.spicy > 0 ? (
+                                    <span className="bg-white border border-gray-100 shadow-sm text-[12px] px-2 py-0.5 rounded-lg tracking-tighter">
+                                      {"🌶️".repeat(item.spicy)}
+                                    </span>
+                                ) : null}
                                 {item.rec && (
-                                    <span className="bg-orange-50 text-nm-orange text-[10px] font-bold px-2 py-0.5 rounded border border-orange-100">EMPFEHLUNG</span>
+                                    <span className="bg-orange-50 text-nm-orange text-[10px] font-bold px-2 py-0.5 rounded-lg border border-orange-100 uppercase tracking-widest">Empfehlung</span>
                                 )}
                             </div>
                           )}
@@ -376,16 +373,6 @@ const FullMenu: React.FC<FullMenuProps> = ({ lang }) => {
         </div>
 
       </div>
-      
-      <style>{`
-        .scrollbar-hide::-webkit-scrollbar {
-            display: none;
-        }
-        .scrollbar-hide {
-            -ms-overflow-style: none;
-            scrollbar-width: none;
-        }
-      `}</style>
     </div>
   );
 };

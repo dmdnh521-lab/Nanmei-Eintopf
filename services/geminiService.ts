@@ -1,11 +1,6 @@
 
 import { GoogleGenAI, Chat, GenerateContentResponse } from "@google/genai";
 
-// Ensure process.env doesn't throw ReferenceError in browser environments
-if (typeof window !== 'undefined' && typeof (window as any).process === 'undefined') {
-    (window as any).process = { env: {} };
-}
-
 // System instruction to guide the persona
 const SYSTEM_INSTRUCTION = `
 You are "Nanmei" (喃妹), the energetic and friendly virtual host for "Nanmei Eintopf" (喃妹砂锅) in Frankfurt.
@@ -48,7 +43,7 @@ You are tri-lingual:
 At the very end of **EVERY** single response, you **MUST** include the following disclaimer in the appropriate language (separated by a newline):
 
 - **If Chinese**: 
-  *(温馨提示：餐厅后台无法看到此对话留言。如需预定或咨询，请直接通过电话、邮件或上方预定链接联系我们。)*
+  *(温馨提示：餐厅后台无法看到此对话留言。如需预定 or 咨询，请直接通过电话、邮件或上方预定链接联系我们。)*
 - **If German**: 
   *(Hinweis: Das Restaurant kann diesen Chat nicht sehen. Für Reservierungen oder Anfragen kontaktieren Sie uns bitte direkt per Telefon, E-Mail oder über den Reservierungslink.)*
 - **If English**: 
@@ -58,38 +53,18 @@ Keep the main part of your answers concise and fun.
 `;
 
 let chatSession: Chat | null = null;
-let aiClient: GoogleGenAI | null = null;
 
+// Correctly initialize GoogleGenAI as per guidelines
 const getAiClient = (): GoogleGenAI => {
-    if (!aiClient) {
-        let apiKey = "";
-        try {
-            // @ts-ignore
-            apiKey = process.env.API_KEY || "";
-        } catch (e) {
-            console.error("Error accessing API key:", e);
-        }
-        
-        if (!apiKey) {
-            console.warn("Gemini API Key is missing. Chat functionality will be disabled.");
-            throw new Error("API Key is missing");
-        }
-        
-        try {
-            aiClient = new GoogleGenAI({ apiKey });
-        } catch (e) {
-            console.error("Failed to initialize Gemini Client:", e);
-            throw e;
-        }
-    }
-    return aiClient;
+    return new GoogleGenAI({ apiKey: process.env.API_KEY });
 };
 
 export const getChatSession = (): Chat => {
   if (!chatSession) {
-    const client = getAiClient();
-    chatSession = client.chats.create({
-      model: 'gemini-3-flash-preview',
+    const ai = getAiClient();
+    // Using the recommended Gemini 3 Pro model for complex reasoning and personality
+    chatSession = ai.chats.create({
+      model: 'gemini-3-pro-preview',
       config: {
         systemInstruction: SYSTEM_INSTRUCTION,
       },
@@ -104,10 +79,12 @@ export const sendMessageToGemini = async (
 ): Promise<void> => {
   try {
     const chat = getChatSession();
+    // sendMessageStream correctly uses the 'message' parameter
     const responseStream = await chat.sendMessageStream({ message });
     
     for await (const chunk of responseStream) {
       const c = chunk as GenerateContentResponse;
+      // Accessing text as a property, not a method, as per guidelines
       if (c.text) {
         onChunk(c.text);
       }
