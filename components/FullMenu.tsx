@@ -1,5 +1,4 @@
 
-// Added missing React hooks and icon imports
 import React, { useState, useRef, useEffect } from 'react';
 import { LayoutList, LayoutGrid, Info } from 'lucide-react';
 import { Language } from '../types';
@@ -33,6 +32,7 @@ const FullMenu: React.FC<FullMenuProps> = ({ lang }) => {
   const [activeCategory, setActiveCategory] = useState<string>('D');
   const [viewMode, setViewMode] = useState<'list' | 'card'>('list');
   const navContainerRef = useRef<HTMLDivElement>(null);
+  const isManualScrolling = useRef(false);
   
   const currentLang = translations[lang] ? lang : 'de';
   const t = translations[currentLang]?.fullmenu;
@@ -110,7 +110,7 @@ const FullMenu: React.FC<FullMenuProps> = ({ lang }) => {
         { code: "E3", name: "Gebratener Kohl auf Hausart", nameEn: "Hand-Torn Cabbage", nameCn: "手撕包菜", price: "€13.80", image: "https://i.postimg.cc/brRGyB9D/e3.jpg?q=80&w=800&auto=format&fit=crop", spicy: 0 },
         { code: "E4", name: "Scharf-saure Kartoffelstreifen", nameEn: "Sour & Spicy Potato Strips", nameCn: "酸辣土豆丝", price: "€12.80", image: "https://i.postimg.cc/HxLfxcmG/e4.jpg?q=80&w=800&auto=format&fit=crop", spicy: 1 },
         { code: "E5", name: "Rindmagen nach Sichuan Art", nameEn: "Beef Tripe Sichuan Style", nameCn: "火爆毛肚", price: "€20.80", image: "https://i.postimg.cc/90FzTzFc/e5.jpg?q=80&w=800&auto=format&fit=crop", spicy: 2 },
-        { code: "E5", name: "Knusprige Schweineaorta nach Sichuan-Art", nameEn: "Spicy Crispy Pork Aorta", nameCn: "火爆黄喉", price: "€22.80", image: "https://i.postimg.cc/63zwc07v/e51.jpg?q=80&w=800&auto=format&fit=crop", spicy: 0 },
+        { code: "E5.1", name: "Knusprige Schweineaorta nach Sichuan-Art", nameEn: "Spicy Crispy Pork Aorta", nameCn: "火爆黄喉", price: "€22.80", image: "https://i.postimg.cc/63zwc07v/e51.jpg?q=80&w=800&auto=format&fit=crop", spicy: 0 },
         { code: "E6", name: "Rindfleisch mit Frühlingszwiebeln", nameEn: "Scallion Beef", nameCn: "葱爆牛肉", price: "€18.80", image: "https://i.postimg.cc/FH55ZHyR/e6.jpg?q=80&w=800&auto=format&fit=crop", spicy: 0 },
         { code: "E7", name: "Gebratene Schweine-Sehnen mit zweierlei Chili", nameEn: "Pork Tendon with Double Peppers", nameCn: "双椒猪蹄筋", price: "€16.00", image: "https://i.postimg.cc/tTdGTzdW/e7.png?q=80&w=800&auto=format&fit=crop", spicy: 2 },
         { code: "E8", name: "Entendärme in würziger Sauce", nameEn: "Spicy Duck Intestines", nameCn: "爽口鸭肠", price: "€18.80", image: "https://i.postimg.cc/x1vrFV5s/e8.jpg?q=80&w=800&auto=format&fit=crop", spicy: 0 },
@@ -152,35 +152,37 @@ const FullMenu: React.FC<FullMenuProps> = ({ lang }) => {
   if (!t || !t.categories) return null;
 
   useEffect(() => {
-    const handleScroll = () => {
-      let currentId = menuData[0].id;
-      for (const cat of menuData) {
-        const element = document.getElementById(`cat-${cat.id}`);
-        if (element) {
-          const rect = element.getBoundingClientRect();
-          if (rect.top <= 180) {
-            currentId = cat.id;
-          }
-        }
-      }
-      setActiveCategory(currentId);
+    const observerOptions = {
+      root: null,
+      rootMargin: '-150px 0px -70% 0px',
+      threshold: 0
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+    const observerCallback = (entries: IntersectionObserverEntry[]) => {
+      if (isManualScrolling.current) return;
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const categoryId = entry.target.id.replace('cat-', '');
+          setActiveCategory(categoryId);
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(observerCallback, observerOptions);
+    menuData.forEach((cat) => {
+      const el = document.getElementById(`cat-${cat.id}`);
+      if (el) observer.observe(el);
+    });
+    return () => observer.disconnect();
+  }, [menuData]);
 
   useEffect(() => {
     if (navContainerRef.current) {
       const activeBtn = document.getElementById(`nav-btn-${activeCategory}`);
       if (activeBtn) {
         const container = navContainerRef.current;
-        const newScrollLeft = activeBtn.offsetLeft - (container.clientWidth / 2) + (activeBtn.clientWidth / 2);
-        
-        container.scrollTo({
-          left: newScrollLeft,
-          behavior: 'smooth'
-        });
+        const targetScroll = activeBtn.offsetLeft - (container.clientWidth / 2) + (activeBtn.clientWidth / 2);
+        container.scrollTo({ left: targetScroll, behavior: 'smooth' });
       }
     }
   }, [activeCategory]);
@@ -188,14 +190,27 @@ const FullMenu: React.FC<FullMenuProps> = ({ lang }) => {
   const scrollToCategory = (id: string) => {
     const element = document.getElementById(`cat-${id}`);
     if (element) {
+      isManualScrolling.current = true;
+      setActiveCategory(id);
       const y = element.getBoundingClientRect().top + window.scrollY - 140;
       window.scrollTo({ top: y, behavior: 'smooth' });
-      setActiveCategory(id);
+      setTimeout(() => { isManualScrolling.current = false; }, 800);
     }
   };
 
   return (
     <div className="bg-nm-light min-h-screen pb-20 pt-24">
+      {/* 注入专属样式以隐藏滚动条 */}
+      <style>{`
+        .nav-scrollbar-hide::-webkit-scrollbar {
+          display: none !important;
+        }
+        .nav-scrollbar-hide {
+          -ms-overflow-style: none !important;
+          scrollbar-width: none !important;
+        }
+      `}</style>
+
       <div className="container mx-auto px-4 md:px-6 py-6 max-w-6xl">
         
         <div className="text-center mb-6 relative">
@@ -206,18 +221,17 @@ const FullMenu: React.FC<FullMenuProps> = ({ lang }) => {
             {lang !== 'cn' && t.chineseSubtitle && <p className="text-nm-orange/80 font-serif font-bold mt-1 text-sm">{t.chineseSubtitle}</p>}
         </div>
 
-        <div className="sticky top-[72px] md:top-[88px] z-40 bg-nm-light/95 backdrop-blur-md py-3 md:py-4 border-b border-gray-100 mb-8 -mx-4 md:-mx-6 px-4 md:px-6 shadow-sm flex items-center gap-3 md:block">
-           
+        <div className="sticky top-[72px] md:top-[88px] z-40 bg-nm-light/90 backdrop-blur-xl py-3 md:py-4 border-b border-gray-100 mb-8 -mx-4 md:-mx-6 px-4 md:px-6 shadow-sm flex items-center gap-3 md:block">
            <div 
              ref={navContainerRef}
-             className="flex overflow-x-auto gap-3 pb-0 scrollbar-hide snap-x items-center flex-1 md:w-auto min-w-0"
+             className="flex overflow-x-auto gap-3 pb-1 nav-scrollbar-hide snap-x items-center flex-1 md:w-auto min-w-0"
            >
               {menuData.map((cat) => (
                 <button
                   key={cat.id}
                   id={`nav-btn-${cat.id}`}
                   onClick={() => scrollToCategory(cat.id)}
-                  className={`flex flex-col items-center justify-center px-4 py-2 rounded-xl whitespace-nowrap transition-all duration-300 font-bold text-sm snap-start shrink-0 border min-w-[100px] ${
+                  className={`flex flex-col items-center justify-center px-4 py-2 rounded-xl whitespace-nowrap transition-all duration-300 font-bold text-sm snap-center shrink-0 border min-w-[100px] ${
                     activeCategory === cat.id 
                       ? 'bg-nm-dark text-white border-nm-dark shadow-md scale-105' 
                       : 'bg-white text-gray-500 border-gray-200 hover:border-nm-orange hover:text-nm-orange'
@@ -254,7 +268,6 @@ const FullMenu: React.FC<FullMenuProps> = ({ lang }) => {
         <div className="space-y-12">
           {menuData.map((category) => (
               <div key={category.id} id={`cat-${category.id}`} className="scroll-mt-32">
-                
                 <div className="flex items-center gap-4 mb-6 md:mb-8 border-b-2 border-nm-orange/10 pb-4">
                     <div className={`w-12 h-12 ${category.iconColor} rounded-xl flex items-center justify-center text-white font-bold shadow-lg shrink-0 text-xl`}>
                       {category.id}
@@ -316,7 +329,6 @@ const FullMenu: React.FC<FullMenuProps> = ({ lang }) => {
                         )}
 
                         <div className={`${viewMode === 'list' ? 'p-2' : 'p-3'} md:p-5 flex flex-col flex-grow`}>
-                          
                           <div className="flex justify-between items-start mb-1">
                             <div>
                                 <h3 className="text-sm md:text-lg font-serif font-bold text-nm-dark leading-tight">{mainName}</h3>
@@ -347,12 +359,10 @@ const FullMenu: React.FC<FullMenuProps> = ({ lang }) => {
                           <div className="mt-auto pt-2">
                             <span className="text-[10px] font-bold text-gray-400 bg-gray-100 px-2 py-1 rounded">{item.code}</span>
                           </div>
-
                         </div>
                       </div>
                     )})}
                   </div>
-
               </div>
           ))}
         </div>
@@ -361,17 +371,11 @@ const FullMenu: React.FC<FullMenuProps> = ({ lang }) => {
             <Info className="text-nm-blue shrink-0" />
             <div className="text-xs text-gray-500 leading-relaxed">
                 <p className="font-bold text-nm-dark mb-1">{t.allergyTitle}</p>
-                <p className="mb-4">
-                    {t.allergyText}
-                </p>
-
+                <p className="mb-4">{t.allergyText}</p>
                 <p className="font-bold text-nm-dark mb-1">{t.imageNoteTitle}</p>
-                <p>
-                    {t.imageNoteText}
-                </p>
+                <p>{t.imageNoteText}</p>
             </div>
         </div>
-
       </div>
     </div>
   );
