@@ -88,8 +88,8 @@ const FullMenu: React.FC<FullMenuProps> = ({ lang }) => {
       iconColor: 'bg-green-600',
       items: [
         { code: "A1", name: "Hausgemachter kalter Vorspeisenteller", nameEn: "Homemade Cold Appetizers", nameCn: "风味小拌菜", price: "€6.80", image: "https://i.postimg.cc/Twcppnxs/a1.jpg?q=80&w=800&auto=format&fit=crop" },
-        { code: "A2", name: "Gurkensalat mit Knoblauch", nameEn: "Smashed Cucumbers with Garlic", nameCn: "拍黄瓜", price: "€7.80", image: "https://i.postimg.cc/kX6xrgxV/a2.jpg?q=80&w=800&auto=format&fit=crop" },
-        { code: "A3", name: "Kalt serviertes Hähnchen mit Frühlingszwiebeln", nameEn: "Scallion & Pepper Chicken", nameCn: "喃味葱椒鸡", price: "€9.80", spicy: true, image: "https://i.postimg.cc/k4yBBWCL/a3.jpg?q=80&w=800&auto=format&fit=crop" },
+        { code: "A2", name: "Gurkensalat mit Knoblauch", nameEn: "Smashed Cucumbers with Garlic", nameCn: "拍黄瓜", price: "€6.80", image: "https://i.postimg.cc/kX6xrgxV/a2.jpg?q=80&w=800&auto=format&fit=crop" },
+        { code: "A3", name: "Kalt serviertes Hähnchen mit Frühlingszwiebeln", nameEn: "Scallion & Pepper Chicken", nameCn: "喃味葱椒鸡", price: "€8.80", spicy: true, image: "https://i.postimg.cc/k4yBBWCL/a3.jpg?q=80&w=800&auto=format&fit=crop" },
         { code: "A4", name: "Schweineohr in Chiliöl", nameEn: "Pork Ear in Chili Oil", nameCn: "红油耳片", price: "€9.80", spicy: true, image: "https://i.postimg.cc/bJ948w8W/a4.png?q=80&w=800&auto=format&fit=crop" },
         { code: "A5", name: "Kalte Nudeln mit Hähnchenstreifen", nameEn: "Cold Noodles with Chicken", nameCn: "鸡丝凉面", price: "€12.80", image: "https://i.postimg.cc/SsWvdqRd/a5.jpg?q=80&w=800&auto=format&fit=crop" },
         { code: "A6", name: "Rindfleisch und Pansen in scharfer Sauce", nameEn: "Sliced Beef & Tripe (Fu Qi Fei Pian)", nameCn: "夫妻肺片", price: "€10.80", spicy: true, image: "https://i.postimg.cc/4yQgy1Gf/a6.png?q=80&w=800&auto=format&fit=crop" },
@@ -116,7 +116,7 @@ const FullMenu: React.FC<FullMenuProps> = ({ lang }) => {
         { code: "E9", name: "Zerpflücktes Schweinefleisch in würziger Sauce", nameEn: "Hand-shredded Pork Chops", nameCn: "手撕大排", price: "€18.80", image: "https://i.postimg.cc/6pcpYn87/e9.png?q=80&w=800&auto=format&fit=crop" },
         { code: "E10", name: "Gebratener Luffa-Kürbis mit Knoblauch", nameEn: "Stir-fried Luffa with Garlic", nameCn: "白油丝瓜", price: "€14.80", image: "https://i.postimg.cc/gjxFMwt2/e10.jpg?q=80&w=800&auto=format&fit=crop" },
         { code: "E11", name: "Gebratene grüne Bohnen und Auberginenstreifen", nameEn: "Green Beans & Eggplant", nameCn: "豆角茄条", price: "€14.80", image: "https://i.postimg.cc/0Q7gwg3R/e11.jpg?q=80&w=800&auto=format&fit=crop" },
-        { code: "E12", name: "Gebratenes Saisongemüse", nameEn: "Stir-fried Seasonal Vegetables", nameCn: "炒时蔬", price: "€14.80", image: "https://i.postimg.cc/hvPhxhPJ/e12.jpg?q=80&w=800&auto=format&fit=crop" },
+        { code: "E12", name: "Gebratenes Saisongemüse", nameEn: "Stir-fried Seasonal Vegetables", nameCn: "炒时蔬", price: "", image: "https://i.postimg.cc/hvPhxhPJ/e12.jpg?q=80&w=800&auto=format&fit=crop" },
       ]
     },
     {
