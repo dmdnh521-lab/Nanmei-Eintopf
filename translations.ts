@@ -5,8 +5,8 @@ export const translations = {
   de: {
     seo: {
       title: "Nanmei Eintopf | Bestes chinesisches Restaurant Frankfurt | 喃妹砂锅",
-      description: "Nanmei Eintopf am Zeil 2. Entdecken Sie authentische Sichuan Jianghu-Küche, scharfe Sandpot Eintöpfe und Zigong-Spezialitäten im Herzen von Frankfurt. Jetzt Tisch reservieren!",
-      keywords: "Nanmei Eintopf, Frankfurt Restaurant, Chinesisches Restaurant Frankfurt, Sichuan Küche Frankfurt, Jianghu Cai, Hotpot Frankfurt, Zeil 2, 喃妹砂锅, Bestes chinesisches Essen Frankfurt, Sandpot Frankfurt, Sichuan Food"
+      description: "Nanmei Eintopf am Zeil 2. Entdecken Sie authentische Sichuan Jianghu-Küche, scharfe Eintöpfe und Zigong-Spezialitäten im Herzen von Frankfurt. Jetzt Tisch reservieren!",
+      keywords: "Nanmei Eintopf, Frankfurt Restaurant, Chinesisches Restaurant Frankfurt, Sichuan Küche Frankfurt, Jianghu Cai, Hotpot Frankfurt, Zeil 2, 喃妹砂锅, Bestes chinesisches Essen Frankfurt, Eintopf Frankfurt, Sichuan Food"
     },
     nav: {
       home: "Startseite",
@@ -35,7 +35,7 @@ export const translations = {
       titleHighlight: "Gemeinsamkeit",
       subTitle: "Jianghu Küche & Eintöpfe",
       description1: "Willkommen bei **Nanmei Eintopf (喃妹砂锅)**, Frankfurts angesagtester Adresse für authentische 'Jianghu'-Küche aus Sichuan. Am **Zeil 2** bringen wir die lebendige und geschmacksintensive Straßenkultur Chinas direkt ins Herz von Deutschland.",
-      description2: "Unsere Spezialität ist der **Chinesische Eintopf (Sandpot Casserole)**. Langsam gekochte, brodelnde Brühen gefüllt mit feinstem Fleisch, Meeresfrüchten und Gemüse. Ob unser klassischer 'Roter Eintopf' oder der 'Zigong Springfisch', jedes Gericht wird mit echten 'Zigong'-Gewürzen zubereitet.",
+      description2: "Unsere Spezialität ist der **Chinesische Eintopf (Eintopf Casserole)**. Langsam gekochte, brodelnde Brühen gefüllt mit feinstem Fleisch, Meeresfrüchten und Gemüse. Ob unser klassischer 'Roter Eintopf' oder der 'Zigong Springfisch', jedes Gericht wird mit echten 'Zigong'-Gewürzen zubereitet.",
       description3: "Perfekt für jeden Anlass: Unser Restaurant verfügt über einen großzügigen Hauptsaal und 3 exklusive Privaträume. Ob Geburtstagsfeier, Geschäftsessen oder entspanntes Treffen mit Freunden – wir bieten den passenden Rahmen.",
       waiting: "Wir freuen uns auf Ihre Reservierung!",
       badge: "Original Sichuan",
@@ -53,7 +53,7 @@ export const translations = {
       heroSubtitle: "Dein Hotspot für echtes Sichuan-Soulfood.",
       section1Title: "Wer ist \"Nanmei\"?",
       section1Text: "Stellen Sie sich Ihre beste Freundin vor, die immer weiß, wo es das beste Essen gibt. Wir sind nicht das typische China-Restaurant von nebenan. Wir bringen das **\"Jianghu\"-Lebensgefühl** an die Zeil: Wild, würzig und unangepasst. Hier geht es nicht um steife Etikette, sondern um lautes Lachen, klirrende Gläser und Aromen, die Sie nie vergessen werden.",
-      section2Title: "Warum Eintopf (Sandpot)?",
+      section2Title: "Warum Eintopf?",
       section2Text: "Weil nichts mehr wärmt als ein brodelnder Topf voller Geschmack. Unsere Tontöpfe sind keine Fast-Food-Behälter, sondern Geschmackstresore. Langsam gekochte Brühen, verfeinert mit importierten Gewürzen aus Zigong. Es ist die chinesische Antwort auf deutsche Gemütlichkeit – nur viel feuriger. Ein kulinarisches Zuhause fernab von Zuhause.",
       section3Title: "Reservieren Sie jetzt Ihren Platz. Die Töpfe sind heiß!",
       section3Text: "Mitten in Frankfurt (Zeil 2) haben wir eine Oase geschaffen. Unter Neonlichtern und modernem Design bieten unser großer Saal und die 3 exklusiven Privatzimmer den perfekten Rahmen. Ob Geburtstag, Team-Event oder einfach Hunger auf etwas Echtes: **Kommen Sie vorbei!**",
@@ -104,16 +104,16 @@ export const translations = {
       subtitle: "Authentische Sichuan Küche in Frankfurt",
       chineseSubtitle: "喃妹砂锅菜单",
       categories: {
-        D: "砂锅清汤",
-        C: "砂锅红汤",
-        B: "必点菜品",
-        A: "特色凉菜",
-        E: "家常小炒",
-        S: "小吃 & 主食",
-        F: "面食 & 米线"
+        D: "Eintopf - Milde Brühe",
+        C: "Eintopf - Scharfe Brühe",
+        B: "Chef-Empfehlungen",
+        A: "Kalte Vorspeisen",
+        E: "Wok-Spezialitäten",
+        S: "Snacks & Desserts",
+        F: "Nudeln & Reisnudeln"
       },
       allergyTitle: "Hinweis zu Allergenen & Zusatzstoffen:",
-      allergyText: "Bitte informieren Sie unser Servicepersonal über eventuelle Allergien oder Unverträglichkeiten. Eine detaillierte Liste ist im Restaurant einsehbar.",
+      allergyText: "Bitte informieren Sie unser Servicepersonal über eventuelle Allergenen oder Unverträglichkeiten. Eine detaillierte Liste ist im Restaurant einsehbar.",
       imageNoteTitle: "Hinweis zu den Abbildungen:",
       imageNoteText: "Die gezeigten Bilder dienen teilweise nur zur Veranschaulichung (Serviervorschläge) und können vom tatsächlichen Aussehen der Speisen abweichen."
     }
@@ -151,7 +151,7 @@ export const translations = {
       titleHighlight: "Togetherness",
       subTitle: "Jianghu Cuisine & Casseroles",
       description1: "Welcome to **Nanmei Eintopf**, Frankfurt's hottest spot for authentic 'Jianghu' cuisine from Sichuan. At **Zeil 2**, we bring the vibrant and flavorful street culture of China directly to the heart of Germany.",
-      description2: "Our specialty is the **Chinese Casserole (Sandpot)**. Slow-cooked, bubbling broths filled with the finest meat, seafood, and vegetables. Whether it's our classic 'Red Soup' or 'Zigong Jumping Fish', every dish is prepared with genuine 'Zigong' spices.",
+      description2: "Our specialty is the **Chinese Casserole (Eintopf)**. Slow-cooked, bubbling broths filled with the finest meat, seafood, and vegetables. Whether it's our classic 'Red Soup' or 'Zigong Jumping Fish', every dish is prepared with genuine 'Zigong' spices.",
       description3: "Perfect for any occasion: Our restaurant features a spacious main hall and 3 exclusive private rooms. Whether for a birthday party, business dinner, or a relaxed meeting with friends – we offer the perfect setting.",
       waiting: "We look forward to your reservation!",
       badge: "Original Sichuan",
@@ -169,7 +169,7 @@ export const translations = {
       heroSubtitle: "The Heart of Sichuan in Frankfurt.",
       section1Title: "Who is \"Nanmei\"?",
       section1Text: "Think of her as the ultimate hostess who brings the heat. We aren't your standard Chinese restaurant. We bring the **\"Jianghu\" spirit** to the Zeil: bold, unpretentious, and full of life. It’s about loosening your tie, rolling up your sleeves, and diving into flavors that pack a punch.",
-      section2Title: "Why the Sandpot?",
+      section2Title: "Why the Eintopf?",
       section2Text: "Because nothing heals the soul like a bubbling clay pot. Slow-cooked broths, infused with spices directly from Zigong, locking in the purest flavors. It’s the Chinese take on comfort food – warm, hearty, and unapologetically spicy. A culinary hug on a cold day.",
       section3Title: "Don't wait. Gather your crew!",
       section3Text: "Located right at Zeil 2, we’ve built a sanctuary of neon lights and bold tastes. With a spacious hall and 3 exclusive private rooms, we are ready for your birthday bash, team event, or spice challenge. **Book your table now!**",
@@ -220,13 +220,13 @@ export const translations = {
       subtitle: "Authentic Sichuan Cuisine in Frankfurt",
       chineseSubtitle: "法兰克福正宗川味",
       categories: {
-        D: "Casserole - Clear Broth",
-        C: "Casserole - Spicy Broth",
+        D: "Eintopf - Milder Broth",
+        C: "Eintopf - Spicy Broth",
         B: "Chef's Recommendations",
-        A: "Cold Starters",
-        E: "Homestyle Cooking",
-        S: "Snacks & Rice",
-        F: "Noodle Soups"
+        A: "Cold Appetizers",
+        E: "Homestyle Stir-fry",
+        S: "Snacks & Desserts",
+        F: "Noodles & Rice Noodles"
       },
       allergyTitle: "Note on Allergens & Additives:",
       allergyText: "Please inform our service staff about any allergies or intolerances. A detailed list is available in the restaurant.",
@@ -347,7 +347,7 @@ export const translations = {
       allergyTitle: "过敏原及添加剂提示：",
       allergyText: "如有过敏或不耐受情况，请告知我们的服务人员。餐厅内备有详细的过敏原和添加剂清单。",
       imageNoteTitle: "图片提示：",
-      imageNoteText: "所示图片部分仅供参考（展示建议），实际菜品外观可能有所不同。"
+      imageNoteText: "所示图片部分仅供参考（展示建议），实际菜品外观可能有所不同。",
     }
   }
 };
