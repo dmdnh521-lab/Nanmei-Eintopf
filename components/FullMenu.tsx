@@ -51,7 +51,7 @@ const FullMenu: React.FC<FullMenuProps> = ({ lang }) => {
       isLunch: true,
       items: [
         { code: "L1", name: "Mapo-Tofu mit Reis", nameEn: "Mapo Tofu with Rice", nameCn: "麻婆豆腐", price: "€11.90", image: "https://i.postimg.cc/qv4CxSW1/l1.jpg?q=80&w=800&auto=format&fit=crop", spicy: 1 },
-        { code: "L2", name: "Gongbao Hähnchen mit Reis", nameEn: "Kung Pao Chicken with Rice", nameCn: "宫保鸡丁", price: "€12.90", image: "https://i.postimg.cc/2SrB7MgT/l2.jpg?q=80&w=800&auto=format&fit=crop", spicy: 1 },
+        { code: "L2", name: "Gongbao Hähnchen mit Reis", nameEn: "Kung Pao Chicken with Rice", nameCn: "宫保鸡丁", price: "€12.90", image: "https://i.postimg.cc/2SDXFjz9/l2.jpg?q=80&w=800&auto=format&fit=crop", spicy: 1 },
         { code: "L3", name: "Gebratenes Schweinefleisch mit Paprika und Reis", nameEn: "Shredded Pork with Green Peppers & Rice", nameCn: "青椒肉丝", price: "€12.90", image: "https://i.postimg.cc/mgBFyJKw/l3.jpg?q=80&w=800&auto=format&fit=crop", spicy: 0 },
         { code: "L4", name: "Gebratenes Rindfleisch mit Zwiebeln und Reis", nameEn: "Stir-fried Beef with Onions & Rice", nameCn: "洋葱牛肉", price: "€13.90", image: "https://i.postimg.cc/8zNrm9xB/l4.jpg?q=80&w=800&auto=format&fit=crop", spicy: 0 },
         { code: "L5", name: "Scharfe Reisnudelsuppe (Red Oil)", nameEn: "Spicy Rice Noodle Soup (Red Oil)", nameCn: "红油米线", price: "€9.90", image: "https://i.postimg.cc/y8sSyt2y/l5.jpg?q=80&w=800&auto=format&fit=crop", spicy: 2 },
