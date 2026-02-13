@@ -89,7 +89,7 @@ const FullMenu: React.FC<FullMenuProps> = ({ lang }) => {
       iconColor: 'bg-nm-orange',
       items: [
         { code: "B1", name: "Garnelen mit Glasnudeln in Knoblauchsauce", nameEn: "Shrimp with Garlic & Glass Noodles", nameCn: "蒜蓉粉丝虾仁", price: "€22.80", image: "https://i.postimg.cc/50m668JT/b1.jpg?q=80&w=800&auto=format&fit=crop", spicy: 0 },
-        { code: "B2", name: "Geschmortes Rindfleisch in Sojasauce", nameEn: "Braised Beef Brisket", nameCn: "红烧牛腩", price: "€18.80", image: "https://i.postimg.cc/ryS4qbdY/b2.jpg?q=80&w=800&auto=format&fit=crop", spicy: 1 },
+        { code: "B2", name: "Geschmortes Rindfleisch in Sojasauce", nameEn: "Braised Beef Brisket", nameCn: "红烧牛腩", price: "€18.80", image: "https://i.postimg.cc/HxCf9cHC/d4.jpg?q=80&w=800&auto=format&fit=crop", spicy: 1 },
         { code: "B3", name: "Fischfilet in Sichuan-Pfeffer-Chili-Sauce", nameEn: "Sichuan Pepper Fish Filet", nameCn: "川香椒麻鱼", price: "€28.80", image: "https://i.postimg.cc/85bjjLG3/b3.jpg?q=80&w=800&auto=format&fit=crop", spicy: 3 },
         { code: "B4", name: "Hausgemachte Schweinefleischbällchen Suppe", nameEn: "Handmade Pork Meatball Soup", nameCn: "手工鲜肉丸子", price: "€17.80", image: "https://i.postimg.cc/tCRPGL4T/b4.jpg?q=80&w=800&auto=format&fit=crop", spicy: 0 },
         { code: "B5", name: "Hähncheneintopf nach Nann-Stil", nameEn: "Nanmei Chicken Pot", nameCn: "喃味鸡煲", price: "€17.80", image: "https://i.postimg.cc/59QCCXy4/b5.jpg?q=80&w=800&auto=format&fit=crop", rec: true, spicy: 2 },
@@ -129,7 +129,7 @@ const FullMenu: React.FC<FullMenuProps> = ({ lang }) => {
         { code: "E6", name: "Rindfleisch mit Frühlingszwiebeln", nameEn: "Scallion Beef", nameCn: "葱爆牛肉", price: "€18.80", image: "https://i.postimg.cc/FH55ZHyR/e6.jpg?q=80&w=800&auto=format&fit=crop", spicy: 0 },
         { code: "E7", name: "Gebratene Schweine-Sehnen mit zweierlei Chili", nameEn: "Pork Tendon with Double Peppers", nameCn: "双椒猪蹄筋", price: "€16.00", image: "https://i.postimg.cc/tTdGTzdW/e7.png?q=80&w=800&auto=format&fit=crop", spicy: 2 },
         { code: "E8", name: "Entendärme in würziger Sauce", nameEn: "Spicy Duck Intestines", nameCn: "爽口鸭肠", price: "€18.80", image: "https://i.postimg.cc/x1vrFV5s/e8.jpg?q=80&w=800&auto=format&fit=crop", spicy: 0 },
-        { code: "E9", name: "Zerpflücktes Schweinefleisch in würziger Sauce", nameEn: "Hand-shredded Pork Chops", nameCn: "手撕大排", price: "€18.80", image: "https://i.postimg.cc/6pcpYn87/e9.png?q=80&w=800&auto=format&fit=crop", spicy: 1 },
+        { code: "E9", name: "Zerpflücktes Schweinefleisch in würziger Sauce", nameEn: "Hand-shredded Pork Chops", nameCn: "手撕大排", price: "€18.80", image: "https://i.postimg.cc/9F2xvcZ9/e9.jpg?q=80&w=800&auto=format&fit=crop", spicy: 1 },
         { code: "E10", name: "Gebratener Luffa-Kürbis with Knoblauch", nameEn: "Stir-fried Luffa with Garlic", nameCn: "白油丝瓜", price: "€14.80", image: "https://i.postimg.cc/gjxFMwt2/e10.jpg?q=80&w=800&auto=format&fit=crop", spicy: 0 },
         { code: "E11", name: "Gebratene grüne Bohnen und Auberginenstreifen", nameEn: "Green Beans & Eggplant", nameCn: "豆角茄条", price: "€14.80", image: "https://i.postimg.cc/0Q7gwg3R/e11.jpg?q=80&w=800&auto=format&fit=crop", spicy: 0 },
         { code: "E12", name: "Gebratenes Saisongemüse", nameEn: "Stir-fried Seasonal Vegetables", nameCn: "炒时蔬", price: "", image: "https://i.postimg.cc/hvPhxhPJ/e12.jpg?q=80&w=800&auto=format&fit=crop", spicy: 0 },
