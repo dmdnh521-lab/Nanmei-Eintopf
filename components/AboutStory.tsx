@@ -16,15 +16,15 @@ const heroImages = [
 ];
 
 const cultureImages = [
-  "https://i.postimg.cc/kGXD8DX3/c3.jpg?q=80&w=1000&auto=format&fit=crop", // Fish
-  "https://i.postimg.cc/RFTNNw99/c4.jpg?q=80&w=1000&auto=format&fit=crop", // Rabbit
-  "https://i.postimg.cc/ZRmWbVG7/109.jpg?q=80&w=1000&auto=format&fit=crop"  // Atmosphere
+  "https://i.postimg.cc/50m668JT/b1.jpg?q=80&w=1000&auto=format&fit=crop", // Fish
+  "https://i.postimg.cc/brJ94CsN/d1.png?q=80&w=1000&auto=format&fit=crop", // Rabbit
+  "https://i.postimg.cc/HxCf9cHC/d4.jpg?q=80&w=1000&auto=format&fit=crop"  // Atmosphere
 ];
 
 const roomImages = [
-  "https://i.postimg.cc/FRvYrDMK/106.jpg?q=80&w=1000&auto=format&fit=crop", // Room like
-  "https://i.postimg.cc/Y97vrb5D/108.jpg?q=80&w=1000&auto=format&fit=crop", // Interior
-  "https://i.postimg.cc/JhZyC92M/101.jpg?q=80&w=1000&auto=format&fit=crop"  // Table
+  "https://i.postimg.cc/7hxPmP0Y/yanshang.png?q=80&w=1000&auto=format&fit=crop", // Room like
+  "https://i.postimg.cc/0j85c5Dy/yangong.png?q=80&w=1000&auto=format&fit=crop", // Interior
+  "https://i.postimg.cc/zvJD0DKf/huiguan.png?q=80&w=1000&auto=format&fit=crop"  // Table
 ];
 
 const nanmeiImages = [
