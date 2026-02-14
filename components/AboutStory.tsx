@@ -214,10 +214,10 @@ const AboutStory: React.FC<AboutStoryProps> = ({ lang }) => {
                 <div className="relative z-10 w-full h-full rounded-2xl shadow-2xl overflow-hidden bg-gray-100">
                     <StoryCarousel images={cultureImages} interval={3500} />
                 </div>
-                {/* Decorative Label moved to top-right as per user request */}
-                <div className="absolute top-6 right-6 bg-white/90 p-4 rounded-xl shadow-lg z-20 backdrop-blur-sm border border-gray-100">
-                     <span className="block text-nm-orange font-bold text-xs uppercase tracking-widest mb-1">Tradition</span>
-                     <span className="font-serif font-bold text-nm-dark text-xl">Yanbang • Zigong</span>
+                {/* Decorative Label moved to top-right and downsized */}
+                <div className="absolute top-3 right-3 md:top-6 md:right-6 bg-white/90 p-2 md:p-4 rounded-lg md:rounded-xl shadow-lg z-20 backdrop-blur-sm border border-gray-100">
+                     <span className="block text-nm-orange font-bold text-[10px] md:text-xs uppercase tracking-widest mb-0.5 md:mb-1">Tradition</span>
+                     <span className="font-serif font-bold text-nm-dark text-sm md:text-xl">Yanbang • Zigong</span>
                 </div>
             </div>
             <div className="w-full md:w-1/2 space-y-6">
@@ -239,9 +239,9 @@ const AboutStory: React.FC<AboutStoryProps> = ({ lang }) => {
                 <div className="relative z-10 w-full h-full rounded-2xl shadow-2xl overflow-hidden border-4 border-white bg-gray-100">
                      <StoryCarousel images={roomImages} interval={3000} />
                 </div>
-                <div className="absolute top-6 left-6 bg-nm-blue text-white p-4 rounded-xl shadow-lg z-20">
-                     <span className="block font-bold text-2xl mb-1">3</span>
-                     <span className="text-xs uppercase tracking-widest opacity-90">Private Rooms</span>
+                <div className="absolute top-3 left-3 md:top-6 md:left-6 bg-nm-blue text-white p-3 md:p-4 rounded-lg md:rounded-xl shadow-lg z-20">
+                     <span className="block font-bold text-lg md:text-2xl mb-0.5 md:mb-1">3</span>
+                     <span className="text-[10px] md:text-xs uppercase tracking-widest opacity-90">Private Rooms</span>
                 </div>
             </div>
             <div className="w-full md:w-1/2 space-y-6">

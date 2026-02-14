@@ -34,7 +34,7 @@ export const translations = {
       title: "Zeit für",
       titleHighlight: "Gemeinsamkeit",
       subTitle: "Salz-Küche & Eintöpfe",
-      description1: "Willkommen bei **Nanmei Eintopf (喃妹砂锅)**, Frankfurts angesagtester Adresse für authentische **Salz-Küche aus Zigong**. Am **Zeil 2** bringen wir die Aromen und die leidenschaftliche Esskultur aus der tausendjährigen Salzstadt Chinas direkt ins Herz von Deutschland.",
+      description1: "Willkommen bei **Nanmei Eintopf (喃妹砂锅)**, Frankfurts angesagtester Adresse für authentische Sichuan-Küche aus Zigong. Am **Zeil 2** bringen wir die Aromen und die leidenschaftliche Esskultur aus der tausendjährigen Salzstadt Chinas direkt ins Herz von Deutschland.",
       description2: "Unsere Spezialität ist der **Chinesische Eintopf (Eintopf Casserole)**. Langsam gekochte, brodelnde Brühen gefüllt mit feinstem Fleisch, Meeresfrüchten und Gemüse. Ob unser klassischer 'Roter Eintopf' oder der 'Zigong Springfisch', jedes Gericht wird mit echten 'Zigong'-Gewürzen zubereitet.",
       description3: "Perfekt für jeden Anlass: Unser Restaurant verfügt über einen großzügigen Hauptsaal und 3 exklusive Privaträume. Ob Geburtstagsfeier, Geschäftsessen oder entspanntes Treffen mit Freunden – wir bieten den passenden Rahmen.",
       waiting: "Wir freuen uns auf Ihre Reservierung!",
@@ -139,7 +139,7 @@ export const translations = {
   en: {
     seo: {
       title: "Nanmei Eintopf | Authentic Sichuan Cuisine Frankfurt | Nanmei Casserole",
-      description: "Visit Nanmei Eintopf at Zeil 2, Frankfurt. The best spot for authentic Salt Gang cuisine, clay pot casseroles and spicy Sichuan flavors. Book your table online!",
+      description: "Visit Nanmei Eintopf at Zeil 2, Frankfurt. The best spot for authentic Zigong Sichuan cuisine, clay pot casseroles and spicy Sichuan flavors. Book your table online!",
       keywords: "Nanmei Eintopf, Frankfurt Chinese Restaurant, Sichuan Food Frankfurt, Salt Gang Cuisine, Hotpot Frankfurt, Zeil 2 Restaurant, Chinese Casserole, Authentic Chinese Food"
     },
     nav: {
@@ -168,7 +168,7 @@ export const translations = {
       title: "Time for",
       titleHighlight: "Togetherness",
       subTitle: "Salt Gang Cuisine & Casseroles",
-      description1: "Welcome to **Nanmei Eintopf (喃妹砂锅)**, Frankfurt's hottest spot for authentic **Zigong Salt Gang cuisine**. Located at **Zeil 2**, we bring the unique flavors and vibrant food culture from China's ancient Salt Capital directly to the heart of Germany.",
+      description1: "Welcome to **Nanmei Eintopf (喃妹砂锅)**, Frankfurt's hottest spot for authentic **Zigong Sichuan cuisine**. Located at **Zeil 2**, we bring the unique flavors and vibrant food culture from China's ancient Salt Capital directly to the heart of Germany.",
       description2: "Our specialty is the **Chinese Casserole (Eintopf)**. Slow-cooked, bubbling broths filled with the finest meat, seafood, and vegetables. Whether it's our classic 'Red Soup' or 'Zigong Jumping Fish', every dish is prepared with genuine 'Zigong' spices.",
       description3: "Perfect for any occasion: Our restaurant features a spacious main hall and 3 exclusive private rooms. Whether for a birthday party, business dinner, or a relaxed meeting with friends – we offer the perfect setting.",
       waiting: "We look forward to your reservation!",
@@ -302,7 +302,7 @@ export const translations = {
       title: "等你来",
       titleHighlight: "组局",
       subTitle: "自贡盐帮菜 & 砂锅",
-      description1: "欢迎来到 **喃妹砂锅 (Nanmei Eintopf)**，法兰克福最潮的四川自贡盐帮菜打卡地。位于 **Zeil 2**，我们将源自中国千年盐都自贡的盐帮风味与热烈饮食文化带到了德国中心。",
+      description1: "欢迎来到 **喃妹砂锅 (Nanmei Eintopf)**，法兰克福不可错过的自贡川菜新地标。位于 **Zeil 2**，我们千年盐都自贡的盐帮美学与浓烈风味带到了德国中心城市。",
       description2: "我们的特色是 **中式砂锅 (Eintopf)**。慢火熬制的汤底，配上上等肉类、海鲜和蔬菜，沸腾鲜香。无论是经典的“砂锅红汤”还是“自贡跳水鱼”，每道菜都采用地道的自贡调料烹制。",
       description3: "适合各种场合：我们餐厅拥有宽敞的大厅和 3 个专属包厢。无论是生日派对、商务宴请还是朋友小聚，我们都能提供完美的场所。",
       waiting: "期待您的光临！",
