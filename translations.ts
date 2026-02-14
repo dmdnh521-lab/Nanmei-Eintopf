@@ -54,7 +54,7 @@ export const translations = {
       
       chapter1: "Die Persönlichkeit",
       nanmeiTitle: "Wer ist Nanmei?",
-      nanmeiText: "Sie ist die „große Schwester“, die direkt an der Frankfurter Zeil mit gutem Wein und tollem Essen auf dich wartet. Seit der **Eröffnung im Dezember 2025** bringt Nanmei den Charme der **Salz-Küche aus Zigong** – einem bedeutenden Zweig der Sichuan-Küche – direkt in das Stadtzentrum.\n\nWir machen kein konventionelles chinesisches Essen. Was wir wollen, ist die Großzügigkeit des Fleischessens, die Leidenschaft des kochenden roten Öls und die ungebremste Frische des Pfeffers; es ist der Lärm anstoßender Gläser und der Moment der puren Freude, wenn der dampfende Tontopf auf den Tisch kommt und sein aroma entfaltet.\n\nHier kann man die Krawatte lockern und die High Heels ausziehen. Setz dich, heb dein Glas und lass Schärfe und Aroma deine Sinne wecken. Nanmei ist mehr als nur ein Restaurant – es ist ein ort, an dem du **du selbst sein kannst**. Im Herzen von Frankfurt servieren wir dir die Leidenschaft und Herzlichkeit der jahrtausendealten Salzstadt.",
+      nanmeiText: "Sie ist die „große Schwester“, die direkt an der Frankfurter Zeil mit gutem Wein und tollem Essen auf dich wartet. Seit der **Eröffnung im Dezember 2025** bringt Nanmei den Charme der **Salz-Küche aus Zigong** – einem bedeutenden Zweig der Sichuan-Küche – direkt in das Stadtzentrum.\n\nWir machen kein konventionelles chinesisches Essen. Was wir wollen, ist die Großzügigkeit des Fleischessens, die Leidenschaft des kochenden roten Öls und die ungebremste Frische des Pfeffers; es ist der lärm anstoßender Gläser und der Moment der puren Freude, wenn der dampfende Tontopf auf den Tisch kommt und sein aroma entfaltet.\n\nHier kann man die Krawatte lockern und die High Heels ausziehen. Setz dich, heb dein Glas und lass Schärfe und Aroma deine Sinne wecken. Nanmei ist mehr als nur ein Restaurant – es ist ein ort, an dem du **du selbst sein kannst**. Im Herzen von Frankfurt servieren wir dir die Leidenschaft und Herzlichkeit der jahrtausendealten Salzstadt.",
       
       chapter2: "Das Handwerk",
       casseroleTitle: "Warum Eintopf?",
@@ -76,7 +76,7 @@ export const translations = {
       stat1: "Tradition",
       stat1Desc: "Salz-Küche",
       stat2: "Atmosphäre",
-      stat2Desc: "Zeil 2 Zentrum",
+      stat2Desc: "Lebhaft & Herzlich",
       stat3: "Exklusiv",
       stat3Desc: "3 Privaträume",
       section3Title: "Bereit für den Geschmack?"
@@ -209,8 +209,8 @@ export const translations = {
       ctaButton: "Reserve a Table",
       stat1: "Heritage",
       stat1Desc: "Salt Cuisine",
-      stat2: "Location",
-      stat2Desc: "Zeil 2 Center",
+      stat2: "Vibe",
+      stat2Desc: "Bold & Vibrant",
       stat3: "Exclusive",
       stat3Desc: "3 Private Rooms",
       section3Title: "Ready to Taste?"
@@ -330,7 +330,7 @@ export const translations = {
 
       cultureLabel: "历史传承",
       cultureTitle: "川菜盐帮：自贡风味探秘",
-      cultureText: "自贡盐帮菜（又称小河帮川菜）是伴随“千年盐都”井盐产业的繁荣而形成的独特饮食流派，在川菜体系中以其精致、奢华与怪异并存的风格独树一帜。它深度融合了极致考究的盐商菜、重味下饭的盐工菜与博采众长的会馆菜，构建出“味厚香浓、辣鲜刺激”的独特审美逻辑。\n\n该菜系的技术核心在于对**“双椒双姜”（鲜辣椒与仔姜）的极致运用，并巧用砂锅作为“热能管理器”以确保菜肴达到“味浓收汁”与“烫”的灵魂境界。凭借冷吃兔、水煮牛肉、鲜锅兔**等享誉世界的代表作，盐帮菜不仅获得了国家地理标志保护产品认定，更支撑起“食在四川，味在自贡”的市场美誉。",
+      cultureText: "自贡盐帮菜（又称小河帮川菜）是伴随“千年盐都”井盐产业的繁荣而形成的独特饮食流派，在川菜体系中以其精致、奢华与怪异并存的风格独树帜。它深度融合了极致考究的盐商菜、重味下饭的盐工菜与博采众长的会馆菜，构建出“味厚香浓、辣鲜刺激”的独特审美逻辑。\n\n该菜系的技术核心在于对**“双椒双姜”（鲜辣椒与仔姜）的极致运用，并巧用砂锅作为“热能管理器”以确保菜肴达到“味浓收汁”与“烫”的灵魂境界。凭借冷吃兔、水煮牛肉、鲜锅兔**等享誉世界的代表作，盐帮菜不仅获得了国家地理标志保护产品认定，更支撑起“食在四川，味在自贡”的市场美誉。",
 
       roomsLabel: "私密空间",
       roomsTitle: "私密尊享包厢",
@@ -338,13 +338,13 @@ export const translations = {
       
       locationLabel: "欢迎光临",
       locationTitle: "核心地段与交通指引",
-      locationText: "我们就位于法兰克福的心脏地带：**Zeil 2**, 60313 Frankfurt am Main。\n\n**公共交通：**\n您可搭乘 S-Bahn（S1–S3）、U-Bahn（U6、U7）、Tram（如 11 路）或多条市区公交至 **Ostendstraße** 站，出站步行仅需 4 分钟即可到达餐厅。或者从 **Konstablerwache** 站下车，步行约 8 分钟即可到达。\n\n**停车建议：**\n您可以选择 **动物园的停车场 (Parkhaus Zoo, 地址：Grüne Str. 11)**、**法院停车场 (Parkhaus Am Gericht, Klapperfeldstraße 8)** 或周边其他公共停车场。",
+      locationText: "我们就位于法兰克福的心脏地带：**Zeil 2**, 60313 Frankfurt am Main。\n\n**公共交通：**\n您可搭乘 S-Bahn（S1–S6, S8, S9）、U-Bahn（U6、U7）、Tram（如 11 路）或多条市区公交至 **Ostendstraße** 站，出站步行仅需 4 分钟即可到达餐厅。或者从 **Konstablerwache** 站下车，步行约 8 分钟即可到达。\n\n**停车建议：**\n您可以选择 **动物园的停车场 (Parkhaus Zoo, Grüne Str. 11)**、**法院停车场 (Parkhaus Am Gericht, Klapperfeldstraße 8)** 或周边其他公共停车场。",
       
       ctaButton: "立即预定包厢",
       stat1: "传承",
       stat1Desc: "自贡盐帮菜",
-      stat2: "地段",
-      stat2Desc: "Zeil 2 市中心",
+      stat2: "氛围",
+      stat2Desc: "豪爽热烈",
       stat3: "私密",
       stat3Desc: "3个专属包厢",
       section3Title: "准备好组局了吗？"

@@ -16,15 +16,15 @@ const heroImages = [
 ];
 
 const cultureImages = [
-  "https://i.postimg.cc/7hxPmP0Y/yanshang.png?q=80&w=1000&auto=format&fit=crop", // Room like
-  "https://i.postimg.cc/0j85c5Dy/yangong.png?q=80&w=1000&auto=format&fit=crop", // Interior
-  "https://i.postimg.cc/zvJD0DKf/huiguan.png?q=80&w=1000&auto=format&fit=crop"  // Table
+  "https://i.postimg.cc/L8kCMH12/yanshang.png?q=80&w=1000&auto=format&fit=crop", // Room like
+  "https://i.postimg.cc/Qdg4rXTs/yangong.png?q=80&w=1000&auto=format&fit=crop", // Interior
+  "https://i.postimg.cc/CxCPVFqw/huiguan.png?q=80&w=1000&auto=format&fit=crop"  // Table
 ];
 
 const roomImages = [
-  "https://i.postimg.cc/7hxPmP0Y/yanshang.png?q=80&w=1000&auto=format&fit=crop", // Room like
-  "https://i.postimg.cc/0j85c5Dy/yangong.png?q=80&w=1000&auto=format&fit=crop", // Interior
-  "https://i.postimg.cc/zvJD0DKf/huiguan.png?q=80&w=1000&auto=format&fit=crop"  // Table
+  "https://i.postimg.cc/FRvYrDMK/106.jpg?q=80&w=1000&auto=format&fit=crop", // Room like
+  "https://i.postimg.cc/qBnZGXMP/bao2.jpg?q=80&w=1000&auto=format&fit=crop", // Interior
+  "https://i.postimg.cc/Wprf76bQ/bao3.jpg?q=80&w=1000&auto=format&fit=crop"  // Table
 ];
 
 const nanmeiImages = [
@@ -214,7 +214,8 @@ const AboutStory: React.FC<AboutStoryProps> = ({ lang }) => {
                 <div className="relative z-10 w-full h-full rounded-2xl shadow-2xl overflow-hidden bg-gray-100">
                     <StoryCarousel images={cultureImages} interval={3500} />
                 </div>
-                <div className="absolute bottom-6 right-6 bg-white/90 p-4 rounded-xl shadow-lg z-20 backdrop-blur-sm border border-gray-100">
+                {/* Decorative Label moved to top-right as per user request */}
+                <div className="absolute top-6 right-6 bg-white/90 p-4 rounded-xl shadow-lg z-20 backdrop-blur-sm border border-gray-100">
                      <span className="block text-nm-orange font-bold text-xs uppercase tracking-widest mb-1">Tradition</span>
                      <span className="font-serif font-bold text-nm-dark text-xl">Yanbang • Zigong</span>
                 </div>
