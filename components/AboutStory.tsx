@@ -16,9 +16,9 @@ const heroImages = [
 ];
 
 const cultureImages = [
-  "https://i.postimg.cc/50m668JT/b1.jpg?q=80&w=1000&auto=format&fit=crop", // Fish
-  "https://i.postimg.cc/brJ94CsN/d1.png?q=80&w=1000&auto=format&fit=crop", // Rabbit
-  "https://i.postimg.cc/HxCf9cHC/d4.jpg?q=80&w=1000&auto=format&fit=crop"  // Atmosphere
+  "https://i.postimg.cc/7hxPmP0Y/yanshang.png?q=80&w=1000&auto=format&fit=crop", // Room like
+  "https://i.postimg.cc/0j85c5Dy/yangong.png?q=80&w=1000&auto=format&fit=crop", // Interior
+  "https://i.postimg.cc/zvJD0DKf/huiguan.png?q=80&w=1000&auto=format&fit=crop"  // Table
 ];
 
 const roomImages = [
@@ -34,9 +34,9 @@ const nanmeiImages = [
 ];
 
 const casseroleImages = [
-  "https://i.postimg.cc/RFTNNw99/c4.jpg?q=80&w=1000&auto=format&fit=crop",
-  "https://i.postimg.cc/kGXD8DX3/c3.jpg?q=80&w=1000&auto=format&fit=crop",
-  "https://i.postimg.cc/pTBppKx2/c1.jpg?q=80&w=1000&auto=format&fit=crop"
+  "https://i.postimg.cc/50m668JT/b1.jpg?q=80&w=1000&auto=format&fit=crop", // Fish
+  "https://i.postimg.cc/brJ94CsN/d1.png?q=80&w=1000&auto=format&fit=crop", // Rabbit
+  "https://i.postimg.cc/HxCf9cHC/d4.jpg?q=80&w=1000&auto=format&fit=crop"  // Atmosphere
 ];
 
 // Reusable Carousel Component
