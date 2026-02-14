@@ -1,9 +1,12 @@
+
 import React, { useState, useEffect } from 'react';
 import { Language } from '../types';
 import { translations } from '../translations';
+import { ExternalLink, ArrowRight } from 'lucide-react';
 
 interface AboutProps {
   lang: Language;
+  onNavigate?: (page: string) => void;
 }
 
 const aboutImages = [
@@ -12,7 +15,7 @@ const aboutImages = [
   "https://i.postimg.cc/ZRmWbVG7/109.jpg?q=80&w=1000&auto=format&fit=crop"  
 ];
 
-const About: React.FC<AboutProps> = ({ lang }) => {
+const About: React.FC<AboutProps> = ({ lang, onNavigate }) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const t = translations[lang].about;
 
@@ -69,18 +72,41 @@ const About: React.FC<AboutProps> = ({ lang }) => {
             </p>
             
             <div className="grid grid-cols-3 gap-2 md:gap-4">
-              <div className="border-l-4 border-nm-orange pl-2 md:pl-3 bg-white/50 p-2 rounded-r-lg">
-                <span className="block text-sm md:text-lg font-bold text-nm-dark">{t.features.location}</span>
-                <span className="text-[10px] md:text-xs text-gray-500">{t.features.locationDesc}</span>
-              </div>
-              <div className="border-l-4 border-nm-blue pl-2 md:pl-3 bg-white/50 p-2 rounded-r-lg">
-                <span className="block text-sm md:text-lg font-bold text-nm-dark">{t.features.rooms}</span>
-                <span className="text-[10px] md:text-xs text-gray-500">{t.features.roomsDesc}</span>
-              </div>
-              <div className="border-l-4 border-nm-pink pl-2 md:pl-3 bg-white/50 p-2 rounded-r-lg">
-                <span className="block text-sm md:text-lg font-bold text-nm-dark">{t.features.taste}</span>
-                <span className="text-[10px] md:text-xs text-gray-500">{t.features.tasteDesc}</span>
-              </div>
+              {/* Location - Links to Story Page (Location section) */}
+              <button 
+                onClick={() => onNavigate?.('about-story#story-location')}
+                className="group border-l-2 md:border-l-4 border-nm-orange pl-2 md:pl-3 bg-white/50 p-2 md:p-3 rounded-r-lg hover:bg-white hover:shadow-md transition-all cursor-pointer text-left flex flex-col justify-center min-h-[70px] md:min-h-[80px]"
+              >
+                <div className="flex items-center justify-between">
+                    <span className="block text-sm md:text-lg font-bold text-nm-dark group-hover:text-nm-orange transition-colors leading-tight">{t.features.location}</span>
+                    <ArrowRight size={14} className="hidden md:block text-gray-400 group-hover:text-nm-orange opacity-0 group-hover:opacity-100 transition-all shrink-0" />
+                </div>
+                <span className="text-[10px] md:text-xs text-gray-500 mt-1 leading-tight">{t.features.locationDesc}</span>
+              </button>
+
+              {/* Rooms - Links to Story Page (Rooms section) */}
+              <button 
+                onClick={() => onNavigate?.('about-story#story-rooms')}
+                className="group border-l-2 md:border-l-4 border-nm-blue pl-2 md:pl-3 bg-white/50 p-2 md:p-3 rounded-r-lg hover:bg-white hover:shadow-md transition-all cursor-pointer text-left flex flex-col justify-center min-h-[70px] md:min-h-[80px]"
+              >
+                <div className="flex items-center justify-between">
+                    <span className="block text-sm md:text-lg font-bold text-nm-dark group-hover:text-nm-blue transition-colors leading-tight">{t.features.rooms}</span>
+                    <ArrowRight size={14} className="hidden md:block text-gray-400 group-hover:text-nm-blue opacity-0 group-hover:opacity-100 transition-all transform group-hover:translate-x-1 shrink-0" />
+                </div>
+                <span className="text-[10px] md:text-xs text-gray-500 mt-1 leading-tight">{t.features.roomsDesc}</span>
+              </button>
+
+              {/* Taste - Links to Story Page (Culture section) */}
+              <button 
+                onClick={() => onNavigate?.('about-story#story-culture')}
+                className="group border-l-2 md:border-l-4 border-nm-pink pl-2 md:pl-3 bg-white/50 p-2 md:p-3 rounded-r-lg hover:bg-white hover:shadow-md transition-all cursor-pointer text-left flex flex-col justify-center min-h-[70px] md:min-h-[80px]"
+              >
+                <div className="flex items-center justify-between">
+                    <span className="block text-sm md:text-lg font-bold text-nm-dark group-hover:text-nm-pink transition-colors leading-tight">{t.features.taste}</span>
+                    <ArrowRight size={14} className="hidden md:block text-gray-400 group-hover:text-nm-pink opacity-0 group-hover:opacity-100 transition-all transform group-hover:translate-x-1 shrink-0" />
+                </div>
+                <span className="text-[10px] md:text-xs text-gray-500 mt-1 leading-tight">{t.features.tasteDesc}</span>
+              </button>
             </div>
           </div>
 

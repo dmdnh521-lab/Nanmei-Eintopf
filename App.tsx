@@ -61,13 +61,21 @@ function App() {
   // 1. Listen for URL Hash changes
   useEffect(() => {
     const handleHashChange = () => {
-      const hash = window.location.hash.replace('#', '');
+      const fullHash = window.location.hash.replace('#', '');
+      const [basePage, anchor] = fullHash.split('#'); // Handle 'about-story#rooms'
       
-      if (['full-menu', 'impressum', 'datenschutz', 'about-story'].includes(hash)) {
-        setCurrentPage(hash);
-        window.scrollTo(0, 0);
+      if (['full-menu', 'impressum', 'datenschutz', 'about-story'].includes(basePage)) {
+        setCurrentPage(basePage);
+        if (!anchor) {
+             window.scrollTo(0, 0);
+        } else {
+             // If there's an anchor, wait a bit for render then scroll
+             setTimeout(() => {
+                 document.getElementById(anchor)?.scrollIntoView({ behavior: 'smooth' });
+             }, 100);
+        }
       } else {
-        if (!['about', 'contact', 'home'].includes(hash) && hash !== '') {
+        if (!['about', 'contact', 'home'].includes(basePage) && basePage !== '') {
              setCurrentPage('home');
         } else if (currentPage !== 'home') {
              setCurrentPage('home');
@@ -76,6 +84,7 @@ function App() {
     };
 
     window.addEventListener('hashchange', handleHashChange);
+    // Initial check
     handleHashChange();
 
     return () => window.removeEventListener('hashchange', handleHashChange);
@@ -133,12 +142,15 @@ function App() {
   }, [currentPage, language, t]);
 
   const handleNavigate = (page: string) => {
-    window.location.hash = page;
-    if (['full-menu', 'impressum', 'datenschutz', 'about-story'].includes(page)) {
-      setCurrentPage(page);
-      window.scrollTo(0, 0);
-    } else if (page === 'home') {
-      setCurrentPage('home');
+    // Check if page contains an anchor like 'about-story#rooms'
+    const [targetPage, anchor] = page.split('#');
+
+    window.location.hash = page; // This triggers hashchange listener
+    
+    // If staying on same page but changing anchor, listener might not trigger scroll if logic prevents re-render
+    // So we manually check if we need to scroll immediately if page is already current
+    if (targetPage === currentPage && anchor) {
+        document.getElementById(anchor)?.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
@@ -148,7 +160,7 @@ function App() {
         return (
           <>
             <Hero onMenuClick={() => handleNavigate('full-menu')} lang={language} />
-            <About lang={language} />
+            <About lang={language} onNavigate={handleNavigate} />
             <Menu onFullMenuClick={() => handleNavigate('full-menu')} lang={language} />
             <Gallery />
           </>
@@ -165,7 +177,7 @@ function App() {
         return (
           <>
             <Hero onMenuClick={() => handleNavigate('full-menu')} lang={language} />
-            <About lang={language} />
+            <About lang={language} onNavigate={handleNavigate} />
             <Menu onFullMenuClick={() => handleNavigate('full-menu')} lang={language} />
             <Gallery />
           </>
