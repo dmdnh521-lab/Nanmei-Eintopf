@@ -34,7 +34,7 @@ export const translations = {
       title: "Zeit für",
       titleHighlight: "Gemeinsamkeit",
       subTitle: "Salz-Küche & Eintöpfe",
-      description1: "Willkommen bei **Nanmei Eintopf (喃妹砂锅)**, Frankfurts angesagtester Adresse für authentische Sichuan-Küche aus Zigong. Am **Zeil 2** bringen wir die Aromen und die leidenschaftliche Esskultur aus der tausendjährigen Salzstadt Chinas direkt ins Herz von Deutschland.",
+      description1: "Willkommen bei **Nanmei Eintopf (喃妹砂锅)**, Frankfurts angesagtester Adresse für authentische **Salz-Küche aus Zigong**. Am **Zeil 2** bringen wir die Aromen und die leidenschaftliche Esskultur aus der tausendjährigen Salzstadt Chinas direkt ins Herz von Deutschland.",
       description2: "Unsere Spezialität ist der **Chinesische Eintopf (Eintopf Casserole)**. Langsam gekochte, brodelnde Brühen gefüllt mit feinstem Fleisch, Meeresfrüchten und Gemüse. Ob unser klassischer 'Roter Eintopf' oder der 'Zigong Springfisch', jedes Gericht wird mit echten 'Zigong'-Gewürzen zubereitet.",
       description3: "Perfekt für jeden Anlass: Unser Restaurant verfügt über einen großzügigen Hauptsaal und 3 exklusive Privaträume. Ob Geburtstagsfeier, Geschäftsessen oder entspanntes Treffen mit Freunden – wir bieten den passenden Rahmen.",
       waiting: "Wir freuen uns auf Ihre Reservierung!",
@@ -62,7 +62,7 @@ export const translations = {
 
       cultureLabel: "Die Tradition",
       cultureTitle: "Sichuan Yanbang: Das Geheimnis von Zigong",
-      cultureText: "Die Zigong-Salzhändlerküche (Yanbang Cai) ist ein einzigartiger kulinarischer Stil, der parallel zum Wohlstand der tausendjährigen Salzindustrie in der 'Hauptstadt des Salzes' entstand. Innerhalb der Sichuan-Küche besticht sie durch ihre Mischung aus Raffinesse, Luxus und Extravaganz. Sie vereint die exklusive Küche der Salzhändler, die herzhafte Kost der Salzarbeiter und die vielfältigen Einflüsse der Gildenküche zu einer Ästhetik von intensiver Würze und frischer Schärfe.\n\nDer technische Kern liegt in der **perfekten Verwendung von 'doppeltem Chili und doppeltem Ingwer' (frischer Chili und Zwergingwer)** sowie im geschickten Einsatz des Tontopfs als 'Wärmeregler', um das ideale Finish der Saucen zu erreichen. Mit weltberühmten Klassikern wie **kaltem Kaninchenfleisch, Wassergekochtem Rindfleisch und frischem Kaninchen-Eintopf** hat Yanbang Cai den Ruf gefestigt: 'Essen in Sichuan, Geschmack in Zigong'.",
+      cultureText: "Die Zigong-Salzhändlerküche (Yanbang Cai) ist ein einzigartiger kulinarischer Stil, der parallel zum Wohlstand der tausendjährigen Salzindustrie in der 'Hauptstadt des Salzes' entstand. Innerhalb der Sichuan-Küche besticht sie durch ihre Mischung aus Raffinesse, Luxus und Extravaganz. Sie vereint die exklusive Küche der Salzhändler, die herzhafte Kost der Salzarbeiter und die vielfältigen Einflüsse der Gildenküche zu einer Ästhetik von intensiver Würze und frischer Schärfe.\n\nDer technische Kern liegt in der **perfekten Verwendung von 'doppeltem Chili und doppeltem Ingwer' (frischer Chili und Zwergingwer)** sowie im geschickten Einsatz des Tontopfs als 'Wärmeregler', um das ideale Finish der Saucen zu erreichen. Mit weltberühmten Klassikern wie **Zigong Springfisch, Wassergekochtem Rindfleisch und frischem Kaninchen mit Chilischoten** hat Yanbang Cai den Ruf gefestigt: 'Essen in Sichuan, Geschmack in Zigong'.",
       
       roomsLabel: "Exklusiv",
       roomsTitle: "Exklusive Privaträume",
@@ -139,7 +139,7 @@ export const translations = {
   en: {
     seo: {
       title: "Nanmei Eintopf | Authentic Sichuan Cuisine Frankfurt | Nanmei Casserole",
-      description: "Visit Nanmei Eintopf at Zeil 2, Frankfurt. The best spot for authentic Zigong Sichuan cuisine, clay pot casseroles and spicy Sichuan flavors. Book your table online!",
+      description: "Visit Nanmei Eintopf at Zeil 2, Frankfurt. The best spot for authentic Salt Gang cuisine, clay pot casseroles and spicy Sichuan flavors. Book your table online!",
       keywords: "Nanmei Eintopf, Frankfurt Chinese Restaurant, Sichuan Food Frankfurt, Salt Gang Cuisine, Hotpot Frankfurt, Zeil 2 Restaurant, Chinese Casserole, Authentic Chinese Food"
     },
     nav: {
@@ -168,7 +168,7 @@ export const translations = {
       title: "Time for",
       titleHighlight: "Togetherness",
       subTitle: "Salt Gang Cuisine & Casseroles",
-      description1: "Welcome to **Nanmei Eintopf (喃妹砂锅)**, Frankfurt's hottest spot for authentic **Zigong Sichuan cuisine**. Located at **Zeil 2**, we bring the unique flavors and vibrant food culture from China's ancient Salt Capital directly to the heart of Germany.",
+      description1: "Welcome to **Nanmei Eintopf (喃妹砂锅)**, Frankfurt's hottest spot for authentic **Zigong Salt Gang cuisine**. Located at **Zeil 2**, we bring the unique flavors and vibrant food culture from China's ancient Salt Capital directly to the heart of Germany.",
       description2: "Our specialty is the **Chinese Casserole (Eintopf)**. Slow-cooked, bubbling broths filled with the finest meat, seafood, and vegetables. Whether it's our classic 'Red Soup' or 'Zigong Jumping Fish', every dish is prepared with genuine 'Zigong' spices.",
       description3: "Perfect for any occasion: Our restaurant features a spacious main hall and 3 exclusive private rooms. Whether for a birthday party, business dinner, or a relaxed meeting with friends – we offer the perfect setting.",
       waiting: "We look forward to your reservation!",
@@ -196,7 +196,7 @@ export const translations = {
       
       cultureLabel: "The Heritage",
       cultureTitle: "Sichuan Salt Gang: Zigong Secrets",
-      cultureText: "Zigong Salt Gang Cuisine (also known as Yanbang Cai) is a unique culinary school formed alongside the prosperity of the 'Millennium Salt Capital' industry. In the Sichuan culinary system, it stands out with a style that blends exquisiteness, luxury, and bold innovation. It integrates the sophisticated Salt Merchant Cuisine, the hearty Salt Worker Cuisine, and the diverse Guild Hall Cuisine into an aesthetic of 'thick aroma and intense flavor'.\n\nThe technical core lies in the **extreme use of 'Double Chili and Double Ginger' (fresh chili and baby ginger)**, and the clever use of the clay pot as a 'thermal manager' to ensure dishes achieve perfection. With world-renowned masterpieces like **Cold-Dressed Rabbit, Boiled Beef, and Fresh Pot Rabbit**, Salt Gang Cuisine has earned the reputation: 'Food in Sichuan, Taste in Zigong'.",
+      cultureText: "Zigong Salt Gang Cuisine (also known as Yanbang Cai) is a unique culinary school formed alongside the prosperity of the 'Millennium Salt Capital' industry. In the Sichuan culinary system, it stands out with a style that blends exquisiteness, luxury, and bold innovation. It integrates the sophisticated Salt Merchant Cuisine, the hearty Salt Worker Cuisine, and the diverse Guild Hall Cuisine into an aesthetic of 'thick aroma and intense flavor'.\n\nThe technical core lies in the **extreme use of 'Double Chili and Double Ginger' (fresh chili and baby ginger)**, and the clever use of the clay pot as a 'thermal manager' to ensure dishes achieve perfection. With world-renowned masterpieces like **Zigong Jumping Fish, Boiled Beef, and Fresh Pepper Rabbit**, Salt Gang Cuisine has earned the reputation: 'Food in Sichuan, Taste in Zigong'.",
       
       roomsLabel: "Exclusive",
       roomsTitle: "Exclusive Private Dining",
@@ -302,7 +302,7 @@ export const translations = {
       title: "等你来",
       titleHighlight: "组局",
       subTitle: "自贡盐帮菜 & 砂锅",
-      description1: "欢迎来到 **喃妹砂锅 (Nanmei Eintopf)**，法兰克福不可错过的自贡川菜新地标。位于 **Zeil 2**，我们千年盐都自贡的盐帮美学与浓烈风味带到了德国中心城市。",
+      description1: "欢迎来到 **喃妹砂锅 (Nanmei Eintopf)**，法兰克福最潮的四川自贡盐帮菜打卡地。位于 **Zeil 2**，我们将源自中国千年盐都自贡的盐帮风味与热烈饮食文化带到了德国中心。",
       description2: "我们的特色是 **中式砂锅 (Eintopf)**。慢火熬制的汤底，配上上等肉类、海鲜和蔬菜，沸腾鲜香。无论是经典的“砂锅红汤”还是“自贡跳水鱼”，每道菜都采用地道的自贡调料烹制。",
       description3: "适合各种场合：我们餐厅拥有宽敞的大厅和 3 个专属包厢。无论是生日派对、商务宴请还是朋友小聚，我们都能提供完美的场所。",
       waiting: "期待您的光临！",
@@ -320,7 +320,7 @@ export const translations = {
       heroTitle: "拒绝无聊，来这儿撒野！",
       heroSubtitle: "法兰克福的“盐帮”根据地",
       
-      chapter1: "餐厅风采",
+      chapter1: "人物风采",
       nanmeiTitle: "“喃妹”是谁？",
       nanmeiText: "她是那个在法兰克福 Zeil 大街旁，时刻备好酒好菜等你的“大姐大”。自 **2025 年 12 月开业**以来，喃妹把来自中国川菜重要分支—**自贡盐帮菜**的江湖气，带到了城市中心。\n\n我们不做循规蹈矩的中餐，我们要的是大口吃肉的豪爽，红油翻滚的热烈，椒香直冲鼻腔的畅快；是锅气蒸腾、筷子碰杯的喧闹，是砂锅端上桌时热浪翻滚、香气炸开的那一瞬真实与痛快。\n\n在这里，领带可以松开，高跟鞋可以脱下。坐下来，举起酒杯，让辣与香打开味蕾，让热与闹驱散疲惫。喃妹想做的，不只是一家餐厅，而是一个可以**放下拘束、做回自己**的地方—在法兰克福的心脏地带，把那份来自千年盐都的滚烫与豪气，稳稳地端到你面前。",
 
@@ -330,7 +330,7 @@ export const translations = {
 
       cultureLabel: "历史传承",
       cultureTitle: "川菜盐帮：自贡风味探秘",
-      cultureText: "自贡盐帮菜（又称小河帮川菜）是伴随“千年盐都”井盐产业的繁荣而形成的独特饮食流派，在川菜体系中以其精致、奢华与怪异并存的风格独树帜。它深度融合了极致考究的盐商菜、重味下饭的盐工菜与博采众长的会馆菜，构建出“味厚香浓、辣鲜刺激”的独特审美逻辑。\n\n该菜系的技术核心在于对**“双椒双姜”（鲜辣椒与仔姜）的极致运用，并巧用砂锅作为“热能管理器”以确保菜肴达到“味浓收汁”与“烫”的灵魂境界。凭借冷吃兔、水煮牛肉、鲜锅兔**等享誉世界的代表作，盐帮菜不仅获得了国家地理标志保护产品认定，更支撑起“食在四川，味在自贡”的市场美誉。",
+      cultureText: "自贡盐帮菜（又称小河帮川菜）是伴随“千年盐都”井盐产业的繁荣而形成的独特饮食流派，在川菜体系中以其精致、奢华与怪异并存的风格独树帜。它深度融合了极致考究的盐商菜、重味下饭的盐工菜与博采众长的会馆菜，构建出“味厚香浓、辣鲜刺激”的独特审美逻辑。\n\n该菜系的技术核心在于对**“双椒双姜”（鲜辣椒与仔姜）的极致运用，并巧用砂锅作为“热能管理器”以确保菜肴达到“味浓收汁”与“烫”的灵魂境界。凭借跳水鱼、水煮牛肉、鲜椒兔**等享誉世界的代表作，盐帮菜不仅获得了国家地理标志保护产品认定，更支撑起“食在四川，味在自贡”的市场美誉。",
 
       roomsLabel: "私密空间",
       roomsTitle: "私密尊享包厢",
@@ -338,7 +338,7 @@ export const translations = {
       
       locationLabel: "欢迎光临",
       locationTitle: "核心地段与交通指引",
-      locationText: "我们就位于法兰克福的心脏地带：**Zeil 2**, 60313 Frankfurt am Main。\n\n**公共交通：**\n您可搭乘 S-Bahn（S1–S6, S8, S9）、U-Bahn（U6、U7）、Tram（如 11 路）或多条市区公交至 **Ostendstraße** 站，出站步行仅需 4 分钟即可到达餐厅。或者从 **Konstablerwache** 站下车，步行约 8 分钟即可到达。\n\n**停车建议：**\n您可以选择 **动物园的停车场 (Parkhaus Zoo, Grüne Str. 11)**、**法院停车场 (Parkhaus Am Gericht, Klapperfeldstraße 8)** 或周边其他公共停车场。",
+      locationText: "我们就位于法兰克福的心脏地带：**Zeil 2**, 60313 Frankfurt am Main。\n\n**公共交通：**\n您可搭乘 S-Bahn（S1–S6, S8, S9）、U-Bahn（U6、U7）、Tram（如 11 路）或多条市区公交至 **Ostendstraße** 站，出站步行仅需 4 分钟即可到达餐厅。或者从 **Konstablerwache** 站下车，步行约 8 分钟即可到达。\n\n**停车建议：**\n您可以选择 **动物园的停车场 (Parkhaus Zoo, 地址：Grüne Str. 11)**、**法院停车场 (Parkhaus Am Gericht, Klapperfeldstraße 8)** 或周边其他公共停车场。",
       
       ctaButton: "立即预定包厢",
       stat1: "传承",
