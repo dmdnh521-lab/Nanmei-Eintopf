@@ -54,7 +54,7 @@ export const translations = {
       
       chapter1: "Die Persönlichkeit",
       nanmeiTitle: "Wer ist Nanmei?",
-      nanmeiText: "Sie ist die „Gastgeberin der Unterwelt“, die direkt an der Frankfurter Zeil mit gutem Wein und tollem Essen auf dich wartet. Seit der **Eröffnung Ende 2025** bringt Nanmei den Charme der **Salz-Küche aus Zigong** – einem bedeutenden Zweig der Sichuan-Küche – direkt in das Stadtzentrum.\n\nHier machen wir kein konventionelles chinesisches Essen. Hier gibt es die Großzügigkeit des Fleischessens, die Leidenschaft des kochenden roten Öls und die ungebremste Frische des Pfeffers; es ist der Moment der puren Freude, wenn der dampfende Tontopf auf den Tisch kommt und sein Aroma entfaltet.\n\nHier kann man die Krawatte lockern und die High Heels ausziehen. Setz dich, heb dein Glas und lass Schärfe und Aroma deine Sinne wecken. Nanmei ist mehr als nur ein Restaurant – es ist ein Ort, an dem du **du selbst sein kannst**. Im Herzen von Frankfurt servieren wir dir die Leidenschaft und Herzlichkeit der jahrtausendealten Salzstadt.",
+      nanmeiText: "Nanmei ist deine Gastgeberin an der Frankfurter Zeil – mit gutem Wein, kräftigen Aromen und einer Küche, die Charakter zeigt. Seit **Ende 2025** bringt sie die **Salzgang-Küche aus Zigong**, einem prägenden Zweig der Sichuan-Küche, ins Herz der Stadt.\n\nHier geht es nicht um angepasstes chinesisches Essen. Hier geht es um kräftige Gewürze, um Schärfe mit Tiefe, um das Aroma von Chili und Ingwer. Wenn der dampfende Tontopf auf den Tisch kommt und sich sein Duft entfaltet, beginnt der Abend erst richtig.\n\nHier darf die Krawatte locker sitzen, hier dürfen die High Heels unter dem Tisch verschwinden. Setz dich, heb dein Glas und lass Schärfe und Wärme den Tag hinter dir lassen. Nanmei ist mehr als ein Restaurant. Es ist ein Ort für **echte Abende** – mitten in Frankfurt, mit der Leidenschaft und Energie einer jahrtausendealten Salzstadt.",
       
       chapter2: "Das Handwerk",
       casseroleTitle: "Warum Eintopf?",
@@ -62,7 +62,7 @@ export const translations = {
 
       cultureLabel: "Die Tradition",
       cultureTitle: "Sichuan Yanbang: Das Geheimnis von Zigong",
-      cultureText: "Die Zigong-Salzhändlerküche (Yanbang Cai) ist ein einzigartiger kulinarischer Stil, der parallel zum Wohlstand der tausendjährigen Salzindustrie in der 'Hauptstadt des Salzes' entstand. Innerhalb der Sichuan-Küche besticht sie durch ihre Mischung aus Raffinesse, Lxus und Extravaganz. Sie vereint die exklusive Küche der Salzhändler, die herzhafte Kost der Salzarbeiter und die vielfältigen Einflüsse der Gildenküche zu einer Ästhetik von intensiver Würze und frischer Schärfe.\n\nDer technische Kern liegt in der **perfekten Verwendung von 'doppeltem Chili und doppeltem Ingwer' (frischer Chili und Zwergingwer)** sowie im geschickten Einsatz des Tontopfs als 'Wärmeregler', um das ideale Finish der Saucen zu erreichen. Mit weltberühmten Klassikern wie **Zigong Springfisch, Wassergekochtem Rindfleisch und frischem Kaninchen mit Chilischoten** hat Yanbang Cai den Ruf gefestigt: 'Essen in Sichuan, Geschmack in Zigong'.",
+      cultureText: "Die Zigong-Salzhändlerküche (Yanbang Cai) ist ein einzigartiger kulinarischer Stil, der parallel zum Wohlstand der tausendjährigen Salzindustrie in der 'Hauptstadt des Salzes' entstand. Innerhalb der Sichuan-Küche besticht sie durch ihre Mischung aus Raffinesse, Luxus und Extravaganz. Sie vereint die exklusive Küche der Salzhändler, die herzhafte Kost der Salzarbeiter und die vielfältigen Einflüsse der Gildenküche zu einer Ästhetik von intensiver Würze und frischer Schärfe.\n\nDer technische Kern liegt in der **perfekten Verwendung von 'doppeltem Chili und doppeltem Ingwer' (frischer Chili und Zwergingwer)** sowie im geschickten Einsatz des Tontopfs als 'Wärmeregler', um das ideale Finish der Saucen zu erreichen. Mit weltberühmten Klassikern wie **Zigong Springfisch, Wassergekochtem Rindfleisch und frischem Kaninchen mit Chilischoten** hat Yanbang Cai den Ruf gefestigt: 'Essen in Sichuan, Geschmack in Zigong'.",
       
       roomsLabel: "Exklusiv",
       roomsTitle: "Exklusive Privaträume",
@@ -317,7 +317,7 @@ export const translations = {
       }
     },
     aboutStory: {
-      heroTitle: "拒绝无聊，来这儿撒野！",
+      heroTitle: "一口砂锅，半城烟火。",
       heroSubtitle: "法兰克福的“盐帮”根据地",
       
       chapter1: "人物风采",
@@ -330,7 +330,7 @@ export const translations = {
 
       cultureLabel: "历史传承",
       cultureTitle: "川菜盐帮：自贡风味探秘",
-      cultureText: "自贡盐帮菜（又称小河帮川菜）是伴随“千年盐都”井盐产业的繁荣而形成的独特饮食流派，在川菜体系中以其精致、奢华与怪异并存的风格独树帜。它深度融合了极致考究的盐商菜、重味下饭的盐工菜与博采众长的会馆菜，构建出“味厚香浓、辣鲜刺激”的独特审美逻辑。\n\n该菜系的技术核心在于对**“双椒双姜”（鲜辣椒与仔姜）的极致运用，并巧用砂锅作为“热能管理器”以确保菜肴达到“味浓收汁”与“烫”的灵魂境界。凭借跳水鱼、水煮牛肉、鲜椒兔**等享誉世界的代表作，盐帮菜不仅获得了国家地理标志保护产品认定，更支撑起“食在四川，味在自贡”的市场美誉。",
+      cultureText: "自贡盐帮菜（又称小河帮川菜）是伴随“千年盐都”井盐产业的繁荣 engagement 而形成的独特饮食流派，在川菜体系中以其精致、奢华与怪异并存的风格独树帜。它深度融合了极致考究的盐商菜、重味下饭的盐工菜与博采众长的会馆菜，构建出“味厚香浓、辣鲜刺激”的独特审美逻辑。\n\n该菜系的技术核心在于对**“双椒双姜”（鲜辣椒与仔姜）的极致运用，并巧用砂锅作为“热能管理器”以确保菜肴达到“味浓收汁”与“烫”的灵魂境界。凭借跳水鱼、水煮牛肉、鲜椒兔**等享誉世界的代表作，盐帮菜不仅获得了国家地理标志保护产品认定，更支撑起“食在四川，味在自贡”的市场美誉。",
 
       roomsLabel: "私密空间",
       roomsTitle: "私密尊享包厢",
