@@ -54,7 +54,7 @@ export const translations = {
       
       chapter1: "Die Persönlichkeit",
       nanmeiTitle: "Wer ist Nanmei?",
-      nanmeiText: "Sie ist die „große Schwester“, die direkt an der Frankfurter Zeil mit gutem Wein und tollem Essen auf dich wartet. Seit der **Eröffnung im Dezember 2025** bringt Nanmei den Charme der **Salz-Küche aus Zigong** – einem bedeutenden Zweig der Sichuan-Küche – direkt in das Stadtzentrum.\n\nWir machen kein konventionelles chinesisches Essen. Was wir wollen, ist die Großzügigkeit des Fleischessens, die Leidenschaft des kochenden roten Öls und die ungebremste Frische des Pfeffers; es ist der lärm anstoßender Gläser und der Moment der puren Freude, wenn der dampfende Tontopf auf den Tisch kommt und sein aroma entfaltet.\n\nHier kann man die Krawatte lockern und die High Heels ausziehen. Setz dich, heb dein Glas und lass Schärfe und Aroma deine Sinne wecken. Nanmei ist mehr als nur ein Restaurant – es ist ein ort, an dem du **du selbst sein kannst**. Im Herzen von Frankfurt servieren wir dir die Leidenschaft und Herzlichkeit der jahrtausendealten Salzstadt.",
+      nanmeiText: "Sie ist die „Gastgeberin der Unterwelt“, die direkt an der Frankfurter Zeil mit gutem Wein und tollem Essen auf dich wartet. Seit der **Eröffnung Ende 2025** bringt Nanmei den Charme der **Salz-Küche aus Zigong** – einem bedeutenden Zweig der Sichuan-Küche – direkt in das Stadtzentrum.\n\nHier machen wir kein konventionelles chinesisches Essen. Hier gibt es die Großzügigkeit des Fleischessens, die Leidenschaft des kochenden roten Öls und die ungebremste Frische des Pfeffers; es ist der Moment der puren Freude, wenn der dampfende Tontopf auf den Tisch kommt und sein Aroma entfaltet.\n\nHier kann man die Krawatte lockern und die High Heels ausziehen. Setz dich, heb dein Glas und lass Schärfe und Aroma deine Sinne wecken. Nanmei ist mehr als nur ein Restaurant – es ist ein Ort, an dem du **du selbst sein kannst**. Im Herzen von Frankfurt servieren wir dir die Leidenschaft und Herzlichkeit der jahrtausendealten Salzstadt.",
       
       chapter2: "Das Handwerk",
       casseroleTitle: "Warum Eintopf?",
@@ -62,7 +62,7 @@ export const translations = {
 
       cultureLabel: "Die Tradition",
       cultureTitle: "Sichuan Yanbang: Das Geheimnis von Zigong",
-      cultureText: "Die Zigong-Salzhändlerküche (Yanbang Cai) ist ein einzigartiger kulinarischer Stil, der parallel zum Wohlstand der tausendjährigen Salzindustrie in der 'Hauptstadt des Salzes' entstand. Innerhalb der Sichuan-Küche besticht sie durch ihre Mischung aus Raffinesse, Luxus und Extravaganz. Sie vereint die exklusive Küche der Salzhändler, die herzhafte Kost der Salzarbeiter und die vielfältigen Einflüsse der Gildenküche zu einer Ästhetik von intensiver Würze und frischer Schärfe.\n\nDer technische Kern liegt in der **perfekten Verwendung von 'doppeltem Chili und doppeltem Ingwer' (frischer Chili und Zwergingwer)** sowie im geschickten Einsatz des Tontopfs als 'Wärmeregler', um das ideale Finish der Saucen zu erreichen. Mit weltberühmten Klassikern wie **Zigong Springfisch, Wassergekochtem Rindfleisch und frischem Kaninchen mit Chilischoten** hat Yanbang Cai den Ruf gefestigt: 'Essen in Sichuan, Geschmack in Zigong'.",
+      cultureText: "Die Zigong-Salzhändlerküche (Yanbang Cai) ist ein einzigartiger kulinarischer Stil, der parallel zum Wohlstand der tausendjährigen Salzindustrie in der 'Hauptstadt des Salzes' entstand. Innerhalb der Sichuan-Küche besticht sie durch ihre Mischung aus Raffinesse, Lxus und Extravaganz. Sie vereint die exklusive Küche der Salzhändler, die herzhafte Kost der Salzarbeiter und die vielfältigen Einflüsse der Gildenküche zu einer Ästhetik von intensiver Würze und frischer Schärfe.\n\nDer technische Kern liegt in der **perfekten Verwendung von 'doppeltem Chili und doppeltem Ingwer' (frischer Chili und Zwergingwer)** sowie im geschickten Einsatz des Tontopfs als 'Wärmeregler', um das ideale Finish der Saucen zu erreichen. Mit weltberühmten Klassikern wie **Zigong Springfisch, Wassergekochtem Rindfleisch und frischem Kaninchen mit Chilischoten** hat Yanbang Cai den Ruf gefestigt: 'Essen in Sichuan, Geschmack in Zigong'.",
       
       roomsLabel: "Exklusiv",
       roomsTitle: "Exklusive Privaträume",
@@ -76,7 +76,7 @@ export const translations = {
       stat1: "Tradition",
       stat1Desc: "Salz-Küche",
       stat2: "Atmosphäre",
-      stat2Desc: "Lebhaft & Herzlich",
+      stat2Desc: "豪爽热烈",
       stat3: "Exklusiv",
       stat3Desc: "3 Privaträume",
       section3Title: "Bereit für den Geschmack?"
@@ -188,7 +188,7 @@ export const translations = {
       
       chapter1: "The Persona",
       nanmeiTitle: "Who is Nanmei?",
-      nanmeiText: "She is the 'Big Sister' waiting for you right by Frankfurt's Zeil with good wine and great food. Since **opening in December 2025**, Nanmei has brought the bold spirit of **Salt Gang cuisine**—a major branch of Sichuan's culinary heritage from Zigong—to the heart of the city.\n\nWe don't do rule-following Chinese food. What we want is the boldness of big meat portions, the heat of boiling red oil, and the exhilarating rush of fresh peppercorns; it's the clinking of glasses and that moment of pure satisfaction when the bubbling casserole hits the table and the aroma explodes.\n\nHere, ties can be loosened, and heels can be taken off. Sit down, raise a glass, and let the spice and fragrance open your palate while the vibrant atmosphere clears your mind. Nanmei isn't just a restaurant; it's a place where you can **let go and be yourself**—bringing the warmth and courage of the ancient Salt Capital straight to the heart of Frankfurt.",
+      nanmeiText: "She is the 'Lady of the House', waiting for you right by Frankfurt's Zeil with good wine and great food. Since **opening at the end of 2025**, Nanmei has brought the bold spirit of **Salt Gang cuisine**—a major branch of Sichuan's culinary heritage from Zigong—to the heart of the city.\n\nWe don't do rule-following Chinese food. Here, we offer the boldness of big meat portions, the heat of boiling red oil, and the exhilarating rush of fresh peppercorns; it's that moment of pure satisfaction when the bubbling casserole hits the table and the aroma explodes.\n\nHere, ties can be loosened, and heels can be taken off. Sit down, raise a glass, and let the spice and fragrance open your palate while the vibrant atmosphere clears your mind. Nanmei isn't just a restaurant; it's a place where you can **let go and be yourself**—bringing the warmth and courage of the ancient Salt Capital straight to the heart of Frankfurt.",
 
       chapter2: "The Craft",
       casseroleTitle: "Why Casserole?",
@@ -322,7 +322,7 @@ export const translations = {
       
       chapter1: "人物风采",
       nanmeiTitle: "“喃妹”是谁？",
-      nanmeiText: "她是那个在法兰克福 Zeil 大街旁，时刻备好酒好菜等你的“大姐大”。自 **2025 年 12 月开业**以来，喃妹把来自中国川菜重要分支—**自贡盐帮菜**的江湖气，带到了城市中心。\n\n我们不做循规蹈矩的中餐，我们要的是大口吃肉的豪爽，红油翻滚的热烈，椒香直冲鼻腔的畅快；是锅气蒸腾、筷子碰杯的喧闹，是砂锅端上桌时热浪翻滚、香气炸开的那一瞬真实与痛快。\n\n在这里，领带可以松开，高跟鞋可以脱下。坐下来，举起酒杯，让辣与香打开味蕾，让热与闹驱散疲惫。喃妹想做的，不只是一家餐厅，而是一个可以**放下拘束、做回自己**的地方—在法兰克福的心脏地带，把那份来自千年盐都的滚烫与豪气，稳稳地端到你面前。",
+      nanmeiText: "她是那个在法兰克福 Zeil 大街旁，时刻备好酒好菜等你的江湖女主人。自 **25 年底开业**以来，喃妹把来自中国川菜重要分支—**自贡盐帮菜**的江湖气，带到了城市中心。\n\n这里不做循规蹈矩的中餐，这里有的是大口吃肉的豪爽，是红油翻滚的热烈，是椒香直冲鼻腔的畅快；是砂锅端上桌时热浪翻滚、香气炸开的那一瞬真实与痛快。\n\n在这里，领带可以松开，高跟鞋可以脱下。坐下来，举起酒杯，让辣与香打开味蕾，让热与闹驱散疲惫。喃妹想做的，不只是一家餐厅，而是一个可以**放下拘束、做回自己**的地方。在法兰克福的心脏地带，把那份来自千年盐都的滚烫与豪气，稳稳地端到你面前。",
 
       chapter2: "匠心独具",
       casseroleTitle: "为什么是砂锅？",
