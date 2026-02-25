@@ -50,10 +50,10 @@ const FullMenu: React.FC<FullMenuProps> = ({ lang }) => {
       iconColor: 'bg-nm-blue',
       isLunch: true,
       items: [
-        { code: "L1", name: "Mapo-Tofu mit Reis", nameEn: "Mapo Tofu with Rice", nameCn: "麻婆豆腐", price: "€11.90", image: "https://i.postimg.cc/qv4CxSW1/l1.jpg?q=80&w=800&auto=format&fit=crop", spicy: 1 },
-        { code: "L2", name: "Gongbao Hähnchen mit Reis", nameEn: "Kung Pao Chicken with Rice", nameCn: "宫保鸡丁", price: "€12.90", image: "https://i.postimg.cc/2SDXFjz9/l2.jpg?q=80&w=800&auto=format&fit=crop", spicy: 1 },
-        { code: "L3", name: "Gebratenes Schweinefleisch mit Paprika und Reis", nameEn: "Shredded Pork with Green Peppers & Rice", nameCn: "青椒肉丝", price: "€12.90", image: "https://i.postimg.cc/mgBFyJKw/l3.jpg?q=80&w=800&auto=format&fit=crop", spicy: 0 },
-        { code: "L4", name: "Gebratenes Rindfleisch mit Zwiebeln und Reis", nameEn: "Stir-fried Beef with Onions & Rice", nameCn: "洋葱牛肉", price: "€13.90", image: "https://i.postimg.cc/8zNrm9xB/l4.jpg?q=80&w=800&auto=format&fit=crop", spicy: 0 },
+        { code: "L1", name: "Mapo-Tofu (Mit Reis und einem kleinen Getränk)", nameEn: "Mapo Tofu (Comes with rice and a soft drink)", nameCn: "麻婆豆腐（带米饭和小饮）", price: "€11.90", image: "https://i.postimg.cc/qv4CxSW1/l1.jpg?q=80&w=800&auto=format&fit=crop", spicy: 1 },
+        { code: "L2", name: "Gongbao Hähnchen (Mit Reis und einem kleinen Getränk)", nameEn: "Kung Pao Chicken (Comes with rice and a soft drink)", nameCn: "宫保鸡丁（带米饭和小饮）", price: "€12.90", image: "https://i.postimg.cc/2SDXFjz9/l2.jpg?q=80&w=800&auto=format&fit=crop", spicy: 1 },
+        { code: "L3", name: "Gebratenes Schweinefleisch mit Paprika (Mit Reis und einem kleinen Getränk)", nameEn: "Shredded Pork with Green Peppers (Comes with rice and a soft drink)", nameCn: "青椒肉丝（带米饭和小饮）", price: "€12.90", image: "https://i.postimg.cc/mgBFyJKw/l3.jpg?q=80&w=800&auto=format&fit=crop", spicy: 0 },
+        { code: "L4", name: "Gebratenes Rindfleisch mit Zwiebeln (Mit Reis und einem kleinen Getränk)", nameEn: "Stir-fried Beef with Onions (Comes with rice and a soft drink)", nameCn: "洋葱牛肉（带米饭和小饮）", price: "€13.90", image: "https://i.postimg.cc/8zNrm9xB/l4.jpg?q=80&w=800&auto=format&fit=crop", spicy: 0 },
         { code: "L5", name: "Scharfe Reisnudelsuppe (Red Oil)", nameEn: "Spicy Rice Noodle Soup (Red Oil)", nameCn: "红油米线", price: "€9.90", image: "https://i.postimg.cc/y8sSyt2y/l5.jpg?q=80&w=800&auto=format&fit=crop", spicy: 2 },
         { code: "L6", name: "Reisnudelsuppe in klarer Brühe", nameEn: "Clear Broth Rice Noodle Soup", nameCn: "清汤米线", price: "€9.90", image: "https://i.postimg.cc/9QCqYKsB/l6.jpg?q=80&w=800&auto=format&fit=crop", spicy: 0 },
       ]
@@ -348,14 +348,26 @@ const FullMenu: React.FC<FullMenuProps> = ({ lang }) => {
                           <div className="flex justify-between items-start mb-1">
                             <div className="flex-1">
                                 <div className="flex items-center gap-2 flex-wrap">
-                                  <h3 className="text-sm md:text-lg font-serif font-bold text-nm-dark leading-tight">{mainName}</h3>
+                                  <h3 className="text-sm md:text-lg font-serif font-bold text-nm-dark leading-tight">
+                                    {mainName.split(/(\(.*?\)|（.*?）)/).map((part, i) => 
+                                      (part.startsWith('(') || part.startsWith('（')) 
+                                        ? <span key={i} className="text-[0.8em] font-normal opacity-70 block md:inline">{part}</span> 
+                                        : part
+                                    )}
+                                  </h3>
                                   {!item.image && item.rec && (
                                     <span className="bg-orange-50 text-nm-orange text-[9px] font-bold px-1.5 py-0.5 rounded border border-orange-100 uppercase tracking-tighter">Top</span>
                                   )}
                                 </div>
                                 
                                 <div className="flex items-center gap-2 mt-1">
-                                  <h4 className="text-xs md:text-sm text-gray-500 font-medium leading-tight">{subName}</h4>
+                                  <h4 className="text-xs md:text-sm text-gray-500 font-medium leading-tight">
+                                    {subName.split(/(\(.*?\)|（.*?）)/).map((part, i) => 
+                                      (part.startsWith('(') || part.startsWith('（')) 
+                                        ? <span key={i} className="text-[0.85em] font-normal opacity-60 block md:inline">{part}</span> 
+                                        : part
+                                    )}
+                                  </h4>
                                   {/* 辣度图标紧跟中文名称，确保辣度为 0 时不显示 */}
                                   {item.spicy && item.spicy > 0 ? (
                                       <span className="text-[10px] md:text-xs tracking-tighter shrink-0">

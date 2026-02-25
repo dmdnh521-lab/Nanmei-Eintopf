@@ -81,7 +81,13 @@ const Menu: React.FC<MenuProps> = ({ onFullMenuClick, lang }) => {
                     </div>
                 </div>
                 <div className="p-6">
-                    <h3 className="text-xl font-serif font-bold text-nm-dark mb-1 group-hover:text-nm-orange transition-colors">{itemData.name}</h3>
+                    <h3 className="text-xl font-serif font-bold text-nm-dark mb-1 group-hover:text-nm-orange transition-colors">
+                      {itemData.name.split(/(\(.*?\)|（.*?）)/).map((part: string, i: number) => 
+                        (part.startsWith('(') || part.startsWith('（')) 
+                          ? <span key={i} className="text-[0.75em] font-normal opacity-70 block">{part}</span> 
+                          : part
+                      )}
+                    </h3>
                     <p className="text-gray-500 text-sm leading-relaxed line-clamp-2">{itemData.desc}</p>
                 </div>
                 </div>
