@@ -54,8 +54,8 @@ const FullMenu: React.FC<FullMenuProps> = ({ lang }) => {
         { code: "L2", name: "Gongbao Hähnchen (Mit Reis und einem kleinen Getränk)", nameEn: "Kung Pao Chicken (Comes with rice and a soft drink)", nameCn: "宫保鸡丁（带米饭和小饮）", price: "€12.90", image: "https://i.postimg.cc/2SDXFjz9/l2.jpg?q=80&w=800&auto=format&fit=crop", spicy: 1 },
         { code: "L3", name: "Gebratenes Schweinefleisch mit Paprika (Mit Reis und einem kleinen Getränk)", nameEn: "Shredded Pork with Green Peppers (Comes with rice and a soft drink)", nameCn: "青椒肉丝（带米饭和小饮）", price: "€12.90", image: "https://i.postimg.cc/mgBFyJKw/l3.jpg?q=80&w=800&auto=format&fit=crop", spicy: 0 },
         { code: "L4", name: "Gebratenes Rindfleisch mit Zwiebeln (Mit Reis und einem kleinen Getränk)", nameEn: "Stir-fried Beef with Onions (Comes with rice and a soft drink)", nameCn: "洋葱牛肉（带米饭和小饮）", price: "€13.90", image: "https://i.postimg.cc/8zNrm9xB/l4.jpg?q=80&w=800&auto=format&fit=crop", spicy: 0 },
-        { code: "L5", name: "Scharfe Reisnudelsuppe (Red Oil)", nameEn: "Spicy Rice Noodle Soup (Red Oil)", nameCn: "红油米线", price: "€9.90", image: "https://i.postimg.cc/y8sSyt2y/l5.jpg?q=80&w=800&auto=format&fit=crop", spicy: 2 },
-        { code: "L6", name: "Reisnudelsuppe in klarer Brühe", nameEn: "Clear Broth Rice Noodle Soup", nameCn: "清汤米线", price: "€9.90", image: "https://i.postimg.cc/9QCqYKsB/l6.jpg?q=80&w=800&auto=format&fit=crop", spicy: 0 },
+        { code: "L5", name: "Scharfe Reisnudelsuppe mit Rindfleisch (Red Oil)", nameEn: "Spicy Beef Rice Noodle Soup (Red Oil)", nameCn: "红油牛肉米线", price: "€9.90", image: "https://i.postimg.cc/y8sSyt2y/l5.jpg?q=80&w=800&auto=format&fit=crop", spicy: 2 },
+        { code: "L6", name: "Reisnudelsuppe mit Rindfleisch in klarer Brühe", nameEn: "Clear Broth Beef Rice Noodle Soup", nameCn: "清汤牛肉米线", price: "€9.90", image: "https://i.postimg.cc/9QCqYKsB/l6.jpg?q=80&w=800&auto=format&fit=crop", spicy: 0 },
       ]
     },
     {
