@@ -93,7 +93,7 @@ const FullMenu: React.FC<FullMenuProps> = ({ lang }) => {
         { code: "B3", name: "Fischfilet in Sichuan-Pfeffer-Chili-Sauce", nameEn: "Sichuan Pepper Fish Filet", nameCn: "川香椒麻鱼", price: "€28.80", image: "https://i.postimg.cc/85bjjLG3/b3.jpg?q=80&w=800&auto=format&fit=crop", spicy: 3 },
         { code: "B5", name: "Hähncheneintopf nach Nann-Stil", nameEn: "Nanmei Chicken Pot", nameCn: "喃味鸡煲", price: "€17.80", image: "https://i.postimg.cc/59QCCXy4/b5.jpg?q=80&w=800&auto=format&fit=crop", rec: true, spicy: 2 },
         { code: "B6", name: "Mapo-Tofu mit Hackfleisch und Chiliöl", nameEn: "Mapo Tofu", nameCn: "麻婆豆腐", price: "€14.80", image: "https://i.postimg.cc/C1QgywSg/b6.jpg?q=80&w=800&auto=format&fit=crop", spicy: 1 },
-        { code: "B8", name: "Scharfer Sichuan-Eintopf (Mao Xue Wang)", nameEn: "Spicy Blood Curd Hotpot (Mao Xue Wang)", nameCn: "砂锅毛血旺", desc: "Mit Entenblut, Innereien und Gemüse.", descEn: "With duck blood, tripe and vegetables.", price: "€22.80", image: "https://i.postimg.cc/HskkFPbW/b8.jpg?q=80&w=800&auto=format&fit=crop", spicy: 3 }
+        { code: "B8", name: "Scharfer Sichuan-Eintopf (Mao Xue Wang)", nameEn: "Spicy Blood Curd Hotpot (Mao Xue Wang)", nameCn: "砂锅毛血旺", desc: "Mit Entenblut, Innereien und Gemüse.", descEn: "With duck blood, tripe and vegetables.", price: "€22.80", image: "https://i.postimg.cc/L4V1fkPP/b8.png?q=80&w=800&auto=format&fit=crop", spicy: 3 }
       ]
     },
     {
@@ -108,7 +108,7 @@ const FullMenu: React.FC<FullMenuProps> = ({ lang }) => {
         { code: "A6", name: "Rindfleisch und Pansen in scharfer Sauce", nameEn: "Sliced Beef & Tripe (Fu Qi Fei Pian)", nameCn: "夫妻肺片", price: "€10.80", image: "https://i.postimg.cc/4yQgy1Gf/a6.png?q=80&w=800&auto=format&fit=crop", spicy: 2 },
         { code: "A7", name: "Kaltes Rindfleisch mit Koriander", nameEn: "Cold Beef with Coriander", nameCn: "香菜拌牛肉", price: "€9.80", image: "https://i.postimg.cc/sfKr51D0/a7.png?q=80&w=800&auto=format&fit=crop", spicy: 2 },
         { code: "A8", name: "Scharfe Rindermagenstreifen", nameEn: "Spicy Shredded Tripe", nameCn: "麻辣肚丝", price: "€9.80", image: "https://i.postimg.cc/rm9KK5Tg/a8.jpg?q=80&w=800&auto=format&fit=crop", spicy: 2 },
-        { code: "A9", name: "Tofustreifen mit Sesamöl", nameEn: "Tofu Strips with Sesame Oil", nameCn: "香油豆腐丝", price: "€7.80", image: "https://i.postimg.cc/wMyZXC3k/a9.jpg?q=80&w=800&auto=format&fit=crop", spicy: 0 },
+        { code: "A9", name: "Tofustreifen mit Sesamöl", nameEn: "Tofu Strips with Sesame Oil", nameCn: "香油豆腐丝", price: "€7.80", image: "https://i.postimg.cc/Bn5TYWL5/a9.png?q=80&w=800&auto=format&fit=crop", spicy: 0 },
         { code: "A10", name: "Kaltes eingelegtes Rindfleisch nach Hausrezept", nameEn: "House Special Marinated Beef", nameCn: "草包牛肉", price: "€11.80", image: "https://i.postimg.cc/s2XqJ2Bx/a10.png?q=80&w=800&auto=format&fit=crop", rec: true, spicy: 3 },
       ]
     },
