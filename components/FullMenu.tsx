@@ -157,8 +157,8 @@ const FullMenu: React.FC<FullMenuProps> = ({ lang }) => {
         { code: "F3", name: "Geschmorte Rindfleisch-Nudelsuppe", nameEn: "Braised Beef Noodle Soup", nameCn: "红烧牛肉面", price: "€13.00", image: "https://i.postimg.cc/HnNHH08v/f3.jpg?q=80&w=800&auto=format&fit=crop", spicy: 1 },
         { code: "F4", name: "Klare Rindfleisch-Nudelsuppe", nameEn: "Clear Broth Beef Noodle Soup", nameCn: "清汤牛肉面", price: "€13.00", image: "https://i.postimg.cc/0yDxRwkD/f4.jpg?q=80&w=800&auto=format&fit=crop", spicy: 0 },
         { code: "F6", name: "Reisnudelsuppe mit Huhn und Pilzen (im Tontopf)", nameEn: "Chicken & Mushroom Rice Noodles", nameCn: "砂锅鸡菌菇米线", price: "€13.50", image: "https://i.postimg.cc/mZYnBg42/f7.jpg?q=80&w=800&auto=format&fit=crop", spicy: 0 },
-        { code: "F7", name: "Scharfe Hotpot-Reisnudelsuppe (im Tontopf)", nameEn: "Spicy Hotpot Rice Noodles", nameCn: "砂锅火锅米线", price: "€13.50", image: "https://i.postimg.cc/mZYnBg42/f7.jpg?q=80&w=800&auto=format&fit=crop", spicy: 2 },
-        { code: "F8", name: "Reisnudelsuppe with Rindfleisch in klarer Brühe", nameEn: "Clear Broth Beef Rice Noodles", nameCn: "砂锅清汤牛肉米线", price: "€13.50", image: "https://i.postimg.cc/cH4NnkRN/f8.jpg?q=80&w=800&auto=format&fit=crop", spicy: 0 },
+        { code: "F7", name: "Scharfe Hotpot-Reisnudelsuppe (im Tontopf)", nameEn: "Spicy Hotpot Rice Noodles", nameCn: "砂锅火锅米线", price: "€13.50", image: "https://i.postimg.cc/JhyhyMQs/f7.png?q=80&w=800&auto=format&fit=crop", spicy: 2 },
+        { code: "F8", name: "Reisnudelsuppe with Rindfleisch in klarer Brühe", nameEn: "Clear Broth Beef Rice Noodles", nameCn: "砂锅清汤牛肉米线", price: "€13.50", image: "https://i.postimg.cc/bvGvGpRs/f8.png?q=80&w=800&auto=format&fit=crop", spicy: 0 },
         { code: "F10", name: "Teigtaschen in Brühe (im Tontopf)", nameEn: "Dumplings in Eintopf", nameCn: "砂锅水饺", price: "€15.00", image: "https://i.postimg.cc/Bb1Sxq7f/F10.jpg?q=80&w=800&auto=format&fit=crop", spicy: 0 },
       ]
     }
