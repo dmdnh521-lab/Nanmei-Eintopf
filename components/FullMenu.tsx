@@ -112,7 +112,7 @@ const FullMenu: React.FC<FullMenuProps> = ({ lang }) => {
         { code: "A7", name: "Kaltes Rindfleisch mit Koriander", nameEn: "Cold Beef with Coriander", nameCn: "香菜拌牛肉", price: "€9.80", image: "https://i.postimg.cc/DZyP31T8/a7.jpg?q=80&w=800&auto=format&fit=crop", spicy: 2 },
         { code: "A8", name: "Scharfe Rindermagenstreifen", nameEn: "Spicy Shredded Tripe", nameCn: "麻辣肚丝", price: "€9.80", image: "https://i.postimg.cc/rm9KK5Tg/a8.jpg?q=80&w=800&auto=format&fit=crop", spicy: 2 },
         { code: "A9", name: "Tofustreifen mit Sesamöl", nameEn: "Tofu Strips with Sesame Oil", nameCn: "香油豆腐丝", price: "€7.80", image: "https://i.postimg.cc/wMyZXC3k/a9.jpg?q=80&w=800&auto=format&fit=crop", spicy: 0 },
-        { code: "A10", name: "Kaltes eingelegtes Rindfleisch nach Hausrezept", nameEn: "House Special Marinated Beef", nameCn: "草包牛肉", price: "€11.80", image: "https://i.postimg.cc/BbryMmK3/a10.jpg?q=80&w=800&auto=format&fit=crop", rec: true, spicy: 3 },
+        { code: "A10", name: "Kaltes eingelegtes Rindfleisch nach Hausrezept", nameEn: "House Special Marinated Beef", nameCn: "草包牛肉", price: "€11.80", image: "https://i.postimg.cc/s2XqJ2Bx/a10.png?q=80&w=800&auto=format&fit=crop", rec: true, spicy: 3 },
       ]
     },
     {
