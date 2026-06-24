@@ -1,25 +1,110 @@
-
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <!-- DE (Default) -->
   <url>
     <loc>https://nanmei-eintopf.de/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <lastmod>2026-06-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="de" href="https://nanmei-eintopf.de/?lang=de"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://nanmei-eintopf.de/?lang=en"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://nanmei-eintopf.de/?lang=cn"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://nanmei-eintopf.de/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nanmei-eintopf.de/en/"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://nanmei-eintopf.de/cn/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nanmei-eintopf.de/"/>
   </url>
   <url>
-    <loc>https://nanmei-eintopf.de/#full-menu</loc>
-    <lastmod>2024-03-20</lastmod>
+    <loc>https://nanmei-eintopf.de/full-menu</loc>
+    <lastmod>2026-06-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://nanmei-eintopf.de/full-menu"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nanmei-eintopf.de/en/full-menu"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://nanmei-eintopf.de/cn/full-menu"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nanmei-eintopf.de/full-menu"/>
+  </url>
+  <url>
+    <loc>https://nanmei-eintopf.de/about-story</loc>
+    <lastmod>2026-06-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://nanmei-eintopf.de/about-story"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nanmei-eintopf.de/en/about-story"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://nanmei-eintopf.de/cn/about-story"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nanmei-eintopf.de/about-story"/>
   </url>
   <url>
-    <loc>https://nanmei-eintopf.de/#about-story</loc>
-    <lastmod>2024-03-20</lastmod>
+    <loc>https://nanmei-eintopf.de/impressum</loc>
+    <lastmod>2026-06-24</lastmod>
     <changefreq>yearly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://nanmei-eintopf.de/datenschutz</loc>
+    <lastmod>2026-06-24</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <!-- EN -->
+  <url>
+    <loc>https://nanmei-eintopf.de/en/</loc>
+    <lastmod>2026-06-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://nanmei-eintopf.de/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nanmei-eintopf.de/en/"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://nanmei-eintopf.de/cn/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nanmei-eintopf.de/"/>
+  </url>
+  <url>
+    <loc>https://nanmei-eintopf.de/en/full-menu</loc>
+    <lastmod>2026-06-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://nanmei-eintopf.de/full-menu"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nanmei-eintopf.de/en/full-menu"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://nanmei-eintopf.de/cn/full-menu"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nanmei-eintopf.de/full-menu"/>
+  </url>
+  <url>
+    <loc>https://nanmei-eintopf.de/en/about-story</loc>
+    <lastmod>2026-06-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://nanmei-eintopf.de/about-story"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nanmei-eintopf.de/en/about-story"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://nanmei-eintopf.de/cn/about-story"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nanmei-eintopf.de/about-story"/>
+  </url>
+
+  <!-- CN -->
+  <url>
+    <loc>https://nanmei-eintopf.de/cn/</loc>
+    <lastmod>2026-06-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://nanmei-eintopf.de/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nanmei-eintopf.de/en/"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://nanmei-eintopf.de/cn/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nanmei-eintopf.de/"/>
+  </url>
+  <url>
+    <loc>https://nanmei-eintopf.de/cn/full-menu</loc>
+    <lastmod>2026-06-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://nanmei-eintopf.de/full-menu"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nanmei-eintopf.de/en/full-menu"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://nanmei-eintopf.de/cn/full-menu"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nanmei-eintopf.de/full-menu"/>
+  </url>
+  <url>
+    <loc>https://nanmei-eintopf.de/cn/about-story</loc>
+    <lastmod>2026-06-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://nanmei-eintopf.de/about-story"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nanmei-eintopf.de/en/about-story"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://nanmei-eintopf.de/cn/about-story"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nanmei-eintopf.de/about-story"/>
   </url>
 </urlset>

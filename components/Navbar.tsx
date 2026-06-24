@@ -19,6 +19,19 @@ const Navbar: React.FC<NavbarProps> = ({ onNavigate, currentPage, currentLang, o
   const langMenuRef = useRef<HTMLDivElement>(null);
   const t = translations[currentLang]?.nav;
 
+  const getLocalizedPath = (page: string) => {
+    let basePath = '/';
+    if (currentLang === 'en') basePath = '/en/';
+    if (currentLang === 'cn') basePath = '/cn/';
+
+    if (page === 'home') return basePath;
+    if (page.startsWith('home#')) {
+      const anchor = page.split('#')[1];
+      return `${basePath}#${anchor}`;
+    }
+    return `${basePath}${page}`;
+  };
+
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
@@ -85,7 +98,7 @@ const Navbar: React.FC<NavbarProps> = ({ onNavigate, currentPage, currentLang, o
       <div className="container mx-auto px-6 flex justify-between items-center">
         {/* 在下方 src 处替换您的 Logo 链接 */}
         <a 
-          href="#home" 
+          href={getLocalizedPath('home')} 
           onClick={(e) => handleLinkClick(e, 'home')}
           className="flex items-center gap-3 group"
         >
@@ -112,10 +125,10 @@ const Navbar: React.FC<NavbarProps> = ({ onNavigate, currentPage, currentLang, o
 
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center space-x-8">
-          <a href="#home" onClick={(e) => handleLinkClick(e, 'home')} className={`text-sm uppercase tracking-widest font-bold hover:text-nm-orange transition-colors ${isLightMode ? 'text-gray-600' : 'text-white'}`}>{t.home}</a>
-          <a href="#about-story" onClick={(e) => handleLinkClick(e, 'about-story')} className={`text-sm uppercase tracking-widest font-bold hover:text-nm-orange transition-colors ${isLightMode ? 'text-gray-600' : 'text-white'}`}>{t.about}</a>
-          <a href="#full-menu" onClick={(e) => handleLinkClick(e, 'full-menu')} className={`text-sm uppercase tracking-widest font-bold hover:text-nm-orange transition-colors ${isLightMode ? 'text-gray-600' : 'text-white'}`}>{t.menu}</a>
-          <a href="#contact" onClick={(e) => handleLinkClick(e, 'home#contact')} className={`text-sm uppercase tracking-widest font-bold hover:text-nm-orange transition-colors ${isLightMode ? 'text-gray-600' : 'text-white'}`}>{t.contact}</a>
+          <a href={getLocalizedPath('home')} onClick={(e) => handleLinkClick(e, 'home')} className={`text-sm uppercase tracking-widest font-bold hover:text-nm-orange transition-colors ${isLightMode ? 'text-gray-600' : 'text-white'}`}>{t.home}</a>
+          <a href={getLocalizedPath('about-story')} onClick={(e) => handleLinkClick(e, 'about-story')} className={`text-sm uppercase tracking-widest font-bold hover:text-nm-orange transition-colors ${isLightMode ? 'text-gray-600' : 'text-white'}`}>{t.about}</a>
+          <a href={getLocalizedPath('full-menu')} onClick={(e) => handleLinkClick(e, 'full-menu')} className={`text-sm uppercase tracking-widest font-bold hover:text-nm-orange transition-colors ${isLightMode ? 'text-gray-600' : 'text-white'}`}>{t.menu}</a>
+          <a href={getLocalizedPath('home#contact')} onClick={(e) => handleLinkClick(e, 'home#contact')} className={`text-sm uppercase tracking-widest font-bold hover:text-nm-orange transition-colors ${isLightMode ? 'text-gray-600' : 'text-white'}`}>{t.contact}</a>
           
           <div className={`h-4 w-[1px] mx-2 ${isLightMode ? 'bg-gray-300' : 'bg-white/30'}`}></div>
           
@@ -176,10 +189,10 @@ const Navbar: React.FC<NavbarProps> = ({ onNavigate, currentPage, currentLang, o
         }`}
       >
         <div className="flex flex-col p-8 space-y-6">
-           <a href="#home" onClick={(e) => handleLinkClick(e, 'home')} className="text-nm-dark hover:text-nm-orange text-xl font-serif font-bold">{t.home}</a>
-           <a href="#about-story" onClick={(e) => handleLinkClick(e, 'about-story')} className="text-nm-dark hover:text-nm-orange text-xl font-serif font-bold">{t.about}</a>
-           <a href="#full-menu" onClick={(e) => handleLinkClick(e, 'full-menu')} className="text-nm-dark hover:text-nm-orange text-xl font-serif font-bold">{t.menu}</a>
-           <a href="#contact" onClick={(e) => handleLinkClick(e, 'home#contact')} className="text-nm-dark hover:text-nm-orange text-xl font-serif font-bold">{t.contact}</a>
+           <a href={getLocalizedPath('home')} onClick={(e) => handleLinkClick(e, 'home')} className="text-nm-dark hover:text-nm-orange text-xl font-serif font-bold">{t.home}</a>
+           <a href={getLocalizedPath('about-story')} onClick={(e) => handleLinkClick(e, 'about-story')} className="text-nm-dark hover:text-nm-orange text-xl font-serif font-bold">{t.about}</a>
+           <a href={getLocalizedPath('full-menu')} onClick={(e) => handleLinkClick(e, 'full-menu')} className="text-nm-dark hover:text-nm-orange text-xl font-serif font-bold">{t.menu}</a>
+           <a href={getLocalizedPath('home#contact')} onClick={(e) => handleLinkClick(e, 'home#contact')} className="text-nm-dark hover:text-nm-orange text-xl font-serif font-bold">{t.contact}</a>
            
            <a
             href="https://reservations.allo.restaurant/de/nan-mei-sha-guo-eintopf"

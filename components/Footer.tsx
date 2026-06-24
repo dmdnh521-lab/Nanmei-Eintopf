@@ -17,6 +17,13 @@ const Footer: React.FC<FooterProps> = ({ onNavigate, lang }) => {
     onNavigate(target);
   };
 
+  const getLocalizedPath = (page: string) => {
+    let basePath = '/';
+    if (lang === 'en') basePath = '/en/';
+    if (lang === 'cn') basePath = '/cn/';
+    return `${basePath}${page}`;
+  };
+
   return (
     <footer id="contact" className="bg-nm-dark text-white pt-20 pb-10">
       <div className="container mx-auto px-6">
@@ -138,8 +145,8 @@ const Footer: React.FC<FooterProps> = ({ onNavigate, lang }) => {
         <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-gray-600 gap-4">
           <p>&copy; {new Date().getFullYear()} Eintopf Gastro Management GmbH. {t.rights}</p>
           <div className="flex gap-6">
-             <a href="#impressum" onClick={(e) => handleLinkClick(e, 'impressum')} className="hover:text-nm-orange transition-colors">{t.impressum}</a>
-             <a href="#datenschutz" onClick={(e) => handleLinkClick(e, 'datenschutz')} className="hover:text-nm-orange transition-colors">{t.datenschutz}</a>
+             <a href={getLocalizedPath('impressum')} onClick={(e) => handleLinkClick(e, 'impressum')} className="hover:text-nm-orange transition-colors">{t.impressum}</a>
+             <a href={getLocalizedPath('datenschutz')} onClick={(e) => handleLinkClick(e, 'datenschutz')} className="hover:text-nm-orange transition-colors">{t.datenschutz}</a>
           </div>
         </div>
       </div>
