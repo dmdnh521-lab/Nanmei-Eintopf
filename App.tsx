@@ -22,7 +22,7 @@ const getPageFromPathname = () => {
   const path = window.location.pathname;
   if (path.includes('about-story')) return 'about-story';
   if (path.includes('full-menu')) return 'full-menu';
-  if (path.includes('media')) return 'media';
+  if (path.includes('media') || path.includes('press')) return 'media';
   if (path.includes('impressum')) return 'impressum';
   if (path.includes('datenschutz')) return 'datenschutz';
   return 'home';
