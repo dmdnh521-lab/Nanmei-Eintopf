@@ -20,5 +20,6 @@ View your app in AI Studio: https://ai.studio/apps/5a0271b2-077c-4835-9ad2-89f70
 ## Production Build & SSG
 - Build & Prerender: `npm run build`
 - Deploy Target: Cloudflare Pages & Vercel
-- Updated: Navigation links with dedicated Media & Press coverage
+- Navbar Update: Fixed press and media navigation keys and SSG routes
+- Version: 1.0.8
 
