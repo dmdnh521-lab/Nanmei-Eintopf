@@ -12,7 +12,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 // Pages to prerender
-const PAGES = ['home', 'about-story', 'full-menu', 'press-media', 'impressum', 'datenschutz'];
+const PAGES = ['home', 'about-story', 'full-menu', 'media', 'impressum', 'datenschutz'];
 const LANGUAGES: Language[] = ['de', 'en', 'cn'];
 
 const templatePath = path.resolve(__dirname, 'dist/index.html');
@@ -39,12 +39,12 @@ for (const lang of LANGUAGES) {
     // Determine the correct page title and descriptions for meta tags
     let docTitle = t.seo.title;
     if (page === 'full-menu') docTitle = `${t.nav.menu} | Nanmei Eintopf Frankfurt`;
-    if (page === 'press-media') docTitle = `${t.nav.press || 'Medien & Berichte'} | Nanmei Eintopf Frankfurt`;
+    if (page === 'media') docTitle = t.mediaPress?.seoTitle || `Presse & Reviews | Nanmei Eintopf Frankfurt`;
     if (page === 'impressum') docTitle = `Impressum | Nanmei Eintopf`;
     if (page === 'datenschutz') docTitle = `Datenschutz | Nanmei Eintopf`;
     if (page === 'about-story') docTitle = `Unsere Story | Nanmei Eintopf Frankfurt`;
 
-    const docDesc = t.seo.description;
+    const docDesc = page === 'media' ? (t.mediaPress?.seoDescription || t.seo.description) : t.seo.description;
     const docKeywords = t.seo.keywords;
 
     // Calculate Canonical URL
@@ -133,6 +133,17 @@ for (const lang of LANGUAGES) {
     const outFile = path.join(outDir, 'index.html');
     fs.writeFileSync(outFile, html, 'utf-8');
     console.log(`Pre-rendered: ${lang.toUpperCase()} - ${page} -> ${path.relative(__dirname, outFile)}`);
+
+    // Also generate single .html file for clean URL handling without trailing slash (e.g. dist/cn/media.html)
+    if (page !== 'home') {
+      let singleFileDir = path.resolve(__dirname, 'dist');
+      if (lang !== 'de') {
+        singleFileDir = path.join(singleFileDir, lang);
+      }
+      ensureDir(singleFileDir);
+      const singleOutFile = path.join(singleFileDir, `${page}.html`);
+      fs.writeFileSync(singleOutFile, html, 'utf-8');
+    }
   }
 }
 
