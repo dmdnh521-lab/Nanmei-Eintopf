@@ -32,14 +32,14 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://nanmei-eintopf.de/about-story"/>
   </url>
   <url>
-    <loc>https://nanmei-eintopf.de/press-media</loc>
+    <loc>https://nanmei-eintopf.de/media</loc>
     <lastmod>2026-06-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="de" href="https://nanmei-eintopf.de/press-media"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://nanmei-eintopf.de/en/press-media"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://nanmei-eintopf.de/cn/press-media"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://nanmei-eintopf.de/press-media"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://nanmei-eintopf.de/media"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nanmei-eintopf.de/en/media"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://nanmei-eintopf.de/cn/media"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nanmei-eintopf.de/media"/>
   </url>
   <url>
     <loc>https://nanmei-eintopf.de/impressum</loc>
@@ -86,14 +86,14 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://nanmei-eintopf.de/about-story"/>
   </url>
   <url>
-    <loc>https://nanmei-eintopf.de/en/press-media</loc>
+    <loc>https://nanmei-eintopf.de/en/media</loc>
     <lastmod>2026-06-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="de" href="https://nanmei-eintopf.de/press-media"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://nanmei-eintopf.de/en/press-media"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://nanmei-eintopf.de/cn/press-media"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://nanmei-eintopf.de/press-media"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://nanmei-eintopf.de/media"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nanmei-eintopf.de/en/media"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://nanmei-eintopf.de/cn/media"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nanmei-eintopf.de/media"/>
   </url>
 
   <!-- CN -->
@@ -128,13 +128,13 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://nanmei-eintopf.de/about-story"/>
   </url>
   <url>
-    <loc>https://nanmei-eintopf.de/cn/press-media</loc>
+    <loc>https://nanmei-eintopf.de/cn/media</loc>
     <lastmod>2026-06-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="de" href="https://nanmei-eintopf.de/press-media"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://nanmei-eintopf.de/en/press-media"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://nanmei-eintopf.de/cn/press-media"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://nanmei-eintopf.de/press-media"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://nanmei-eintopf.de/media"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nanmei-eintopf.de/en/media"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://nanmei-eintopf.de/cn/media"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nanmei-eintopf.de/media"/>
   </url>
 </urlset>

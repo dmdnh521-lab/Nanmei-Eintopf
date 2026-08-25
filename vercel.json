@@ -3,13 +3,27 @@
   "outputDirectory": "dist",
   "cleanUrls": true,
   "trailingSlash": false,
-  "routes": [
+  "redirects": [
     {
-      "handle": "filesystem"
+      "source": "/press-media",
+      "destination": "/media",
+      "permanent": true
     },
     {
-      "src": "/(.*)",
-      "dest": "/index.html"
+      "source": "/en/press-media",
+      "destination": "/en/media",
+      "permanent": true
+    },
+    {
+      "source": "/cn/press-media",
+      "destination": "/cn/media",
+      "permanent": true
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/"
     }
   ]
 }
