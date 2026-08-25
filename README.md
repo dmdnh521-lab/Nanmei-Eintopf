@@ -19,4 +19,5 @@ View your app in AI Studio: https://ai.studio/apps/5a0271b2-077c-4835-9ad2-89f70
 
 ## Production Build & SSG
 - Build & Prerender: `npm run build`
+- Deploy Platform: Cloudflare Pages / Vercel
 
