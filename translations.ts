@@ -13,6 +13,7 @@ export const translations = {
       about: "Unsere Story",
       menu: "Speisekarte",
       media: "Presse & Reviews",
+      press: "Presse & Reviews",
       contact: "Kontakt",
       reserve: "Reservierung",
       bookTable: "Tisch reservieren"
@@ -301,6 +302,7 @@ export const translations = {
       about: "Our Story",
       menu: "Menu",
       media: "Press & Reviews",
+      press: "Press & Reviews",
       contact: "Contact",
       reserve: "Reservation",
       bookTable: "Book a Table"
@@ -589,6 +591,7 @@ export const translations = {
       about: "关于我们",
       menu: "菜单",
       media: "媒体报道",
+      press: "媒体报道",
       contact: "联系方式",
       reserve: "预定座位",
       bookTable: "立即预定"
