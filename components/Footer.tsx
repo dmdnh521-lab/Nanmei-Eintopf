@@ -36,7 +36,7 @@ const Footer: React.FC<FooterProps> = ({ onNavigate, lang }) => {
             <div className="flex items-center gap-3">
                <div className="w-14 h-14 md:w-16 md:h-16 shrink-0">
                   <img 
-                    src="https://i.postimg.cc/wMf9Fvsj/logo.png" 
+                    src="/images/wMf9Fvsj-logo.webp"
                     alt="Nanmei Panda Pot Mascot" 
                     className="w-full h-full object-contain brightness-110 drop-shadow-[0_0_12px_rgba(255,77,0,0.4)]"
                     onError={(e) => {

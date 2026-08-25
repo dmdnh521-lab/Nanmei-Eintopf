@@ -4,12 +4,12 @@ import React from 'react';
 // 这里是画廊的图片列表。
 // 您可以把链接换成您自己的图片链接（例如 "/images/photo1.jpg" 或 "https://..."）
 const galleryImages = [
-  "https://i.postimg.cc/x15CCRdm/gallery1.jpg?q=80&w=600&auto=format&fit=crop",
-  "https://i.postimg.cc/ncYVRkqV/gallery3.jpg?q=80&w=600&auto=format&fit=crop",
-  "https://i.postimg.cc/yNr8h8cc/gallery2.jpg?q=80&w=600&auto=format&fit=crop",
-  "https://i.postimg.cc/vHbr40zv/gallery6.jpg?q=80&w=600&auto=format&fit=crop",
-  "https://i.postimg.cc/wTCw4Xcz/gallery5.jpg?q=80&w=600&auto=format&fit=crop",
-  "https://i.postimg.cc/v8SqfF45/gallery4.jpg?q=80&w=600&auto=format&fit=crop"
+  "/images/x15CCRdm-gallery1.webp",
+  "/images/ncYVRkqV-gallery3.webp",
+  "/images/yNr8h8cc-gallery2.webp",
+  "/images/vHbr40zv-gallery6.webp",
+  "/images/wTCw4Xcz-gallery5.webp",
+  "/images/v8SqfF45-gallery4.webp"
 ];
 
 const Gallery: React.FC = () => {

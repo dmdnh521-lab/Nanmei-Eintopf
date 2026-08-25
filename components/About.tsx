@@ -10,9 +10,9 @@ interface AboutProps {
 }
 
 const aboutImages = [
-  "https://i.postimg.cc/JhZyC92M/101.jpg?q=80&w=1000&auto=format&fit=crop", 
-  "https://i.postimg.cc/FRvYrDMK/106.jpg?q=80&w=1000&auto=format&fit=crop", 
-  "https://i.postimg.cc/ZRmWbVG7/109.jpg?q=80&w=1000&auto=format&fit=crop"  
+  "/images/JhZyC92M-101.webp",
+  "/images/FRvYrDMK-106.webp",
+  "/images/ZRmWbVG7-109.webp"
 ];
 
 const About: React.FC<AboutProps> = ({ lang, onNavigate }) => {

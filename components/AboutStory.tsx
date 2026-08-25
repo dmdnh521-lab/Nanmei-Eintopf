@@ -10,33 +10,33 @@ interface AboutStoryProps {
 
 // Image Collections
 const heroImages = [
-  "https://i.postimg.cc/JhZyC92M/101.jpg?q=80&w=2000&auto=format&fit=crop",
-  "https://i.postimg.cc/9fZ4HvnH/105.jpg?q=80&w=2522&auto=format&fit=crop", 
-  "https://i.postimg.cc/mD4PL8vd/107.jpg?q=80&w=2000&auto=format&fit=crop"
+  "/images/JhZyC92M-101.webp",
+  "/images/9fZ4HvnH-105.webp",
+  "/images/mD4PL8vd-107.webp"
 ];
 
 const cultureImages = [
-  "https://i.postimg.cc/L8kCMH12/yanshang.png?q=80&w=1000&auto=format&fit=crop", // Room like
-  "https://i.postimg.cc/Qdg4rXTs/yangong.png?q=80&w=1000&auto=format&fit=crop", // Interior
-  "https://i.postimg.cc/CxCPVFqw/huiguan.png?q=80&w=1000&auto=format&fit=crop"  // Table
+  "/images/L8kCMH12-yanshang.webp", // Room like
+  "/images/Qdg4rXTs-yangong.webp", // Interior
+  "/images/CxCPVFqw-huiguan.webp"  // Table
 ];
 
 const roomImages = [
-  "https://i.postimg.cc/FRvYrDMK/106.jpg?q=80&w=1000&auto=format&fit=crop", // Room like
-  "https://i.postimg.cc/qBnZGXMP/bao2.jpg?q=80&w=1000&auto=format&fit=crop", // Interior
-  "https://i.postimg.cc/Wprf76bQ/bao3.jpg?q=80&w=1000&auto=format&fit=crop"  // Table
+  "/images/FRvYrDMK-106.webp", // Room like
+  "/images/qBnZGXMP-bao2.webp", // Interior
+  "/images/Wprf76bQ-bao3.webp"  // Table
 ];
 
 const nanmeiImages = [
-  "https://i.postimg.cc/ZRmWbVG7/109.jpg?q=80&w=1000&auto=format&fit=crop",
-  "https://i.postimg.cc/mD4PL8vd/107.jpg?q=80&w=1000&auto=format&fit=crop",
-  "https://i.postimg.cc/JhZyC92M/101.jpg?q=80&w=1000&auto=format&fit=crop"
+  "/images/ZRmWbVG7-109.webp",
+  "/images/mD4PL8vd-107.webp",
+  "/images/JhZyC92M-101.webp"
 ];
 
 const casseroleImages = [
-  "https://i.postimg.cc/50m668JT/b1.jpg?q=80&w=1000&auto=format&fit=crop", // Fish
-  "https://i.postimg.cc/brJ94CsN/d1.png?q=80&w=1000&auto=format&fit=crop", // Rabbit
-  "https://i.postimg.cc/HxCf9cHC/d4.jpg?q=80&w=1000&auto=format&fit=crop"  // Atmosphere
+  "/images/50m668JT-b1.webp", // Fish
+  "/images/brJ94CsN-d1.webp", // Rabbit
+  "/images/HxCf9cHC-d4.webp"  // Atmosphere
 ];
 
 // Reusable Carousel Component
@@ -165,7 +165,7 @@ const AboutStory: React.FC<AboutStoryProps> = ({ lang }) => {
                     <StoryCarousel images={nanmeiImages} interval={3800} />
                     {/* Animated Badge - Active Movement */}
                     <div className="absolute bottom-6 right-6 bg-white py-3 px-6 rounded-xl shadow-xl flex items-center gap-3 border border-nm-orange/40 animate-wanghong-active z-20">
-                        <img src="https://i.postimg.cc/wMf9Fvsj/logo.png" className="w-6 h-6" alt="logo" />
+                        <img src="/images/wMf9Fvsj-logo.webp" className="w-6 h-6" alt="logo" />
                         <span className="text-nm-dark font-serif font-bold text-sm tracking-tighter">Wanghong Style</span>
                     </div>
                 </div>

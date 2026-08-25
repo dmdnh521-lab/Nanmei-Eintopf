@@ -16,25 +16,25 @@ const Menu: React.FC<MenuProps> = ({ onFullMenuClick, lang }) => {
   const highlights: Partial<MenuItem>[] = [
     {
       id: 1,
-      image: "https://i.postimg.cc/WzHz5MW0/d4.jpg?q=80&w=1000&auto=format&fit=crop",
+      image: "/images/WzHz5MW0-d4.webp",
       price: "€18.80",
       category: "soup"
     },
     {
       id: 2,
-      image: "https://i.postimg.cc/kGXD8DX3/c3.jpg?q=80&w=1000&auto=format&fit=crop",
+      image: "/images/kGXD8DX3-c3.webp",
       price: "€24.80",
       category: "seafood"
     },
     {
       id: 3,
-      image: "https://i.postimg.cc/RFTNNw99/c4.jpg?q=80&w=1000&auto=format&fit=crop",
+      image: "/images/RFTNNw99-c4.webp",
       price: "€22.80",
       category: "meat"
     },
     {
       id: 4,
-      image: "https://i.postimg.cc/pTBppKx2/c1.jpg?q=80&w=1000&auto=format&fit=crop",
+      image: "/images/pTBppKx2-c1.webp",
       price: "€20.80",
       category: "meat"
     }

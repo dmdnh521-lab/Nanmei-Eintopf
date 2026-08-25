@@ -105,7 +105,7 @@ const Navbar: React.FC<NavbarProps> = ({ onNavigate, currentPage, currentLang, o
           <div className="relative">
             <div className="w-14 h-14 transition-transform duration-500 group-hover:scale-110 group-hover:-rotate-3">
                <img 
-                 src="https://i.postimg.cc/wMf9Fvsj/logo.png" 
+                 src="/images/wMf9Fvsj-logo.webp"
                  alt="Nanmei Panda Pot Logo" 
                  className="w-full h-full object-contain drop-shadow-lg"
                  onError={(e) => {
