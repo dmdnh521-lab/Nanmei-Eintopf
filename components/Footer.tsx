@@ -25,13 +25,16 @@ const Footer: React.FC<FooterProps> = ({ onNavigate, lang }) => {
   };
 
   return (
-    <footer id="contact" className="bg-nm-dark text-white pt-20 pb-10">
-      <div className="container mx-auto px-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+    <footer id="contact" className="bg-nm-dark text-white pt-12 pb-8 md:pt-20 md:pb-12">
+      <div className="container mx-auto px-5 sm:px-6">
+        
+        {/* Responsive Grid: 1 col on mobile, 2 cols on tablet/sm, 4 cols on lg */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 lg:gap-12 mb-12 md:mb-16">
           
-          <div className="space-y-6">
+          {/* 1. Brand & Mascot */}
+          <div className="space-y-4 md:space-y-5">
             <div className="flex items-center gap-3">
-               <div className="w-16 h-16 shrink-0">
+               <div className="w-14 h-14 md:w-16 md:h-16 shrink-0">
                   <img 
                     src="https://i.postimg.cc/wMf9Fvsj/logo.png" 
                     alt="Nanmei Panda Pot Mascot" 
@@ -72,7 +75,8 @@ const Footer: React.FC<FooterProps> = ({ onNavigate, lang }) => {
             </div>
           </div>
 
-          <div className="space-y-6">
+          {/* 2. Address */}
+          <div className="space-y-4 md:space-y-5">
             <h4 className="text-sm font-bold text-white uppercase tracking-widest border-l-4 border-nm-orange pl-3">{t.addressTitle}</h4>
             <div className="space-y-4">
               <div className="flex items-start gap-3 text-gray-400 hover:text-white transition-colors">
@@ -87,16 +91,17 @@ const Footer: React.FC<FooterProps> = ({ onNavigate, lang }) => {
                 href="https://www.google.com/maps/search/?api=1&query=Nanmei+Eintopf+Restaurant+Zeil+2+Frankfurt" 
                 target="_blank" 
                 rel="noreferrer" 
-                className="inline-flex items-center gap-2 text-xs text-nm-blue font-bold uppercase tracking-wide hover:underline"
+                className="inline-flex items-center gap-2 text-xs text-nm-blue font-bold uppercase tracking-wide hover:underline pl-7"
               >
                 {t.route} <ExternalLink size={12} />
               </a>
             </div>
           </div>
 
-          <div className="space-y-6">
+          {/* 3. Contact & Reservation */}
+          <div className="space-y-4 md:space-y-5">
             <h4 className="text-sm font-bold text-white uppercase tracking-widest border-l-4 border-nm-blue pl-3">{t.contactTitle}</h4>
-            <div className="space-y-4">
+            <div className="space-y-3.5">
               <a 
                 href="tel:06975796768" 
                 className="flex items-center gap-3 text-gray-400 hover:text-white transition-colors group"
@@ -105,7 +110,7 @@ const Footer: React.FC<FooterProps> = ({ onNavigate, lang }) => {
                 <p className="text-sm font-medium group-hover:text-nm-orange transition-colors">069 75796768</p>
               </a>
               <a 
-                href="mailto:nanmeieintopf@gmail.com"
+                href="mailto:nanmeieintopf@gmail.com" 
                 className="flex items-center gap-3 text-gray-400 hover:text-white transition-colors group"
               >
                 <Mail className="text-nm-orange shrink-0 group-hover:scale-110 transition-transform" size={18} />
@@ -115,7 +120,7 @@ const Footer: React.FC<FooterProps> = ({ onNavigate, lang }) => {
                 href="https://reservations.allo.restaurant/de/nan-mei-sha-guo-eintopf" 
                 target="_blank" 
                 rel="noreferrer" 
-                className="flex items-center gap-3 text-gray-400 hover:text-nm-orange transition-colors group"
+                className="flex items-center gap-3 text-nm-orange hover:text-orange-400 transition-colors group"
               >
                 <CalendarDays className="text-nm-orange shrink-0 group-hover:scale-110 transition-transform" size={18} />
                 <p className="text-sm font-bold underline decoration-dotted underline-offset-4">{t.reserve}</p>
@@ -123,11 +128,14 @@ const Footer: React.FC<FooterProps> = ({ onNavigate, lang }) => {
             </div>
           </div>
 
-          <div className="space-y-6">
+          {/* 4. Opening Hours */}
+          <div className="space-y-4 md:space-y-5">
             <h4 className="text-sm font-bold text-white uppercase tracking-widest border-l-4 border-white pl-3">{t.hoursTitle}</h4>
             <div className="space-y-3 text-sm text-gray-400">
               <div className="flex flex-col gap-1 border-b border-gray-800 pb-2">
-                <div className="flex items-center gap-2 font-bold"><Clock size={14} className="text-nm-orange"/> {t.daily}</div>
+                <div className="flex items-center gap-2 font-bold text-gray-300">
+                  <Clock size={14} className="text-nm-orange"/> {t.daily}
+                </div>
                 <div className="text-white font-bold ml-6">
                   11:30 - 15:00<br/>
                   17:00 - 21:30
@@ -136,15 +144,17 @@ const Footer: React.FC<FooterProps> = ({ onNavigate, lang }) => {
               <div className="flex items-center gap-2 text-nm-orange font-bold text-xs uppercase">
                 <X size={14} /> {t.tuesdayClosed}
               </div>
-              <p className="text-xs text-gray-500 mt-2 italic">{t.kitchenClose}</p>
+              <p className="text-xs text-gray-500 mt-1 italic">{t.kitchenClose}</p>
             </div>
           </div>
 
         </div>
 
-        <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-gray-600 gap-4">
-          <p>&copy; {new Date().getFullYear()} Eintopf Gastro Management GmbH. {t.rights}</p>
-          <div className="flex gap-6">
+        {/* Bottom Legal / Copyright row */}
+        <div className="border-t border-gray-800 pt-6 md:pt-8 flex flex-col sm:flex-row justify-between items-center text-xs text-gray-500 gap-3">
+          <p className="text-center sm:text-left text-xs">&copy; {new Date().getFullYear()} Eintopf Gastro Management GmbH. {t.rights}</p>
+          <div className="flex flex-wrap justify-center gap-4 sm:gap-6 text-xs">
+             <a href={getLocalizedPath('media')} onClick={(e) => handleLinkClick(e, 'media')} className="hover:text-nm-orange transition-colors">{translations[lang].nav.media}</a>
              <a href={getLocalizedPath('impressum')} onClick={(e) => handleLinkClick(e, 'impressum')} className="hover:text-nm-orange transition-colors">{t.impressum}</a>
              <a href={getLocalizedPath('datenschutz')} onClick={(e) => handleLinkClick(e, 'datenschutz')} className="hover:text-nm-orange transition-colors">{t.datenschutz}</a>
           </div>

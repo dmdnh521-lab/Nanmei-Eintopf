@@ -58,7 +58,7 @@ const Navbar: React.FC<NavbarProps> = ({ onNavigate, currentPage, currentLang, o
 
   if (!t) return null;
 
-  const isLightMode = currentPage === 'full-menu' || currentPage === 'impressum' || currentPage === 'datenschutz' || currentPage === 'about-story' || isScrolled;
+  const isLightMode = currentPage === 'full-menu' || currentPage === 'impressum' || currentPage === 'datenschutz' || currentPage === 'about-story' || currentPage === 'press-media' || isScrolled;
 
   const toggleMobileMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen);
   const closeMobileMenu = () => setIsMobileMenuOpen(false);
@@ -124,13 +124,14 @@ const Navbar: React.FC<NavbarProps> = ({ onNavigate, currentPage, currentLang, o
         </a>
 
         {/* Desktop Menu */}
-        <div className="hidden md:flex items-center space-x-8">
+        <div className="hidden md:flex items-center space-x-7">
           <a href={getLocalizedPath('home')} onClick={(e) => handleLinkClick(e, 'home')} className={`text-sm uppercase tracking-widest font-bold hover:text-nm-orange transition-colors ${isLightMode ? 'text-gray-600' : 'text-white'}`}>{t.home}</a>
           <a href={getLocalizedPath('about-story')} onClick={(e) => handleLinkClick(e, 'about-story')} className={`text-sm uppercase tracking-widest font-bold hover:text-nm-orange transition-colors ${isLightMode ? 'text-gray-600' : 'text-white'}`}>{t.about}</a>
           <a href={getLocalizedPath('full-menu')} onClick={(e) => handleLinkClick(e, 'full-menu')} className={`text-sm uppercase tracking-widest font-bold hover:text-nm-orange transition-colors ${isLightMode ? 'text-gray-600' : 'text-white'}`}>{t.menu}</a>
+          <a href={getLocalizedPath('press-media')} onClick={(e) => handleLinkClick(e, 'press-media')} className={`text-sm uppercase tracking-widest font-bold hover:text-nm-orange transition-colors ${isLightMode ? 'text-gray-600' : 'text-white'}`}>{t.press}</a>
           <a href={getLocalizedPath('home#contact')} onClick={(e) => handleLinkClick(e, 'home#contact')} className={`text-sm uppercase tracking-widest font-bold hover:text-nm-orange transition-colors ${isLightMode ? 'text-gray-600' : 'text-white'}`}>{t.contact}</a>
           
-          <div className={`h-4 w-[1px] mx-2 ${isLightMode ? 'bg-gray-300' : 'bg-white/30'}`}></div>
+          <div className={`h-4 w-[1px] mx-1 ${isLightMode ? 'bg-gray-300' : 'bg-white/30'}`}></div>
           
           <div className="relative" ref={langMenuRef}>
              <button 
@@ -192,6 +193,7 @@ const Navbar: React.FC<NavbarProps> = ({ onNavigate, currentPage, currentLang, o
            <a href={getLocalizedPath('home')} onClick={(e) => handleLinkClick(e, 'home')} className="text-nm-dark hover:text-nm-orange text-xl font-serif font-bold">{t.home}</a>
            <a href={getLocalizedPath('about-story')} onClick={(e) => handleLinkClick(e, 'about-story')} className="text-nm-dark hover:text-nm-orange text-xl font-serif font-bold">{t.about}</a>
            <a href={getLocalizedPath('full-menu')} onClick={(e) => handleLinkClick(e, 'full-menu')} className="text-nm-dark hover:text-nm-orange text-xl font-serif font-bold">{t.menu}</a>
+           <a href={getLocalizedPath('press-media')} onClick={(e) => handleLinkClick(e, 'press-media')} className="text-nm-dark hover:text-nm-orange text-xl font-serif font-bold">{t.press}</a>
            <a href={getLocalizedPath('home#contact')} onClick={(e) => handleLinkClick(e, 'home#contact')} className="text-nm-dark hover:text-nm-orange text-xl font-serif font-bold">{t.contact}</a>
            
            <a

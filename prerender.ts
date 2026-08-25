@@ -12,7 +12,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 // Pages to prerender
-const PAGES = ['home', 'about-story', 'full-menu', 'impressum', 'datenschutz'];
+const PAGES = ['home', 'about-story', 'full-menu', 'press-media', 'impressum', 'datenschutz'];
 const LANGUAGES: Language[] = ['de', 'en', 'cn'];
 
 const templatePath = path.resolve(__dirname, 'dist/index.html');
@@ -39,6 +39,7 @@ for (const lang of LANGUAGES) {
     // Determine the correct page title and descriptions for meta tags
     let docTitle = t.seo.title;
     if (page === 'full-menu') docTitle = `${t.nav.menu} | Nanmei Eintopf Frankfurt`;
+    if (page === 'press-media') docTitle = `${t.nav.press || 'Medien & Berichte'} | Nanmei Eintopf Frankfurt`;
     if (page === 'impressum') docTitle = `Impressum | Nanmei Eintopf`;
     if (page === 'datenschutz') docTitle = `Datenschutz | Nanmei Eintopf`;
     if (page === 'about-story') docTitle = `Unsere Story | Nanmei Eintopf Frankfurt`;

@@ -11,6 +11,7 @@ import FullMenu from './components/FullMenu';
 import Impressum from './components/Impressum';
 import Datenschutz from './components/Datenschutz';
 import AboutStory from './components/AboutStory'; 
+import { MediaPress } from './components/MediaPress';
 import CookieBanner from './components/CookieBanner';
 import { Language } from './types';
 import { translations } from './translations';
@@ -21,6 +22,7 @@ const getPageFromPathname = () => {
   const path = window.location.pathname;
   if (path.includes('about-story')) return 'about-story';
   if (path.includes('full-menu')) return 'full-menu';
+  if (path.includes('media')) return 'media';
   if (path.includes('impressum')) return 'impressum';
   if (path.includes('datenschutz')) return 'datenschutz';
   return 'home';
@@ -44,7 +46,7 @@ function App({ initialPage, initialLang }: AppProps = {}) {
   const [currentPage, setCurrentPage] = useState<string>(() => {
     if (typeof window === 'undefined') return initialPage || 'home';
     const hashPage = window.location.hash.replace('#', '').split('#')[0];
-    if (['full-menu', 'impressum', 'datenschutz', 'about-story'].includes(hashPage)) return hashPage;
+    if (['full-menu', 'impressum', 'datenschutz', 'about-story', 'media'].includes(hashPage)) return hashPage;
     return initialPage || getPageFromPathname();
   });
 
@@ -110,6 +112,7 @@ function App({ initialPage, initialLang }: AppProps = {}) {
 
     let docTitle = t.seo.title;
     if (currentPage === 'full-menu') docTitle = `${t.nav.menu} | Nanmei Eintopf Frankfurt`;
+    if (currentPage === 'media') docTitle = t.mediaPress?.seoTitle || `Presse & Reviews | Nanmei Eintopf Frankfurt`;
     if (currentPage === 'impressum') docTitle = `Impressum | Nanmei Eintopf`;
     if (currentPage === 'datenschutz') docTitle = `Datenschutz | Nanmei Eintopf`;
     if (currentPage === 'about-story') docTitle = `Unsere Story | Nanmei Eintopf Frankfurt`;
@@ -119,7 +122,7 @@ function App({ initialPage, initialLang }: AppProps = {}) {
     // Update Meta Description
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-        metaDescription.setAttribute('content', t.seo.description);
+        metaDescription.setAttribute('content', currentPage === 'media' ? (t.mediaPress?.seoDescription || t.seo.description) : t.seo.description);
     }
 
     // Update Meta Keywords
@@ -198,6 +201,8 @@ function App({ initialPage, initialLang }: AppProps = {}) {
         return <FullMenu lang={language} />;
       case 'about-story':
         return <AboutStory lang={language} />;
+      case 'media':
+        return <MediaPress lang={language} onNavigate={handleNavigate} />;
       case 'impressum':
         return <Impressum />;
       case 'datenschutz':
