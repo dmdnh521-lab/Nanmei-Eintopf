@@ -82,8 +82,7 @@ for (const lang of LANGUAGES) {
     // Replace or insert meta tags
     // 1. Lang attribute
     const htmlLang = lang === 'cn' ? 'zh-CN' : lang;
-    html = html.replace('<html lang="de">', `<html lang="${htmlLang}">`);
-    html = html.replace('<html>', `<html lang="${htmlLang}">`);
+    html = html.replace(/(<html\b[^>]*\blang=")[^"]*(")/, `$1${htmlLang}$2`);
 
     // 2. Meta description
     if (html.includes('name="description"')) {
