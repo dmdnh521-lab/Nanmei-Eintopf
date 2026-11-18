@@ -108,6 +108,7 @@ export const translations = {
       tuesdayClosed: "Dienstag Ruhetag",
       kitchenClose: "Küche schließt um 21:00",
       rights: "Alle Rechte vorbehalten.",
+      websiteCredit: "Website erstellt von",
       impressum: "Impressum",
       datenschutz: "Datenschutz"
     },
@@ -397,6 +398,7 @@ export const translations = {
       tuesdayClosed: "Closed on Tuesdays",
       kitchenClose: "Kitchen closes at 21:00",
       rights: "All rights reserved.",
+      websiteCredit: "Website built by",
       impressum: "Imprint",
       datenschutz: "Privacy Policy"
     },
@@ -686,6 +688,7 @@ export const translations = {
       tuesdayClosed: "周二休息",
       kitchenClose: "厨房 21:00 关闭",
       rights: "所有权利保留。",
+      websiteCredit: "网站建设：",
       impressum: "法律声明 (Impressum)",
       datenschutz: "隐私政策 (Datenschutz)"
     },

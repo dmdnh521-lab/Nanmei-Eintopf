@@ -152,7 +152,13 @@ const Footer: React.FC<FooterProps> = ({ onNavigate, lang }) => {
 
         {/* Bottom Legal / Copyright row */}
         <div className="border-t border-gray-800 pt-6 md:pt-8 flex flex-col sm:flex-row justify-between items-center text-xs text-gray-500 gap-3">
-          <p className="text-center sm:text-left text-xs">&copy; {new Date().getFullYear()} Eintopf Gastro Management GmbH. {t.rights}</p>
+          <div className="space-y-1 text-center sm:text-left">
+            <p>&copy; {new Date().getFullYear()} Eintopf Gastro Management GmbH. {t.rights}</p>
+            <p className="text-gray-400">
+              {t.websiteCredit}{' '}
+              <a href="https://66eu.de" className="underline underline-offset-2 hover:text-nm-orange focus-visible:text-nm-orange transition-colors">66eu</a>
+            </p>
+          </div>
           <div className="flex flex-wrap justify-center gap-4 sm:gap-6 text-xs">
              <a href={getLocalizedPath('media')} onClick={(e) => handleLinkClick(e, 'media')} className="hover:text-nm-orange transition-colors">{translations[lang].nav.media}</a>
              <a href={getLocalizedPath('impressum')} onClick={(e) => handleLinkClick(e, 'impressum')} className="hover:text-nm-orange transition-colors">{t.impressum}</a>
